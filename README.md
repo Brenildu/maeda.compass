@@ -6,20 +6,35 @@
 
 Olá, meu nome é Breno Maeda e estou no programa de bolsas da compass.uol!
 
-Resido atualmente na cidade de [Ilha Solteira SP](https://www.google.com/maps/place/Ilha+Solteira+-+SP,+15385-000/@-20.480396,-51.5590673,10z/data=!3m1!4b1!4m6!3m5!1s0x9499f8719482b45b:0x2763c44fdc87bc75!8m2!3d-20.4322835!4d-51.3487707!16zL20vMDQwd3dj?entry=ttu), 60 km do município de Três Lagoas cidade em que estudo e falando nisso, estudo sistemas de informação na instituição [UFMS](https://www.ufms.br) e já estou no meu 10 período, e sim! já estourei na perspectiva de ter concluído em 8 semestres, ainda faltam 4 semestres totalizando 14 no final, mas não sou uma pessoa que vê o copo meio cheio, esse tempo a mais não foi perdido, conheci pessoas incriveis no processo, a cada dp que pegava só me insentivava a correr atrás de novo e hoje já me vejo mais maduro e responsavél(melhorando aos poucos) coisa que não evoluiria se passasse nas matérias tudo com a nota mínima.
+Resido atualmente na cidade de [Ilha Solteira SP](https://www.google.com/maps/place/Ilha+Solteira+-+SP,+15385-000/@-20.480396,-51.5590673,10z/data=!3m1!4b1!4m6!3m5!1s0x9499f8719482b45b:0x2763c44fdc87bc75!8m2!3d-20.4322835!4d-51.3487707!16zL20vMDQwd3dj?entry=ttu), 60 km do município de Três Lagoas cidade em que estudo e falando nisso, estudo sistemas de informação na instituição [UFMS](https://www.ufms.br) e já estou no meu 10 período, e sim! já estourei na perspectiva de ter concluído em 8 semestres, ainda faltam 4 semestres totalizando 14 no final, mas não sou uma pessoa que vê o copo meio cheio, esse tempo a mais não foi perdido, conheci pessoas incriveis no processo e sou grato por isso. 
 
-Queria ser breve, me empolguei kkkk. Sobre hobbies, começo pelos esportes, sou enxadrista amador, já disputei alguns torneios na minha região, chegando no máximo individualmente em segundo lugar no JESP(jogos escolares de São Paulo) sub 15 e entre os primeiros no sub 18, por equipe já ficamos em segundo nos abertos dos JJSP(jogos da juventude de SP, sub 18), atualmente jogo por Ilha Solteira, se quiser jogar ou ter umas aulinhas é só chamar!! Finjo que jogo outros esportes também kkkk, basket e futsal são os que me garanto não ser uma total ameba. Prático corridas curtas, gosto de ler(estava tentado bater a meta de 1 livro por mês, mas não vai dar não kkkk) e curto para um caramba terminar um programa sabendo que deu certo. 
+Sobre hobbies, começo pelos esportes, sou enxadrista amador, já disputei alguns torneios na minha região, chegando no máximo individualmente em segundo lugar no JESP(jogos escolares de São Paulo) sub 15 e entre os primeiros no sub 18, se quiser jogar ou ter umas aulinhas é só chamar!! Finjo que jogo outros esportes também kkkk, basket e futsal são os que me garanto não ser uma total ameba. Prático corridas curtas, gosto de ler(estava tentado bater a meta de 1 livro por mês, mas não vai dar não kkkk) e curto para um caramba terminar um programa sabendo que deu certo. 
 
 Escolhi passar pelo programa para ter um noção básica do mercado de trabalho (sou muito inseguro em não ser um bom profissional no futuro). Ciente que sou uma pessoa que procrastina bastante, luto muito para melhorar isso, vim almejando receber o máximo de críticas possível para me auxiliar profissionalmente.
 
+# Marco Atual
 
-# Sprint 1
+- [x] Sprint 1
+- [ ] Sprint 2
+- [ ] Sprint 3
+- [ ] Sprint 4
+- [ ] Sprint 5
+- [ ] Sprint 6
+- [ ] Sprint 7
+- [ ] Sprint 8
+- [ ] Sprint 9
+- [ ] Sprint 10
 
-## Curso Git e GitHub do básico ao avançado (c/ gist e GitHub Pages)
+# RESUMOS
+
+## Sprint 1
+
+### Curso Git e GitHub do básico ao avançado (c/ gist e GitHub Pages)
 
 &nbsp;
 * **Sobre o Git e GitHub**  
 <p>
+&nbsp;
 Como desenvolvedor de softwares vejo claramente a importância do git e as frameworks que trabalham o utilizando, as modificações continuas, o uso de várias versões e a importância de trabalhar com a mesma versão nas máquinas de todos os membros do projeto é de suma importancia a medida que o projeto cresce e tudo isso se encaixa no tema do controle de versão que é a premissa principal do git.<br/>  
 &nbsp;
 O git é o sistema de controle de versão mais utilizado no mundo, ele cria e trabalha com repositórios, esses que são responsavéis de armazenarem todas as linhas de código de uma aplicação, quando falamos em trabalhar em um repositório estamos falando de trabalhar diretamente em uma aplicação.<br/>
@@ -30,14 +45,16 @@ Há diversas ferramentas que usam do git e armazenam repositórios em divesos se
 &nbsp;
 * **Por onde começar?**  
 <p>
-Primeiro de tudo faça o download das ferramentas, sendo elas o [git](https://git-scm.com/downloads) e um editor de texto. Download concluído é preciso criar uma pasta no editor de testo e abrir o terminal nela, com o comando git init é possível criar o repositório, tendo uma conta no GitHub será possível gerenciar esse repositório o enviando para lá com a sequência de comandos, git commit -m ".", git branch -M main, git remote add "link(que você receberá dentro do GitHub)" e git push -u Origin master.<br/>
+&nbsp;
+Primeiro de tudo faça o download das ferramentas, sendo elas o <a href=https://git-scm.com/downloads>git</a> e um editor de texto. Download concluído é preciso criar uma pasta no editor de testo e abrir o terminal nela, com o comando git init é possível criar o repositório, tendo uma conta no GitHub será possível gerenciar esse repositório o enviando para lá com a sequência de comandos, git commit -m ".", git branch -M main, git remote add "link(que você receberá dentro do GitHub)" e git push -u Origin master.<br/>
 &nbsp;
 Toda vez que criar pastas ou arquivos é preciso usar o comando git add ., toda modificação feita é preciso usar o comando git commit -a -m "mensagem tal" e para enviar para o repositório remoto é preciso dar um git push. Para baixar modificações se utiliza o comando git pull e é possível ver o status usando o git status.  
 </p>
 
 &nbsp;
 * **Branch**
-<p>  
+<p>
+&nbsp;  
 É importante se falar das branches, essas são as ramificações de um projeto, dentro de um projeto possivelmente haverá funçãos ou layouts que serão testados, para que possa ocorrer modificações diretas no projeto que não comprometam sua funcionalidade atual é usado uma ramificação, a ramificação principal é chamada de main e nela que há o projeto funcional(cuidado para não há modificar sem querer), qualquer outra ramificação não é vista para o usuário final.<br/> 
 &nbsp;
 Um bom exemplo de como utiliza-lás na prática de maneira saúdavel: imagine 3 desenvolvedores de um projeto web, um deles modificou a pasta css dentro de uma branch e enviou para o GitHub, outro modificou o arquivo index.html dentro de outra branch e também o enviou e o terceiro, sendo esse o responsável por alterar a main ele deu um push e gostou das modificações, apartir disso ele cópia com o código git merge as duas ramificações dentro da main. Apartir desse exemplo dá para ver que as ramificações podem ser utéis para que não hajá confusões nas modificações, se o primeiro dev precisasse fazer testes, esses teste ficariam apenas em sua ramificação.<br/> 
@@ -72,8 +89,71 @@ Um bom exemplo de como utiliza-lás na prática de maneira saúdavel: imagine 3 
 12. git rm (+ nome do arquivo)
     * Remove um arquivo    
 
+&nbsp;
+* **Readme.md e marckdown**
+<p> 
+&nbsp;
+O Readme é o que vai vender o seu peixe dentro do GitHub, a ideia é ter resumos principais da sua aplicação como o detalhamento da linguam utilizando, colaboradores, tarefas pendenter e concluídas e funcionalidades.<br />
+&nbsp;
+Para formatar esse arquivo é utilizado a linguagem de marcação MarckDown, ela converte as especificaçãos para o html.
+</p>
 
-## Curso Linux para Desenvolvedores (c/ terminal, Shell, Apache e +)
+* **Opnião Pessoal**
+<p> 
+&nbsp;
+Gostei muito do curso, achei o professor bem didático e demonstrou o conteúdo perfeitamente na prática, acredito que usarei conhecimento aprendido de forma cotidiana no futuro.
+</p>
 
+### Curso Linux para Desenvolvedores (c/ terminal, Shell, Apache e +)
 
-## Resumo 
+&nbsp;
+* **Introdução do curso**  
+<p>
+&nbsp;
+O Linux é um sistema operacional muito famoso entre os desenvolvedores, ele tem sim suas vantagens em ralação ao S.O Windows, o preço, a velocidade, segurança, algumas funcionalidades, entre outras. A ideia do curso não é falar sobre o linux e sim ensinar o aluno a trabalhar de forma prática com o terminal e o powershell.<br />
+&nbsp;
+Foi utilizado a distriubuição Ubuntu, pois ele é o mais popular das versões e atende bem o desejado de forma eficiente, diferente do mac e do wintowns é sempre preciso utilizar as distribuições mais recentes, nos sitemas operacionais temos o kernel que realiza a comunicação do hardawere com o usuário no linux também possuimos ele. Para instalar esse sistema sem precisar abrir mão do Windowns pode ser usado uma máquina virtual, a escolhida por mim foi a <a href=https://www.oracle.com/br/virtualization/technologies/vm/downloads/virtualbox-downloads.html?source=:ow:o:p:nav:mmddyyVirtualBoxHero_br&intcmp=:ow:o:p:nav:mmddyyVirtualBoxHero_br>VM VirtualBox</a>, da empresa Oracle, mas o instrutor sugere outra opção interessante também, agora é preciso do arquivo .iso do <a href=https://ubuntu.com/download/desktop>Ubuntu</a> para abri-ló dentro da VM, feito o download dos dois é preciso apenas criar um nova máquina virtual, escolher o sistema linux, Ubuntu e arrastar o arquivo .iso para opção de arquivos na tela.<br />
+&nbsp;
+Para abrir o terminal basta clicar em arquivos e abrir por la, ou clicar ctrl + t, e pronto o terminal estará aberto e pronto para ter a manipulação dos diretórios e arquivos com o uso simples de códigos a partir apenas do teclado. Podemos no perguntar da vantagem de usar o termianal, é possível citar a facilidade de usar apenas uma porta de entrada, a velocidade de criar, modificar e procurar por diretórios e arquivos, a praticidade de poder ver alterações e algumas outras  .
+</p>
+
+&nbsp;
+* **Terminal e comandos básicos**  
+<p>
+&nbsp;
+O terminal são janelas que podemos digitar comandos que comunicaram com o shell e o shell executará esses comandos retornando um resultado.
+O basico da sintaxe do comando é seguir essa sequencia: comando -opções arquivo/diretorio, é importante saber a diferença entre arquivos e diretórios, os diretórios de forma direta são as pastas que podem armazenar arquivos ou outras pastas e os arquivos são únicos e contem apenas conteúdo.
+</p>
+
+&nbsp;
+* **Gerenciamentos**  
+
+1. Gerenciamento de arquivos e diretorios
+    * Uso de comandos para criar, deletar, copiar ou mover arquivos e diretórios
+    * Principais comandos: 
+        1. mkdir - criar diretório
+        2. rm - remover diretório ou arquivos
+        3. rmdr - remover apenas diretórios
+        4. cp - copiar arquivos ou diretórios
+        5. mv - mover arquivos ou diretórios
+2. Gerenciamento de pacotes e aplicativos
+    * Com o auxílio de comandos no terminal é possível atualizar, instalar ou remover aplicativos ou até mesmo o Linux;
+    * Tudo é feito de forma simples e é preciso ter permissão usando o comando sudo apt -get (+ o comando que precisa fazer) se for atualizar é upagrade, para instalar é install + o nome do aplicativo e para remover purge + o nome do aplicativo
+3. Gerenciamento de usuários e grupos
+    * Também há a possibilidade de criar e deletar usuários e grupos, nem sempre é tão utilizado, mas pode ser utilizado para garantir permissões de forma segura para usuários em várias funçãos em uma empresa que utiliza do Linux.
+    * É preciso ter usuários para trabalhar com grupos, só conseguem fazer modificações desses grupos e usuários alguem com permissão para tal
+4. Gerenciamento de permissões
+    * Pemissões no linux são representandos por números, sendo o primeiro algarismo a permissão de diretório e arquivos, os três próximos são as permissões de leitura, escrita e execução, os três próximos são as permissões do grupo e os ultimos são as permissões do demais usuários;
+    * Alterar permissões existem duas formas 1 sendo a numérica: chmod xxx file/dir (x são as permissões numérias):
+        1. 0 ou -- = sem permissão
+        2. 1 ou --x = Executar
+        3. 2 ou -w- = Escrever
+        4. 3 ou -wx = Escrever e executar
+        5. 4 ou r-- = Ler
+        6. 5 ou r-x = Ler e executar
+        7. 6 ou r-w = Ler e excrever
+        8. 7 ou rwx = Ler, escrever e executar
+
+5. Gerenciamento de Redes
+    * Fundamentos teóricos podem ser executados dentro do terminal do Linux 
+
