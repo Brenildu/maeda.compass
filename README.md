@@ -17,35 +17,34 @@ Escolhi passar pelo programa para ter um noção básica do mercado de trabalho 
 
 ## Curso Git e GitHub do básico ao avançado (c/ gist e GitHub Pages)
 
+&nbsp;
 * **Sobre o Git e GitHub**  
 <p>
-Como desenvolvedor de softwares vejo claramente a importância do git e as frameworks que trabalham o utilizando, as modificações continuas, o uso de várias versões e a importância de trabalhar com a mesma versão nas máquinas de todos os membros do projeto é de suma importancia a medida que o projeto cresce e tudo isso se encaixa no tema do controle de versão que é a premissa principal do git.  
+Como desenvolvedor de softwares vejo claramente a importância do git e as frameworks que trabalham o utilizando, as modificações continuas, o uso de várias versões e a importância de trabalhar com a mesma versão nas máquinas de todos os membros do projeto é de suma importancia a medida que o projeto cresce e tudo isso se encaixa no tema do controle de versão que é a premissa principal do git.<br/>  
 &nbsp;
-O git é o sistema de controle de versão mais utilizado no mundo, ele cria e trabalha com repositórios, esses que são responsavéis de armazenarem todas as linhas de código de uma aplicação, quando falamos em trabalhar em um repositório estamos falando de trabalhar diretamente em uma aplicação.  
+O git é o sistema de controle de versão mais utilizado no mundo, ele cria e trabalha com repositórios, esses que são responsavéis de armazenarem todas as linhas de código de uma aplicação, quando falamos em trabalhar em um repositório estamos falando de trabalhar diretamente em uma aplicação.<br/>
 &nbsp;
 Há diversas ferramentas que usam do git e armazenam repositórios em divesos servidores online, podemos citar 3 grandes plataformas que fornecem esse serviço: GitHub, GitLab e BitBucket. Elas possuem sim algumas diferenças, como o foco não é citar a melhor, a pior ou o defeito de cada uma, comentarei apenas sobre o GitHub. O GitHub é a plataforma mais popular que existe no setor, ela é uma ferramenta gratuita que possui uma gigantesca comunidade que compartilha códigos públicos e privados. Para se criar uma conta no GitHub é simples, basta pesquisar por GitHub no navegador, clicar na opção de criar nova conta, preencher o formulário e aceitar o email de confirmação, se tudo der certo você estará cadastrado e pronto para compartilhar repositórios com outras pessoas.  
-&nbsp;
 </p>
 
-* **Por onde começar?**  
 &nbsp;
+* **Por onde começar?**  
 <p>
 Primeiro de tudo faça o download das ferramentas, sendo elas o [git](https://git-scm.com/downloads) e um editor de texto. Download concluído é preciso criar uma pasta no editor de testo e abrir o terminal nela, com o comando git init é possível criar o repositório, tendo uma conta no GitHub será possível gerenciar esse repositório o enviando para lá com a sequência de comandos, git commit -m ".", git branch -M main, git remote add "link(que você receberá dentro do GitHub)" e git push -u Origin master.<br/>
 &nbsp;
 Toda vez que criar pastas ou arquivos é preciso usar o comando git add ., toda modificação feita é preciso usar o comando git commit -a -m "mensagem tal" e para enviar para o repositório remoto é preciso dar um git push. Para baixar modificações se utiliza o comando git pull e é possível ver o status usando o git status.  
-&nbsp;
 </p>
 
+&nbsp;
 * **Branch**
 <p>  
-É importante se falar das branches, essas são as ramificações de um projeto, dentro de um projeto possivelmente haverá funçãos ou layouts que serão testados, para que possa ocorrer modificações diretas no projeto que não comprometam sua funcionalidade atual é usado uma ramificação, a ramificação principal é chamada de main e nela que há o projeto funcional(cuidado para não há modificar sem querer), qualquer outra ramificação não é vista para o usuário final.  
+É importante se falar das branches, essas são as ramificações de um projeto, dentro de um projeto possivelmente haverá funçãos ou layouts que serão testados, para que possa ocorrer modificações diretas no projeto que não comprometam sua funcionalidade atual é usado uma ramificação, a ramificação principal é chamada de main e nela que há o projeto funcional(cuidado para não há modificar sem querer), qualquer outra ramificação não é vista para o usuário final.<br/> 
 &nbsp;
-Um bom exemplo de como utiliza-lás na prática de maneira saúdavel: imagine 3 desenvolvedores de um projeto web, um deles modificou a pasta css dentro de uma branch e enviou para o GitHub, outro modificou o arquivo index.html dentro de outra branch e também o enviou e o terceiro, sendo esse o responsável por alterar a main ele deu um push e gostou das modificações, apartir disso ele cópia com o código git merge as duas ramificações dentro da main. Apartir desse exemplo dá para ver que as ramificações podem ser utéis para que não hajá confusões nas modificações, se o primeiro dev precisasse fazer testes, esses teste ficariam apenas em sua ramificação.    
+Um bom exemplo de como utiliza-lás na prática de maneira saúdavel: imagine 3 desenvolvedores de um projeto web, um deles modificou a pasta css dentro de uma branch e enviou para o GitHub, outro modificou o arquivo index.html dentro de outra branch e também o enviou e o terceiro, sendo esse o responsável por alterar a main ele deu um push e gostou das modificações, apartir disso ele cópia com o código git merge as duas ramificações dentro da main. Apartir desse exemplo dá para ver que as ramificações podem ser utéis para que não hajá confusões nas modificações, se o primeiro dev precisasse fazer testes, esses teste ficariam apenas em sua ramificação.<br/> 
 </p>
 
 &nbsp;
 * **Comandos principais**  
-&nbsp;
 1. git init
     * Comando para criar um novo repositório, vai ser criado um pasta .git e um novo repo.
 2. git add (+ . ou o nome do arquivo/pasta)
