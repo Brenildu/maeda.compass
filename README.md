@@ -30,7 +30,7 @@ Há diversas ferramentas que usam do git e armazenam repositórios em divesos se
 * **Por onde começar?**  
 &nbsp;
 <p>
-Primeiro de tudo faça o download das ferramentas, sendo elas o [git](https://git-scm.com/downloads) e um editor de texto. Download concluído é preciso criar uma pasta no editor de testo e abrir o terminal nela, com o comando git init é possível criar o repositório, tendo uma conta no GitHub será possível gerenciar esse repositório o enviando para lá com a sequência de comandos, git commit -m ".", git branch -M main, git remote add "link(que você receberá dentro do GitHub)" e git push -u Origin master.  
+Primeiro de tudo faça o download das ferramentas, sendo elas o [git](https://git-scm.com/downloads) e um editor de texto. Download concluído é preciso criar uma pasta no editor de testo e abrir o terminal nela, com o comando git init é possível criar o repositório, tendo uma conta no GitHub será possível gerenciar esse repositório o enviando para lá com a sequência de comandos, git commit -m ".", git branch -M main, git remote add "link(que você receberá dentro do GitHub)" e git push -u Origin master.<br/>
 &nbsp;
 Toda vez que criar pastas ou arquivos é preciso usar o comando git add ., toda modificação feita é preciso usar o comando git commit -a -m "mensagem tal" e para enviar para o repositório remoto é preciso dar um git push. Para baixar modificações se utiliza o comando git pull e é possível ver o status usando o git status.  
 &nbsp;
