@@ -162,6 +162,7 @@ O basico da sintaxe do comando é seguir essa sequencia: comando -opções arqui
 
 ### Curso SQL
 
+![foto big data](img./sql_imagina.jpeg)
 &nbsp;
 
 1. Baixar e Instalar:
@@ -250,3 +251,98 @@ Representações gráficas de tabelas e suas conexões.
         * `ADD` para adicionar colunas.
         * `ALTER COLUMN` para alterar tipos de colunas.
         * `DROP COLUMN` para remover colunas.
+
+
+    
+### Curso Big DAta
+
+&nbsp;
+![foto big data](img./bigdata.jpeg)
+* **Introdução ao Big Data**
+<p>
+&nbsp;
+2.5 quitilhões de bytes dados por dia no mundo todo, quando falamos de big data estamos falando de um volume de dados muito grande, o big data de uma empresa x passa das casa dos terabytes, o volume de dados aumentou exponencialmente nos ultimos anos, 90% dos big datas foram gerados nos últimos 2 anos, 80% dos dados não são estruturados ou estão em formatos diferentes dificultando análise, dados gerados por uma pessoa em compras ou interações em redes sociais dão a característica de veracidade ,volume, velocidade, variedades, veracidade são características que ajudam a definir o termo. O cruzamento de informações do dia-a-dia tal, não apenas com celulares mas tal como a produção de dados por meio de geladeiras, relógios, carros e outros objetos se tornam massivas e estão sendo cruzadas e analisadas com técnicas e modelos preditivos para prever comportamentos e ações de um determinado grupo de pessoas ou empresas.</br>
+&nbsp;
+Com o crescimento da internet aumentou o volume dos dados, sempre produzimos dados, podemos dizer que o big data é um conjunto de dados amplos e que precisam de ferramentas específicas para conseguir extrair valor em tempo hábil. É de forma simples a análise precisa de um padrão de comportamento que não seria possível em pequenas quantidades de dados, no big data pode se chegar na causalidade do problema.</br>
+<ul>
+  <li><strong>Os 4 Vs:</strong></li>
+  <ul>
+    <li>volume: quantidade de dados</li>
+    <li>variedade: formato dos dados</li>
+    <li>velocidade: geração de dados</li>
+  </ul>
+</ul>
+</p>
+
+1. **Características do Big Data**
+    * importante ressaltar novamente os 4 Vs: Volume, Variedade, Velocidade e Veracidade.
+    * Ampliação da Variedade: Dados provêm de diferentes fontes e têm variados formatos.
+    * Velocidade de Geração: Dados são criados em alta velocidade.
+    * Veracidade dos Dados: Foco na confiabilidade dos dados.
+    * Cruzamento de Dados: Combinação de informações para prever comportamentos.
+
+2. **Sistema de Armazenamento de Dados**
+
+    * **Volume no Big Data:** Volume é crucial; necessidade de armazenar e acessar grandes quantidades de dados.
+    1. *Data Warehouse:* Armazenamento de dados estruturados.
+    2. *Data Lake:* Armazenamento de dados brutos e não estruturados.
+    3. *Armazenamento Híbrido:* Pode envolver formatos brutos e estruturados.
+
+    * **Bancos de Dados Relacionais e Não Relacionais**
+        1. **Bancos Relacionais:** Estruturados com tabelas e esquemas.
+        2. **Bancos Não Relacionais:** Dados sem esquema pré-definido; variedade de formatos.
+
+3. **Data Warehouse e Data Lake**
+
+    * *Data Warehouse*: Sistema de armazenamento que conecta e harmoniza grandes quantidades de dados de muitas fontes diferentes
+        1. Objetivo: entregar soluções e análises de tomada de decisões a partir dos dados armazenados no dw, ajudar o tomador de decisão.
+        2. beneficios: Melhor análise de negócios: várias fontes para tomada de decisão, Consulta mais rápidas: consulta de um grande volume de dados, Mais qualidade no dados: os dados são limpos antes de serem armazenados, Visão histórica: facilidade em gerar aprendizado com dados passados
+
+    * *Data Lake*: O inverso do data warehouse, é carregado os dados brutos e depois feito a limpeza caso precise, não são perdidos dados nesse primeiro armazenamento, ao contrário do que pode ocorrer no anterior.
+        1. Objetivo: O DL abraça a ideia da velocidade. Os dl permitem várias percepções nos dados nas análises. Importante de evitar o pantano de dados, que são excesso de dados que não são possam ser confiáveis ou encontrados, lixo, é preciso de maquinismo para catalogar e proteger os dados
+        2. beneficios: Armazenamento em dados brutos: não é preciso limpar os dados, velocidade, Importação de qualquer tipo de dados em tempo real: Repositório central para todos os dados da empresa, Sem necessário movimentação de dados: algumas ferramentas têm conexões diretas no DL
+
+
+4. **Armazenamento em Paralelo**
+    &nbsp;
+    <p>O armazenamento paralelo é a ideia de utilizar mais de uma máquina para os dados, permitindo aumentar de forma considerável a capacidade de armazenamento, O Software que será responsável na manutenção em computadores pessoais(sistema de arquivos) e para a parte em paralelo temos o Apache Hadoop, ele gerencia e envia cada arquivo em um local no cluster, um app de código aberto que espera que ocorra algum erro. Com o HDFS se pode construir um data Lake sobre um cluster permitindo de usar o big data em larga escala de forma segura e sem perda de dados. </p>
+
+    * Necessidade de Escalabilidade: Uso de várias máquinas em paralelo.
+    * Cluster de Servidores: Conjunto de servidores para maior capacidade.
+    * Apache Hadoop: Gerenciamento de armazenamento paralelo.
+    * HDFS e MapReduce: Componentes para armazenamento e processamento.
+
+5. Cloud Computing
+    * Conceito: acesso à nuvem por um fornecedor pelo um x valor já combinado, entrega de serviços de computação pela internet(nuvem) visando flexibilidade, inovação e economia. A estrutura local já não faz mais sentido, vale mais a pena o uso desse serviço.
+    * Acesso à Nuvem: Uso de serviços de computação pela internet.
+    * Vantagens: Escalabilidade, inovação e economia.
+    * Principais Provedores: [AWS](https://aws.amazon.com/pt/free/?trk=2ee11bb2-bc40-4546-9852-2c4ad8e8f646&sc_channel=ps&ef_id=CjwKCAjw5_GmBhBIEiwA5QSMxCOakvB_2FZ7TXElHDSgl_fKFzjRi_aPsgQk5RMSsSiApFdePfOElBoCSXIQAvD_BwE:G:s&s_kwcid=AL!4422!3!561843094929!e!!g!!aws!15278604629!130587771740&all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all), [Microsoft Azure](https://azure.microsoft.com/pt-br/free/search/?ef_id=_k_CjwKCAjw5_GmBhBIEiwA5QSMxCcXNCJjgQl9sKHixZ88PR6i8AgPVBBe_fNTcnjYVwxZSWNZknMJohoCXTkQAvD_BwE_k_&OCID=AIDcmmzmnb0182_SEM__k_CjwKCAjw5_GmBhBIEiwA5QSMxCcXNCJjgQl9sKHixZ88PR6i8AgPVBBe_fNTcnjYVwxZSWNZknMJohoCXTkQAvD_BwE_k_&gclid=CjwKCAjw5_GmBhBIEiwA5QSMxCcXNCJjgQl9sKHixZ88PR6i8AgPVBBe_fNTcnjYVwxZSWNZknMJohoCXTkQAvD_BwE), [Google Cloud](https://cloud.google.com/?utm_source=google&utm_medium=cpc&utm_campaign=latam-BR-all-pt-dr-BKWS-all-all-trial-e-dr-1605194-LUAC0010101&utm_content=text-ad-none-any-DEV_c-CRE_512285710743-ADGP_Hybrid+%7C+BKWS+-+EXA+%7C+Txt+~+GCP_General-KWID_43700062788251521-kwd-301173107424&utm_term=KW_google%20cloud-ST_Google+Cloud&gclid=CjwKCAjw5_GmBhBIEiwA5QSMxHbsiYHny_zJ77hdtHyx5XdvavKMM4JYXyLTTZpcio_gmTnO9DWG1BoClZQQAvD_BwE&gclsrc=aw.ds), entre outros.
+
+6. MLOps e DataOps
+
+    * *Machine Learning* (ML): Imitação do aprendizado humano com dados e algoritmos.
+    * *MLOps*: é um conjunto de práticas para colaboração e comunicação entre os desenvolvedores e cientistas de dados, aumentando a qualidade, simplifica processos e automatiza as implementações de modelos. Unifica o desenvolvimentos dos sistemas ML(dev) e suas implementações (ops) padronizando e agilizando a entrega, tratando o processo de aprendizado mais formal
+    * *DataOps*: Metodologia ágil e de processos para desenvolvimento de entrega analítica, fornece frameworks, processos e estruturas para apoiar em relação aos dados. DataOps habilita soluções, desenvolve produto de dados e ativa dados para valor comercial. Linha de produção onde a matéria prima são os dados e o produto final é um resultado reproduzível uma analytics.
+    * *DevOps*: Abordagem de desenvolvimento de software que visa acelerar o ciclo de vida de uma construção automatizando o processo, implementação contínua do software aproveitando recursos de ti, código e testes. Empresas aceleraram suas entregas de meses para segundos
+
+7. Data as a Service (DaaS), Data LakeHouse e Data Mesh
+
+    * Estratégia DaaS: Gerenciamento de dados como ativos de negócios.
+    * Arquitetura:Uma diversificação de dados espalhados em uma variedade de fontes sendo chamados por uma API quando solicitado,Fornece conjuntos de dados já tratados ou um fluxo de dados preparados para serem consumidos
+
+    * Benefícios: Redução de custos, inovação, monetização dos dados.
+    * *Data LakeHouse:* Fusão de Data Warehouse e Data Lake.
+    * *Data Mesh:* é um tipo de arquitetura de plataforma de dados que abrange a onipresença dos dados na empresa, permitindo um design orientado ao domínio e de auto atendimento, uma arquitetura totalmente descentralizada. É uma arquitetura orientada a domínios, separando cada domínio para um time responsável, com os blocos de construções de construções fundamentais de uma malha. Cada domínio é armazenado em um Data Lake 
+
+8. ETL - Extração, Transformação e Carga de Dados
+
+    * *Processo ETL:* Refinamento de dados para obter informações úteis.
+    * *ETL vs. ELT:* Comparação de ordem das etapas.
+    * *AWS Glue:* Ferramenta para ETL em nuvem.
+
+9. Big Data na Prática
+
+    * Business Case: definição do objetivo de um projeto
+    * Planejamento do projeto: determinar requisitos de negócio,, alinhar expectativas e definir métricas de sucesso e marcos de tempo
+    * Requisitos técnicos: definir objetivos, ferramentas de análises, material humano, abordagens, técnicas, arquitetura de documentação;
+    * Criação de um Total business value assessment: Pensar no retorno de valor que o projeto irá gerar, qual o tempo útil, suporte e manutenção, alterar o modelo de trabalho para trabalhar com Big Data, 
