@@ -168,8 +168,10 @@ O basico da sintaxe do comando é seguir essa sequencia: comando -opções arqui
 1. Baixar e Instalar:
     * Baixar e instalar o pgAdmin, software gráfico para administração do PostgreSQL.
     * Baixar e instalar o PostgreSQL, sistema gerenciador de banco de dados (SGBD) com SQL.
+    * [link](https://www.postgresql.org) 
 
 2. Configuração do Banco de Dados:
+
 
     * Rodar um script para criar tabelas a serem usadas no curso.
 
