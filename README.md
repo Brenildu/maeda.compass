@@ -162,7 +162,7 @@ O basico da sintaxe do comando é seguir essa sequencia: comando -opções arqui
 
 ### Curso SQL
 
-![foto big data](img./sql_imagina.jpeg)
+![foto big data](img./sql_img.jpg)
 &nbsp;
 
 1. Baixar e Instalar:
@@ -346,3 +346,6 @@ Com o crescimento da internet aumentou o volume dos dados, sempre produzimos dad
     * Planejamento do projeto: determinar requisitos de negócio,, alinhar expectativas e definir métricas de sucesso e marcos de tempo
     * Requisitos técnicos: definir objetivos, ferramentas de análises, material humano, abordagens, técnicas, arquitetura de documentação;
     * Criação de um Total business value assessment: Pensar no retorno de valor que o projeto irá gerar, qual o tempo útil, suporte e manutenção, alterar o modelo de trabalho para trabalhar com Big Data, 
+
+
+### [Desafio](https://github.com/Brenildu/maeda.compass/tree/main/Sprint_2/desafio)
