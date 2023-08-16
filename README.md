@@ -165,87 +165,88 @@ O basico da sintaxe do comando é seguir essa sequencia: comando -opções arqui
 &nbsp;
 
 1. Baixar e Instalar:
-
-- Baixar e instalar o pgAdmin, software gráfico para administração do PostgreSQL.
-- Baixar e instalar o PostgreSQL, sistema gerenciador de banco de dados (SGBD) com SQL.
+    * Baixar e instalar o pgAdmin, software gráfico para administração do PostgreSQL.
+    * Baixar e instalar o PostgreSQL, sistema gerenciador de banco de dados (SGBD) com SQL.
 
 2. Configuração do Banco de Dados:
 
-- Rodar um script para criar tabelas a serem usadas no curso.
+    * Rodar um script para criar tabelas a serem usadas no curso.
 
-### Diagramas:
-
-- Representações gráficas de tabelas e suas conexões.
-
-### Pontos Importantes:
+**Diagramas**:
+&nbsp;
+Representações gráficas de tabelas e suas conexões.
+&nbsp;
+**Pontos Importantes**:
 
 - Usar aspas simples para textos e aspas duplas para nomes de colunas.
 - `AS` para pseudônimos de colunas.
 - Formato de datas: ano/mês/dia.
 - `current_date` retorna a data atual.
+&nbsp;
+1. Comandos essenciais:
 
-3. Comandos Selecionados:
+    * `SELECT`: selecionar colunas de tabelas.
+    * `DISTINCT`: mostrar apenas linhas distintas.
+    * `WHERE`: filtrar linhas com base em condições.
+    * `ORDER BY`: ordenar colunas.
+    * `LIMIT`: limitar número de linhas retornadas.
 
-- `SELECT`: selecionar colunas de tabelas.
-- `DISTINCT`: mostrar apenas linhas distintas.
-- `WHERE`: filtrar linhas com base em condições.
-- `ORDER BY`: ordenar colunas.
-- `LIMIT`: limitar número de linhas retornadas.
+2. Funções de Agregação:
 
-* Operadores Aritméticos, de Comparação e Lógicos.
+    * `COUNT()`: conta as linhas.
+    * `SUM()`: opera a soma.
+    * `MIN()`: devolve o mínimo valor de uma coluna.
+    * `MAX()`: devolve o maior valor de uma coluna.
+    * `AVG()`: realiza a média.
 
-* Funções de Agregação:
+3. GROUP BY e HAVING:
 
-- `COUNT()`: contar linhas.
-- `SUM()`: soma.
-- `MIN()`: mínimo.
-- `MAX()`: máximo.
-- `AVG()`: média.
+    * agrupa os registros semelhantes de uma coluna.    
+    * Filtra linhas da seleção por uma coluna agrupada possui a mesma função do where mas pode filtrar funções agregadas e não agregadas
 
-* GROUP BY e HAVING:
+4. Joins:
 
-- Agrupar registros semelhantes.
-- Filtrar por colunas agrupadas.
+    * `LEFT JOIN`, `INNER JOIN`, `RIGHT JOIN`, `FULL JOIN`.
+    * Combinação de dados de diferentes tabelas, sendo em sequência: a primeira tabela junto com o match da segunda, a segunda tabela junto com o match da primeira, só os match das duas e as duas tabelas combinadas 
 
-* Joins:
+5. Union:
 
-- `LEFT JOIN`, `INNER JOIN`, `RIGHT JOIN`, `FULL JOIN`.
-- Combinação de dados de diferentes tabelas.
+    * `UNION`  so adiciona na tabela1 as linhas diferentes que estiverem na linha 2
+    * `UNION ALL`faz a união da tabela 1 e no final dela faz a cola da tabela 2
 
-* Union:
+6. Subqueries:
 
-- `UNION` e `UNION ALL` para combinar tabelas.
+    * São query que podem ser trabalhadas dentro de outras
+    * `WITH` é possível escrever subquery diretos no from, so que escrever no with da mais organização
+    * Subqueries podem ser usadas em diferentes partes.
 
-* Subqueries:
+7. Tipos de Conversão:
 
-- Consultas dentro de outras.
-- `WITH` para uso organizado.
-- Subqueries podem ser usadas em diferentes partes.
+    * Operador `::` e `CAST`
+    * O operador é mais utilizado e simples de se entender, porém em algumas situações ele não funcionará e aí que entra o uso do cast que opera a mesma função.
 
-* Tipos de Conversão:
+8. Tratamento de Dados:
 
-- Operador `::` e `CAST` para conversões.
+    * `CASE WHEN` para respostas específicas.
+    * `COALESCE` para valores não nulos.
+    * Funções como `LOWER`, `UPPER`, `TRIM`, `REPLACE` auxiliam a transformar strings, cada qual tendo sua função
 
-* Tratamento de Dados:
+9. Comandos de Tratamento de Data:
 
-- `CASE WHEN` para respostas específicas.
-- `COALESCE` para valores não nulos.
-- Funções como `LOWER`, `UPPER`, `TRIM`, `REPLACE`.
+    * `INTERVAL`, opera soma de datas, caso não especifique somará em dias
+    * `DATE_TRUNC`, trunca uma data no início do período
+    * `EXTRACT`,  extrai unidades de uma data
+    * `DATE_DIFF`. calcula a diferença entre datas alterando a unidade
 
-* Comandos de Tratamento de Data:
+10. Criar Tabelas e Manipular Linhas e Colunas:
 
-- `INTERVAL`, `DATE_TRUNC`, `EXTRACT`, `DATE_DIFF`.
+    * `CREATE TABLE` para criar tabelas.
+    * `INSERT INTO` para adicionar linhas.
+    * `UPDATE` para atualizar linhas.
+    * `DELETE FROM` para deletar linhas.
+    * `ALTER TABLE` para modificar tabelas.
 
-* Criar Tabelas e Manipular Linhas e Colunas:
-
-- `CREATE TABLE` para criar tabelas.
-- `INSERT INTO` para adicionar linhas.
-- `UPDATE` para atualizar linhas.
-- `DELETE FROM` para deletar linhas.
-- `ALTER TABLE` para modificar tabelas.
-
-* Manusear Colunas:
-
-- `ADD` para adicionar colunas.
-- `ALTER COLUMN` para alterar tipos de colunas.
-- `DROP COLUMN` para remover colunas.
+    1. Manusear Colunas:
+        * `ADD` para adicionar colunas.
+        * `ALTER COLUMN` para alterar tipos de colunas.
+        * `DROP COLUMN` para remover colunas.
