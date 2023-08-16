@@ -15,7 +15,7 @@ Escolhi passar pelo programa para ter um noção básica do mercado de trabalho 
 # Marco Atual
 
 - [x] Sprint 1
-- [ ] Sprint 2
+- [x] Sprint 2
 - [ ] Sprint 3
 - [ ] Sprint 4
 - [ ] Sprint 5
@@ -157,3 +157,95 @@ O basico da sintaxe do comando é seguir essa sequencia: comando -opções arqui
 5. Gerenciamento de Redes
     * Fundamentos teóricos podem ser executados dentro do terminal do Linux 
 
+
+## Sprint 2
+
+### Curso SQL
+
+&nbsp;
+
+1. Baixar e Instalar:
+
+- Baixar e instalar o pgAdmin, software gráfico para administração do PostgreSQL.
+- Baixar e instalar o PostgreSQL, sistema gerenciador de banco de dados (SGBD) com SQL.
+
+2. Configuração do Banco de Dados:
+
+- Rodar um script para criar tabelas a serem usadas no curso.
+
+### Diagramas:
+
+- Representações gráficas de tabelas e suas conexões.
+
+### Pontos Importantes:
+
+- Usar aspas simples para textos e aspas duplas para nomes de colunas.
+- `AS` para pseudônimos de colunas.
+- Formato de datas: ano/mês/dia.
+- `current_date` retorna a data atual.
+
+3. Comandos Selecionados:
+
+- `SELECT`: selecionar colunas de tabelas.
+- `DISTINCT`: mostrar apenas linhas distintas.
+- `WHERE`: filtrar linhas com base em condições.
+- `ORDER BY`: ordenar colunas.
+- `LIMIT`: limitar número de linhas retornadas.
+
+* Operadores Aritméticos, de Comparação e Lógicos.
+
+* Funções de Agregação:
+
+- `COUNT()`: contar linhas.
+- `SUM()`: soma.
+- `MIN()`: mínimo.
+- `MAX()`: máximo.
+- `AVG()`: média.
+
+* GROUP BY e HAVING:
+
+- Agrupar registros semelhantes.
+- Filtrar por colunas agrupadas.
+
+* Joins:
+
+- `LEFT JOIN`, `INNER JOIN`, `RIGHT JOIN`, `FULL JOIN`.
+- Combinação de dados de diferentes tabelas.
+
+* Union:
+
+- `UNION` e `UNION ALL` para combinar tabelas.
+
+* Subqueries:
+
+- Consultas dentro de outras.
+- `WITH` para uso organizado.
+- Subqueries podem ser usadas em diferentes partes.
+
+* Tipos de Conversão:
+
+- Operador `::` e `CAST` para conversões.
+
+* Tratamento de Dados:
+
+- `CASE WHEN` para respostas específicas.
+- `COALESCE` para valores não nulos.
+- Funções como `LOWER`, `UPPER`, `TRIM`, `REPLACE`.
+
+* Comandos de Tratamento de Data:
+
+- `INTERVAL`, `DATE_TRUNC`, `EXTRACT`, `DATE_DIFF`.
+
+* Criar Tabelas e Manipular Linhas e Colunas:
+
+- `CREATE TABLE` para criar tabelas.
+- `INSERT INTO` para adicionar linhas.
+- `UPDATE` para atualizar linhas.
+- `DELETE FROM` para deletar linhas.
+- `ALTER TABLE` para modificar tabelas.
+
+* Manusear Colunas:
+
+- `ADD` para adicionar colunas.
+- `ALTER COLUMN` para alterar tipos de colunas.
+- `DROP COLUMN` para remover colunas.

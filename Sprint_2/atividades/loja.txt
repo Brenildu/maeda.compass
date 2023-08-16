@@ -1,0 +1,167 @@
+Atividade Loja
+
+
+--Ex 8
+--Apresente a query para listar o código e o nome do vendedor com maior número de vendas (contagem), e que
+--estas vendas estejam com o status concluída. As colunas presentes no resultado devem ser, portanto, cdvdd e nmvdd.
+select *
+from tbvendas
+with
+	vendedor_mais_vendas as(
+		select
+			tbvendedor.cdvdd,
+			tbvendedor.nmvdd
+		from tbvendedor
+		left join tbvendas
+			on tbvendedor.cdvdd = tbvendas.cdvdd
+		where tbvendas.status = "Concluído"
+		group by tbvendedor.cdvdd
+		order by count(*) desc
+		limit 1
+	),
+	
+--Ex 9
+--Apresente a query para listar o código e nome do produto mais vendido entre as datas de 2014-02-03 até 2018-02-02,
+--e que estas vendas estejam com o status concluída. As colunas presentes no resultado devem ser cdpro e nmpro.
+	produto_mais_vendido_2014_2018 as(
+		SELECT
+			tbvendas.cdpro,
+			tbvendas.nmpro
+		from tbvendas
+		where tbvendas.dtven BETWEEN '2014-02-03' and '2018-02-02'
+		group by tbvendas.cdpro
+		order by count(*) desc
+		limit 1
+		
+	),
+--Ex 10
+--A comissão de um vendedor é definida a partir de um percentual sobre o total de vendas (quantidade * valor unitário)
+--por ele realizado. O percentual de comissão de cada vendedor está armazenado na coluna perccomissao, tabela tbvendedor.
+--Com base em tais informações, calcule a comissão de todos os vendedores, considerando todas as vendas armazenadas na
+--base de dados com status concluído.As colunas presentes no resultado devem ser vendedor, valor_total_vendas e comissao.
+--O valor de comissão deve ser apresentado em ordem decrescente arredondado na segunda casa decimal.
+	
+	comissao_vendedor as(
+		select
+		 tbvendedor.nmvdd as vendedor,
+		 sum(tbvendas.qtd * tbvendas.vrunt) as valor_total_vendas,
+		 Round(sum(tbvendas.qtd * tbvendas.vrunt * tbvendedor.perccomissao / 100), 2) as comissao
+		from tbvendedor
+		left join tbvendas
+		 on tbvendedor.cdvdd = tbvendas.cdvdd
+		where tbvendas.status = "Concluído"
+		group by vendedor
+		order by comissao desc
+	),
+--Ex 11
+--Apresente a query para listar o código e nome cliente com maior gasto na loja. As colunas presentes no resultado
+--devem ser cdcli, nmcli e gasto, esta última representando o somatório das vendas (concluídas) atribuídas ao cliente.	
+	SELECT *
+	from tbvendas
+	
+	cliente_maior_gasto as(
+		SELECT
+			tbvendas.cdcli,
+			tbvendas.nmcli,
+			SUM(tbvendas.qtd * tbvendas.vrunt )as gasto
+		from tbvendas
+		WHERE tbvendas.status = "Concluído"
+		GROUP by tbvendas.cdcli
+		order by gasto desc
+		limit 1
+		
+	),
+	
+--Ex 12
+--Apresente a query para listar código, nome e data de nascimento dos dependentes do vendedor com menor valor total
+--bruto em vendas (não sendo zero). As colunas presentes no resultado devem ser cddep, nmdep, dtnasc e valor_total_vendas.
+--Observação: Apenas vendas com status concluído.
+	
+	with
+	vendedor_menos_vendas as(
+		select
+			tbvendedor.cdvdd,
+			tbvendedor.nmvdd,
+			SUM(tbvendas.qtd * tbvendas.vrunt )as valor_total_vendas
+		from tbvendas
+		left join tbvendedor
+			on tbvendas.cdvdd = tbvendedor.cdvdd
+		WHERE tbvendas.status = "Concluído"
+		GROUP by tbvendedor.cdvdd
+		order by valor_total_vendas
+		limit 1
+	)
+	SELECT
+		tbdependente.cddep,
+		tbdependente.nmdep,
+		tbdependente.dtnasc,
+		vendedor_menos_vendas.valor_total_vendas
+	from vendedor_menos_vendas
+	left join tbdependente
+		on vendedor_menos_vendas.cdvdd = tbdependente.cdvdd
+	
+--Ex 13
+--Apresente a query para listar os 10 produtos menos vendidos pelos canais de E-Commerce ou Matriz (Considerar apenas
+--vendas concluídas). As colunas presentes no resultado devem ser cdpro, nmcanalvendas, nmpro e quantidade_vendas.
+	with
+		produtos_menos_vendidos as(
+			SELECT
+				tbvendas.cdpro,
+				tbvendas.nmcanalvendas,
+				tbvendas.nmpro,
+				SUM(tbvendas.qtd) AS quantidade_vendas
+			from tbvendas
+			where tbvendas.status = "Concluído"
+			group by tbvendas.cdpro, nmcanalvendas
+			order by quantidade_vendas
+			limit 10
+		),
+		
+--Ex 14
+--Apresente a query para listar o gasto médio por estado da federação. As colunas presentes no resultado devem ser
+--estado e gastomedio. Considere apresentar a coluna gastomedio arredondada na segunda casa decimal e ordenado de forma
+-- decrescente.
+--Observação: Apenas vendas com status concluído.
+		gasto_medio_estado as (
+			SELECT
+				tbvendas.estado,
+				ROUND(AVG(tbvendas.qtd * tbvendas.vrunt ), 2) as gastomedio
+			from tbvendas
+			where tbvendas.status = "Concluído"
+			group by tbvendas.estado
+			order by gastomedio desc
+			
+		),
+		
+		
+--Ex 15
+--Apresente a query para listar os códigos das vendas identificadas como deletadas.
+--Apresente o resultado em ordem crescente.
+	
+			SELECT * from tbvendas
+		
+		codigos_deletados as(
+			SELECT
+				tbvendas.cdven
+			from tbvendas
+			WHERE tbvendas.deletado = 1
+			group by tbvendas.cdven
+			ORDER by tbvendas.cdven
+		),
+	
+--Ex 16
+--Apresente a query para listar a quantidade média vendida de cada produto agrupado por estado da federação.
+--As colunas presentes no resultado devem ser estado e nmprod e quantidade_media. Considere arredondar o valor da coluna
+--quantidade_media na quarta casa decimal. Ordene os resultados pelo estado (1º) e nome do produto (2º).
+	quantidade_media_estado as (
+		SELECT
+			tbvendas.estado,
+			tbvendas.nmpro,
+			ROUND(AVG(tbvendas.qtd), 4) as quantidade_media
+		from tbvendas
+		where tbvendas.status = "Concluído"
+		group by tbvendas.estado, tbvendas.nmpro
+		order by tbvendas.estado
+	),
+	
+

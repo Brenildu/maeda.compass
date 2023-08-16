@@ -1,0 +1,129 @@
+Atividades
+
+-- EX 1
+select
+livro.cod,
+livro.titulo,
+livro.autor,
+livro.editora,
+livro.valor,
+livro.publicacao,
+livro.edicao,
+livro.idioma
+from livro
+where livro.publicacao >= '2015-01-01'
+order by livro.cod
+--EX 2
+--Apresente a query para listar os 10 livros mais caros.
+--Ordenar as linhas pela coluna valor, em ordem decrescente.
+--Atenção às colunas esperadas no resultado final: titulo, valor.
+select
+livro.titulo,
+livro.valor
+from livro
+order by livro.valor desc
+limit 10
+--EX 3
+--Apresente a query para listar as 5 editoras com mais livros na biblioteca.
+--O resultado deve conter apenas as colunas quantidade, nome, estado e cidade.
+--Ordenar as linhas pela coluna que representa a quantidade de livros em ordem decrescente.
+with
+	editora_qntd as(
+		select
+			count(*) as qntd,
+			editora.nome as nome,
+			endereco.estado as estado,
+			endereco.cidade as cidade
+		from livro
+		left join editora
+			on lower(livro.editora) = lower(editora.codeditora)
+		left join endereco
+			on endereco.codendereco = editora.endereco
+		group by editora.nome
+		order by qntd desc
+	)
+select
+	editora_qntd.qntd as "quantidades",
+	editora_qntd.nome,
+	editora_qntd.estado,
+	editora_qntd.cidade
+from editora_qntd
+limit 5
+--EX 4
+--Apresente a query para listar a quantidade de livros publicada por cada autor.
+--Ordenar as linhas pela coluna nome (autor), em ordem crescente. Além desta, apresentar as colunas codautor,
+--nascimento e quantidade (total de livros de sua autoria).
+select *
+from autor
+left join livro
+	on livro.cod = autor.codautor
+with
+	livro_autor as(
+		select
+		autor.nome as nome,
+		autor.codautor as codautor,
+		autor.nascimento as nascimento,
+		case
+			when livro.titulo is null then 0
+			else count(*) end as quantidade
+		from autor
+		left join livro
+			on livro.autor = autor.codautor
+		group by nome, codautor, nascimento
+		order by nome
+	)
+select
+	livro_autor.nome,
+	livro_autor.codautor,
+	livro_autor.nascimento,
+	livro_autor.quantidade
+from livro_autor
+--Ex 5
+--Apresente a query para listar o nome dos autores que publicaram livros através de editoras NÃO situadas na região sul
+--do Brasil. Ordene o resultado pela coluna nome, em ordem crescente. Não podem haver nomes repetidos em seu retorno.
+	
+	livro_not_sul as(
+		select
+			autor.nome as nome
+		from livro
+		left join editora
+			on livro.editora = editora.codeditora
+		left join endereco
+			on editora.endereco = endereco.codendereco
+		left join autor
+			on autor.codautor = livro.autor
+		where endereco.estado NOT in ('PARANÁ', 'RIO GRANDE DO SUL', 'SANTA CATARINA')
+		group by autor.nome
+	),
+	
+--Ex 6
+--Apresente a query para listar o autor com maior número de livros publicados.
+--O resultado deve conter apenas as colunas codautor, nome, quantidade_publicacoes.
+	autor_mais_publicacoes as(
+		select
+			autor.codautor as codautor,
+			autor.nome as nome,
+			count(*) as "quantidade_publicacoes"
+		from livro
+		left join autor
+			on autor.codautor = livro.autor
+		group by autor.nome
+		order by "quantidade_publicacoes" desc
+		limit 1
+	),
+	
+--Ex 7
+--Apresente a query para listar o nome dos autores com nenhuma publicação. Apresentá-los em ordem crescente.
+	autor_sem_publicacoes as(
+		select
+			autor.nome as nome
+		from autor
+		left join livro
+			on livro.autor = autor.codautor
+		where livro.titulo is null
+		group by autor.nome
+		order by autor.nome
+	),
+
+
+

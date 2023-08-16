@@ -1,0 +1,45 @@
+--Desafio
+--Exportar o resultado da query que obtém os 10 livros mais caros para um arquivo CSV. Utilizar o caractere ;
+--(ponto e vírgula) como separador. Lembre-se que o conteúdo do seu arquivo deverá respeitar a sequência de
+--colunas e seus respectivos nomes de cabeçalho que listamos abaixo:
+--CodLivro Titulo CodAutor NomeAutor Valor CodEditora NomeEditora
+
+
+SELECT
+	livro.cod CodLivro,
+	livro.titulo Titulo,
+	livro.autor CodAutor,
+	autor.nome NomeAutor,
+	livro.valor Valor,
+	livro.editora CodEditora,
+	editora.nome NomeEditora
+from livro
+left join autor
+	on livro.autor = autor.codautor
+left join editora
+	on livro.editora = editora.codeditora
+group by CodLivro, Titulo, CodAutor
+order by valor DESC
+limit 10
+
+
+--Exportar o resultado da query que obtém as 5 editoras com maior quantidade de livros
+--na biblioteca para um arquivo CSV. Utilizar o caractere | (pipe) como separador.
+--Lembre-se que o conteúdo do seu arquivo deverá respeitar a sequência de colunas e
+--seus respectivos nomes de cabeçalho que listamos abaixo:
+--CodEditora NomeEditora QuantidadeLivros
+
+
+select *
+from livro
+select
+	editora.codeditora || '|' as "CodEditora|",
+	editora.nome || '|' as "NomeEditorame|",
+	count(*) || '|' as "QuantidadeLivros|"
+from livro
+left join editora
+	on lower(livro.editora) = lower(editora.codeditora)
+group by "CodEditora|"
+order by "QuantidadeLivros|" desc
+limit 5
+
