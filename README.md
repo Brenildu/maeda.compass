@@ -162,7 +162,7 @@ O basico da sintaxe do comando é seguir essa sequencia: comando -opções arqui
 
 ### Curso SQL
 
-![foto big data](img./sql_img.jpg)
+![foto sql](img/sql_img.jpg)
 &nbsp;
 
 1. Baixar e Instalar:
@@ -257,7 +257,7 @@ Representações gráficas de tabelas e suas conexões.
 ### Curso Big DAta
 
 &nbsp;
-![foto big data](img./bigdata.jpeg)
+![foto big data](img/bigdata.jpeg)
 * **Introdução ao Big Data**
 <p>
 &nbsp;
@@ -348,4 +348,4 @@ Com o crescimento da internet aumentou o volume dos dados, sempre produzimos dad
     * Criação de um Total business value assessment: Pensar no retorno de valor que o projeto irá gerar, qual o tempo útil, suporte e manutenção, alterar o modelo de trabalho para trabalhar com Big Data, 
 
 
-### [Desafio](https://github.com/Brenildu/maeda.compass/tree/main/Sprint_2/desafio)
+### [Desafio](https://github.com/Brenildu/maeda.compass/tree/main/Sprint_2/desafio) *link*
