@@ -1,0 +1,11 @@
+Atores com maiores médias de bilheterias: 
+1- Anthony Daniels: 451.8
+2- Orlando Bloom: 165.6
+3- Emma Watson: 157.8
+4- Daniel Radcliffe: 155.0
+5- Will Smith: 131.2
+6- Andy Serkis: 125.7
+7- Jeremy Renner: 119.1
+8- Harrison Ford: 118.8
+9- Chris Evans: 106.9
+10- Bradley Cooper: 102.3

@@ -1,0 +1,52 @@
+1- Harrison Ford - 4871.7.
+2- Samuel L. Jackson - 4772.8.
+3- Morgan Freeman - 4468.3.
+4- Tom Hanks - 4340.8.
+5- Robert Downey, Jr. - 3947.3.
+6- Eddie Murphy - 3810.4.
+7- Tom Cruise - 3587.2.
+8- Johnny Depp - 3368.6.
+9- Michael Caine - 3351.5.
+10- Scarlett Johansson - 3341.2.
+11- Gary Oldman - 3294.0.
+12- Robin Williams - 3279.3.
+13- Bruce Willis - 3189.4.
+14- Stellan Skarsgard - 3175.0.
+15- Anthony Daniels - 3162.9.
+16- Ian McKellen - 3150.4.
+17- Will Smith - 3149.1.
+18- Stanley Tucci - 3123.9.
+19- Matt Damon - 3107.3.
+20- Robert DeNiro - 3081.3.
+21- Cameron Diaz - 3031.7.
+22- Liam Neeson - 2942.7.
+23- Andy Serkis - 2890.6.
+24- Don Cheadle - 2885.4.
+25- Ben Stiller - 2827.0.
+26- Helena Bonham Carter - 2822.0.
+27- Orlando Bloom - 2815.8.
+28- Woody Harrelson - 2815.8.
+29- Orlando Bloom - 2815.8.
+30- Woody Harrelson - 2815.8.
+31- Cate Blanchett - 2802.6.
+32- Julia Roberts - 2735.3.
+33- Elizabeth Banks - 2726.3.
+34- Ralph Fiennes - 2715.3.
+35- Emma Watson - 2681.9.
+36- Tommy Lee Jones - 2681.3.
+37- Brad Pitt - 2680.9.
+38- Adam Sandler - 2661.0.
+39- Daniel Radcliffe - 2634.4.
+40- Jonah Hill - 2605.1.
+41- Owen Wilson - 2602.3.
+42- Idris Elba - 2580.6.
+43- Bradley Cooper - 2557.7.
+44- Mark Wahlberg - 2549.8.
+45- Jim Carrey - 2545.2.
+46- Dustin Hoffman - 2522.1.
+47- Leonardo DiCaprio - 2518.3.
+48- Jeremy Renner - 2500.3.
+49- Philip Seymour Hoffman - 2463.7.
+50- Sandra Bullock - 2462.6.
+51- Chris Evans - 2457.8.
+52- Anne Hathaway - 2416.5.
