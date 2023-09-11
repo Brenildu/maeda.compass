@@ -12,18 +12,19 @@ Sobre hobbies, começo pelos esportes, sou enxadrista amador, já disputei algun
 
 Escolhi passar pelo programa para ter um noção básica do mercado de trabalho (sou muito inseguro em não ser um bom profissional no futuro). Ciente que sou uma pessoa que procrastina bastante, luto muito para melhorar isso, vim almejando receber o máximo de críticas possível para me auxiliar profissionalmente.
 
-# Marco Atual
+# Marco Atual                   Desafios
 
-- [x] Sprint 1
-- [x] Sprint 2
-- [ ] Sprint 3
-- [ ] Sprint 4
+- [x] Sprint 1                  Sem Desafio
+- [x] Sprint 2                  [Link 2](https://github.com/Brenildu/maeda.compass/tree/main/Sprint_2/desafio)
+- [x] Sprint 3                  [link 3](https://github.com/Brenildu/maeda.compass/tree/main/Sprint_3/desafio)
+- [x] Sprint 4                  [link 4](https://github.com/Brenildu/maeda.compass/tree/main/Sprint_4/docker/desafio)
 - [ ] Sprint 5
 - [ ] Sprint 6
 - [ ] Sprint 7
 - [ ] Sprint 8
 - [ ] Sprint 9
 - [ ] Sprint 10
+
 
 # RESUMOS
 
@@ -351,3 +352,4 @@ Com o crescimento da internet aumentou o volume dos dados, sempre produzimos dad
 
 
 ### [Desafio](https://github.com/Brenildu/maeda.compass/tree/main/Sprint_2/desafio) *link*
+
