@@ -1,0 +1,40 @@
+# Instruções para o programa
+nome: "Brenildu"
+idade: 30
+
+# Este objeto descreve o nosso projeto
+objeto:
+ versao: 2
+ arquivo: "teste.txt"
+
+versao: 2
+vesao_completa: 3.14
+
+string_sem_aspas: digite um texto
+string_com_aspas: "texto com aspas"
+
+nulo: ~
+nulo_dois: null
+
+verdadeiro: True
+verdadeiro2: On
+
+falso: False
+falso: Off
+
+lista: [1,2,3,4,5]
+
+lista2:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+
+obj: {a: 1, b: 2, c: 3}
+
+objeto:
+  a: 1
+  b: 2
+  objeto_interno:
+    x: 2

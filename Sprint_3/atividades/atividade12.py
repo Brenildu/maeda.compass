@@ -4,10 +4,6 @@
 
 import json
 
-if __name__ == '__main__':
-
-    jason = open('person.json')
-
-    if(jason):
-        conteudo = json.loads(jason)
-        print(conteudo)
+with open('person.json') as arquivo:
+    dados = json.load(arquivo)
+    print(dados)
