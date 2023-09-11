@@ -1,0 +1,250 @@
+Big Data
+
+2.5 quitilhões de bytes dados por dia no mundo todo, quando falamos de big data estamos falando de um volume de dados muito grande, o big data de uma empresa x passa das casa dos terabytes, o volume de dados aumentou exponencialmente nos ultimos anos, 90% dos big datas foram gerados nos últimos 2 anos, 80% dos dados não são estruturados ou estão em formatos diferentes dificultando análise, dados gerados por uma pessoa em compras ou interações em redes sociais dão a característica de veracidade ,volume, velocidade, variedades, veracidade são características que ajudam a definir o termo. O cruzamento de informações do dia-a-dia tal, não apenas com celulares mas tal como a produção de dados por meio de geladeiras, relógios, carros e outros objetos se tornam massivas e estão sendo cruzadas e analisadas com técnicas e modelos preditivos para prever comportamentos e ações de um determinado grupo de pessoas ou empresas.
+Com o crescimento da internet aumentou o volume dos dados, sempre produzimos dados, podemos dizer que o big data é um conjunto de dados amplos e que precisam de ferramentas específicas para conseguir extrair valor em tempo hábil. É de forma simples a análise precisa de um padrão de comportamento que não seria possível em pequenas quantidades de dados, no big data pode se chegar na causalidade do problema.
+Os 4 Vs: 
+volume: quantidade de dados
+variedade: formato dos dados
+velocidade: geração de dados
+veracidade: confiabilidade dos dados
+
+	Ciência de dados é um conjunto de técnicas de extração de dados e big data é a matéria prima, usando a ciência de dados numa boa fonte de big data temos big data analytics que é a informação retirada a partir desse processo. Ex de aplicações de uma rede de hotéis: extrai, armazena, processa e analisa dados dos comentários nas redes sociais de seus clientes para customizar seus serviços, aumentar vendas e diminuir custos, a parte mais relevante é encontrar valor para esses dados.
+
+
+seção 3- SISTEMA DE ARMAZENAMENTO DE DADOS
+
+1° V - Volume - é crítico em big Data, precisamos responder algumas perguntas:
+
+Como armazenar todos os dados(custos, instalação, manutenção)?
+Como acessar grandes conjuntos de dados(não deixar desperdiçar recursos, o petróleo do século 21);?
+Precisamos armazenar tudo?
+
+Data warehouse - para dados estruturados
+Data lake ou data store- para dados não estruturados
+
+Dependendo do volume de dados pode ser que não consiga estruturar os dados antes do armazenamento, talvez entre no conceito de armazenamento híbrido, dados nos formatos brutos e depois de armazenados é aplicado uma estruturação para que seja analisado apenas os dados especificados o contrário pode ser feito também.
+Bancos de dados:
+Relacionais: bd estruturados com schema bem definido, primeiro se cria o schema para depois armazenar os dados, os dados do bdr são organizados em tabelas que se relacionam daí o nome
+
+Não Relacionais: partem do princípio que devem ser semi ou não estruturados e que pode haver outros tipos de relacionamentos. Dados em formatos muitos diferentes valem mais a pena utilizar uma tecnologia apropriada para o formato dos dados do que organizar em tabelas. Não é preciso definir o schema antes ou ele é definido durante o armazenamento 
+
+Definições:
+
+Data warehouse: sistema de armazenamento que conecta e harmoniza grandes quantidades de dados de muitas fontes diferentes
+
+exemplo para compreensão:
+-várias fontes de dados;
+-é construindo o processo etl, que extrai, aplica uma transformação de acordo com o schema e carrega ao dw;
+-dados serão carregados, armazenados e trabalhados dentro do banco de dados dw
+-é entregue uma informação para o tomador de decisão
+
+objetivo: é entregar soluções e análises de tomada de decisões a partir dos dados armazenados no dw, ajudar o tomador de decisão.
+Geralmente terão apenas um dw principal, e são carregados uma vez por dia, a periodicidade(cadência) que a informação é extraída da fonte depende do que é acordado entre os gestores.
+
+Nos últimos anos teve grande mudança para armazenamento local para nuvem. não importa o local do armazenamento todos precisam de um schema bem definido antes.
+
+Alguns dw aproveitam análise integrada e tecnologias de bd in-memory, mantendo os dados na memória ram e não no disco, deixando mais rápido o acesso.
+
+O lado positivo do dw é facilitar a combinação de dados de fontes distintas, garantir o formato certo e obter uma visão atual e de longo alcance dos dados ao longo do tempo.
+
+Benefícios:
+Melhor análise de negócios: várias fontes para tomada de decisão
+Consulta mais rápidas: consulta de um grande volume de dados
+Mais qualidade no dados: os dados são limpos antes de serem armazenados
+Visão histórica: facilidade em gerar aprendizado com dados passados
+
+Data Lake
+
+O inverso do data warehouse, é carregado os dados brutos e depois feito a limpeza caso precise, não são perdidos dados nesse primeiro armazenamento, ao contrário do que pode ocorrer no anterior.
+Pode ser armazenados dados estruturados e não estruturados, mas diferente do dw ao carregar os dados eles já estarão prontos para análise, no dl mesmo carregando carregamento de dados estruturados eles não estarão prontos para análises é preciso passar por limpeza ou transformação.
+O DL abraça a ideia da velocidade. Os dl permitem várias percepções nos dados nas análises. Importante de evitar o pantano de dados, que são excesso de dados que não são possam ser confiáveis ou encontrados, lixo, é preciso de maquinismo para catalogar e proteger os dados
+
+Pode construir com Apache hadoop ou BD NoSQL.
+
+No DW ETL(extração, transformação e carga) no DL ELT(extração, carga e tranformação)
+
+Benefícios:
+Armazenamento em dados brutos: não é preciso limpar os dados, velocidade
+Importação de qualquer tipo de dados em tempo real: 
+Repositório central para todos os dados da empresa
+Sem necessário movimentação de dados: algumas ferramentas têm conexões diretas no DL
+
+
+Data Store
+
+É um repositório para armazenar e gerenciar de forma persistente os dados de tipos de armazenamento variados, como documentos, chaves de valor, filas de mensagens…
+
+Tipos comuns:
+Armazenamento de chave-valor(Redis, Mencached)
+Motor de pesquisa de texto completo (elastic Search)
+Fila de mensagens(Apache Kafka)
+Sistema de arquivos distribuídos(Hadoop HDFS, AWSS3)
+
+Sistemas de armazenamentos próprios para uma finalidade, objetivo de armazenar dados já preparados para aplicação final, diferente dos dois anteriores, existe mais flexibilidade  e finalidades já esclarecidas
+
+Beneficios:
+Armazenamento de variados tipos de dados
+Flexibilidade: dados aderente às necessidades
+Suporte a dados semi-estruturados: possuem organização prévia e devem ser usados em seu formato original
+Custo total menor: tipos especificados armazenam menos dados desnecessários.
+
+
+Seção 4 - Armazenamento em paralelo
+
+Por questões de limites físicos um único servidor é inviável, daí vem a necessidade de usar mais de um de forma paralelo. Servidores são máquinas com propósitos específicos e escalabilidade vertical. Um cluster de servidores é um conjunto de servidores.
+
+O armazenamento paralelo é a ideia de utilizar mais de uma máquina para os dados, permitindo aumentar de forma considerável a capacidade de armazenamento, O Software que será responsável na manutenção em computadores pessoais(sistema de arquivos) e para a parte em paralelo temos o Apache Hadoop, ele gerencia e envia cada arquivo em um local no cluster, um app de código aberto que espera que ocorra algum erro. Com o HDFS se pode construir um data Lake sobre um cluster permitindo de usar o big data em larga escala de forma segura e sem perda de dados. 
+
+Como processar os dados em diversas máquinas em um cluster?
+Uma ideia é dividir uma tarefa em várias sub-tarefas e as processa uma de cada vez, a maioria dos software não conseguiram processar dados de várias máquinas por isso é usado o Apache Hadoop. com esse framework cada sub-tarefa é enviada para o processador da máquina que está armazenado o dado realizando assim o processamento de maneira mais veloz de grandes volumes de dados.
+
+Temos 2 serviços rodando dentro da ferramenta, 
+o HDFS que possui o:
+NameNode: gerenciar o cluster
+DataNode: fazem o trabalho de armazenamento
+
+O MapReduce: é preciso desenvolver o software para cada tarefa, submeter o programa e
+JobTracker: gerenciar o processamento, consulta namenodes e comunica as máquinas que irão processar e entrega os resultados.
+TaskTracker: fazem o trabalho do processamento, se comunicam com os dataNodes para obter dados do disco, executam e envia os resultados para o jobTracker
+
+
+seção 5 - Cloud Computing 
+
+Conceito: acesso à nuvem por um fornecedor pelo um x valor já combinado, entrega de serviços de computação pela internet(nuvem) visando flexibilidade, inovação e economia. A estrutura local já não faz mais sentido, vale mais a pena o uso desse serviço.
+
+Big data e cloud computing, a escalabilidade do serviço local é baixa diferente do provedor em nuvem que volta seu negócio no “aluguel” desse armazenamento, muitas vezes precisamos aumentar ou não precisamos de mais armazenamento e no armazenamento local é muito mais complexo do que no cloud computing, além da segurança ser mais investida na nuvem, há quase nenhum vazamento de dados nas grandes empresas, elas zelam por isso. Os benefícios são cada vez mais evidentes para o armazenamento em nuvem, desde o custo do armazenamento até a segurança dos dados.
+
+Principais provedores:
+AWS(Amazon Web Services): aproveitaram uma oportunidade de negócio que veio depois de uma análise do uso de seus servidores levando a conclusão que eles detinham de um número ocioso e com possibilidade de ser utilizado.
+Microsoft Azure
+Google cloud
+Ibm cloud
+Oracle cloud
+
+AWS:
+Serviço de cloud computing da Amazon, ao invés de montar ambientes locais a idéia é utilizar diversos ambientes como banco de dados, machine learning, redes privadas, etc… De forma simples e sem se preocupar com com todos os transtornos de um ambiente local, 
+
+na prática:
+pode se utilizar software para gerenciamento de armazenamento como Apache Haddop,
+Pagamento por uma máquina a AWS fornece uma linha de comando para a mesma.
+quando envia um arquivo para o nameNode ele comunica-se com os dataNodes grava um bloco, grava o arquivo no bloco e cria réplicas entre eles, se algum dos dois falhar é só verificar pelo outro dataNode.
+A partir de relatórios é possível retirar informações importantes, como a quantidade de dados armazenados e número de máquinas sendo utilizadas,
+Se não precisa mais o Data Lake só é preciso desligar todos os servidores.
+
+
+seção 6 - MLOps e DataOps
+
+Machine Learning - uma sub-área da IA que usa dados e algoritmos para imitar o aprendizado humano, pode ser utilizado a técnica de aprendizado por reforço com várias tentativas, erros e acertos de terceiros, sempre sendo alimentado por dados
+baseado em dados -> algoritmo -> modelo
+Pipeline - é o fluxo de trabalho, de uma ponta a outra de trabalhos:
+definição dos problemas: escolha de que área estudar
+coleta e preparo de dados: limpeza, transformação, normalização e processamento
+modelagem: seleção dos algoritmos, treinamento da máquina, otimização dos parâmetros e testes
+deploy: publicação do modelo
+
+MLOps: é um conjunto de práticas para colaboração e comunicação entre os desenvolvedores e cientistas de dados, aumentando a qualidade, simplifica processos e automatiza as implementações de modelos. Unifica o desenvolvimentos dos sistemas ML(dev) e suas implementações (ops) padronizando e agilizando a entrega, tratando o processo de aprendizado mais formal
+
+Problemas que o MLOps tenta solucionar o mitigar:
+Lacunas de comunicação entre as equipes técnicas e de negócio
+Mudança dos objetivos de negócios no modelo
+Avaliação de risco
+
+
+DEVOps
+
+
+Abordagem de desenvolvimento de software que visa acelerar o ciclo de vida de uma construção automatizando o processo, implementação contínua do software aproveitando recursos de ti, código e testes. Empresas aceleraram suas entregas de meses para segundos
+
+
+DATAOps
+
+
+Metodologia ágil e de processos para desenvolvimento de entrega analítica, fornece frameworks, processos e estruturas para apoiar em relação aos dados. DataOps habilita soluções, desenvolve produto de dados e ativa dados para valor comercial. Linha de produção onde a matéria prima são os dados e o produto final é um resultado reproduzível uma analytics.
+
+
+Big Data x Small Data
+
+small data remete a uma quantidade mínima de dados para compreensão do ser humano, é possível usar técnicas para trabalhar com os dois
+
+
+
+seção 7 Dados como Serviço
+
+
+Data as a Service(DaaS)
+Uma empresa quer resolver problemas e quer os melhores dados de forma mais rápida independente de como foram desenvolvidos.
+Daas é uma estratégia de gerenciamento de dados visando alavancar os dados como ativos de negócios para maior velocidade
+
+Arquitetura:
+Uma diversificação de dados espalhados em uma variedade de fontes sendo chamados por uma API quando solicitado
+Fornece conjuntos de dados já tratados ou um fluxo de dados preparados para serem consumidos
+
+Os Benefícios são voltados à ideia de uma linha de produção de dados, facilidade em detectar padrões de dados, fazer previsões, identificar anomalias, realizar previsões e isso gera:
+Redução de custos;
+Caminho rápido para inovação;
+Monetização dos dados;
+Menor risco no uso dos dados;
+Cultura Data-Driven
+
+Data LakeHouse e Data Mesh
+
+. Mescla o gerenciamento dos Data Warehouse e a economia de baixo custo de armazenamento do Data Lake 
+. Data Mesh é um tipo de arquitetura de plataforma de dados que abrange a onipresença dos dados na empresa, permitindo um design orientado ao domínio e de auto atendimento, uma arquitetura totalmente descentralizada. É uma arquitetura orientada a domínios, separando cada domínio para um time responsável, com os blocos de construções de construções fundamentais de uma malha. Cada domínio é armazenado em um Data Lake 
+
+Data Mesh foge da ideia de ter todos os dados em um só lugar ou ter dados gerenciados por apenas uma equipe
+
+Descentralização orientada ao domínio da propriedade e arquitetura de dados;
+Dados orientados ao domínio servidos como um produto;
+Infraestrutura de dados de autoatendimento como uma plataforma para habilitar equipes de dados autônomas e orientadas para o domínio;
+Governança federada para permitir ecossistemas e interoperabilidade
+
+
+
+
+seção 8 - ETL - Extração, transformação e carga de dados
+Extract -> Transform -> load
+Os dados não chegam prontos para uso e sim precisam de uma refinação para liberar informações úteis  
+
+ETL x ELT
+Altera a ordem das ultimas siglas, literalmente esse é o conceito
+
+
+AWS glue
+
+Não é preciso de um servidor, é possível construir o ETL de forma simples e a plataforma também aloca armazenamento em nuvem
+
+
+
+ 
+Exemplos de Áreas:
+Manufatura: industrial
+Finanças: bancos
+Saúde: prontuários eletrônicos
+Varejo: redes de varejos
+
+
+Big Data na prática
+
+Business Case: definição do objetivo de um projeto
+Planejamento do projeto: determinar requisitos de negócio,, alinhar expectativas e definir métricas de sucesso e marcos de tempo
+Requisitos técnicos: definir objetivos, ferramentas de análises, material humano, abordagens, técnicas, arquitetura de documentação;
+Criação de um Total business value assessment: Pensar no retorno de valor que o projeto irá gerar, qual o tempo útil, suporte e manutenção, alterar o modelo de trabalho para trabalhar com Big Data, 
+
+Importante
+**A tecnologia é apenas o meio, o que precisa ser o foco é o objetivo da empresa.
+*DW armazena dados estruturados
+*DL armazena dados brutos
+*Os dois são conceitos que podem ser utilizados em diferentes ambientes.
+*Pode haver limpezas antes de carregar os dados no DL ex(tirar emojis)
+*Empresas podem usar os dois conceitos e importar dados de um para outro(Data Hub)
+*o número de dados não estruturados está crescendo demais
+*não fique preso a conceitos puro,
+*Usar apenas um conceito não é o melhor na prática, o uso do conjunto dos sistemas de armazenamentos é o mais usado no cenário atual, os famoso sistemas híbridos, 
+*Grandes volumes de dados é essencial o uso de armazenamento e processamento em paralelo
+*Provavelmente vc terá que criar várias versões de modelo de aprendizado de máquina
+*DATAOps é preciso experiência 
+*Dados são o novo petróleo
+*Big Data Analytics é o que dá o valor para as empresas
+
+
+

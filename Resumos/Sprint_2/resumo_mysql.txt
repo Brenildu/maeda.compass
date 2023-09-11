@@ -1,0 +1,195 @@
+Baixar e instalar o pgAdmin: software gráfico para administração do  PostgreSQL
+Baixar e instalar o PostgreSQL: Sistema gerenciador do banco de dados (SGBD) que possibilita a consulta aos dados com o uso da linguagem SQL
+Configurar o banco de dados: nós iremos rodar um script que cria todas as tabelas que serão utilizadas durante as aulas desse curso
+
+
+Diagramas = é uma representação gráfica de uma tabela de dados e como funcionam suas conexões
+
+Pontos:
+
+utilize aspas simples para tratar de textos, e aspas duplas para nomes de colunas
+(as) serve para nomear colunas, pseudônimos
+as datas são escritas no formato ano/mes/dia
+a função current_date devolve a data atual
+
+Comandos:
+
+-----------------------------------------------
+Select: usado para selecionar as colunas de tabelas
+
+select: <coluna1>, <coluna2>, …
+from: <schema>.<tabela>(qual tabela selecionar)
+
+*a última coluna fica sem vírgula
+*o asterisco seleciona todas as colunas
+-----------------------------------------------
+distinct: apresenta apenas linhas distintas, nenhuma igual
+
+select distinct <coluna1>, …
+from <schema>.<tabela>
+
+*mais de uma coluna, não mostrará o resultado que houver a combinação das duas iguais
+-----------------------------------------------
+where: filtra as linhas da tabela de acordo com uma condição
+
+select..
+from..
+where <coluna> = ‘campo_tal’’
+-----------------------------------------------
+order by: ordena as colunas de acordo com a escolha de uma regra definida pelo usuario
+
+select..
+from..
+order by <coluna>
+*desc depois do comando ele ordenará na hora inversa
+*se for ordenar texto ela é ordenada de forma alfabética
+
+-----------------------------------------------
+limit: serve para limitar número de linhas que aparecerá na consulta
+
+select..
+from..
+limit <número de linhas máximo>
+
+
+
+-----------------------------------------------
+Operadores Aritméticos
+
+. *
+. -
+. +
+. /
+. ^
+. %
+. ||
+-----------------------------------------------
+Operadores de comparação // Retorna True ou false
+– =
+– >
+– <
+– >=
+– <=
+– <>
+-----------------------------------------------
+Operadores Lógicos
+– AND: retorna true se as duas condições forem verdadeiras
+– OR: retorna true se uma das duas condições forem verdadeiras
+– NOT: troca o valor booleano
+– BETWEEN: trabalha com a separação de um sequência de valores entre um número e outro
+– IN: funciona com um or, de forma que facilita a escrita
+– LIKE: faz o match com alguma sequência de palavra
+– ILIKE: faz a função do like ignorando a tipagem da letra
+– IS NULL: trabalha com valores nulos
+
+** % dentro de aspas simples no like funciona como um coringa
+
+-----------------------------------------------
+– COUNT(): conta as linhas de uma coluna
+– SUM(): 
+– MIN(): devolve o mínimo valor de uma coluna
+– MAX(): devolve o maior valor de uma coluna
+– AVG(): realiza a média de uma coluna
+Servem para executar operações aritméticas nos registros de uma coluna, não computam células vazias 
+
+** é possível utilizar os comandos dentro de outros ex:
+–Selecione todas as informações do cliente mais rico da tabela sales.customers
+-- (possivelmente a resposta contém mais de um cliente)
+select *	
+from sales.customers
+where income = (select max(income) from sales.customers)
+
+
+-----------------------------------------------
+– GROUP BY: agrupa os registros semelhantes de uma coluna
+Normalmente utilizado em conjunto com as funções de agregação
+
+select ..
+from .. 
+group by <coluna>
+
+** é possível agrupar utilizando números
+** com group by sozinho ele funciona como distinct
+
+----------------------------------------------
+-Having: Filtra linhas da seleção por uma coluna agrupada
+possui a mesma função do where mas pode filtrar funções agregadas e não agregadas
+
+
+----------------------------------------------
+Joins:
+
+left join: pega os dados da primeira tabela junto com oque deu match na segunda
+inner join: pega APENAS os dados que deram match entre as duas tabelas
+right join: pega os dados da segunda tabela junto com o dado que deu match com a primeira
+Full jon: pega os dados das duas tabelas
+
+** não é muito utilizado na prática
+
+----------------------------------------------
+Union
+
+union all: faz a união da tabela 1 e no final dela faz a cola da tabela 2
+union: so adiciona na tabela1 as linhas diferentes que estiverem na linha 2
+
+** se possível use o union all por ser mais leve
+----------------------------------------------
+SubQuery
+são query que podem ser trabalhadas dentro de outras
+**where e select retornam apenas um dado
+with: é possível usar o resultado de um subquery em uma query escrita depois
+é possível escrever subquery diretos no from, so que escrever no with da mais organização
+select: realiza a comparação da subquery linha por linha, não é muito utilizada, só pode retornar um dado
+
+-----------------------------------------------
+Tipos de conversão
+
+1- Operador ‘::’
+2- Cast
+
+O operador é mais utilizado e simples de se entender, porém em algumas situações ele não funcionará e aí que entra o uso do cast que opera a mesma função.
+
+-----------------------------------------------
+Tratamento de dados geral:
+
+1- Case When
+2- coalesce - verifica qual o primeiro numero nao nulo de uma ista de valores
+
+O primeiro comando é utilizado para ter respostas específicas de diferentes condições o coalesce preenche campos nulos com o primeiro valor não nulo
+
+funções:
+. Lower: transforma texto em letras minúsculas
+. Upper:  transforma texto em letras maiúsculas
+. Trim: remove os espaços entre os caracteres
+. replace: substituição de uma string por outra
+
+comandos de tratamento de data
+interval: opera soma de datas, caso não especifique somará em dias
+date_trunc: trunca uma data no início do período
+extract: extrai unidades de uma data
+date_diff: calcula a diferença entre datas alterando a unidade
+
+criar funções:
+create function, para criar funções passando unidades de valor, a linguagem e a saída, ele será delimitado pelos $ – codigo – $
+drop function para deletar funções
+
+-----------------------------------------------
+
+Criar tabelas
+é possível criar tabelas dentro de uma query com o comando into ou de forma isolada  criando uma tabela vazia primeiro com o comando create table e inserindo seus valores um a uma com o comando insert into seguido do nome da coluna 
+para deletar tabelas se usa o comando drop table seguido do nome da tabela
+
+
+Manusear linhas
+
+para inserir as linhas em uma tabela é necessarios informar quais valores serão inseridos com o comando insert into, seguido do nome da tabela e o nome das colunas, e com o comando values as insira manualmente
+Com o comando update é possível atualizar uma tabela informando o seu nome, informar o novo valor com o comando set e modificar as linhas com o comando where
+Delete from deletará uma tabela que será filtrada com o comando where
+
+Manusear Colunas
+
+para modificar a tabela é preciso usar o comando alter table
+é feito a adição usando o comando add seguido do nome da coluna e da unidade da nova coluna, para alterar o tipo da coluna usa-se o comando alter column
+para renomear rename column e para deletar drop column
+
+

@@ -1,0 +1,301 @@
+Resumo Python
+
+
+É uma linguagem de programação de código aberto, criada em volta de 1991, é uma linguagem mais simples do que java, sendo de fácil aprendizado, uma linguagem de alto nível que está mais próximo a síntese da compreensão geral
+
+. princípios e filosofia do python:
+Bonito é melhor que feio
+Explícito é melhor que implícito
+Simples é melhor que complexo
+complexo é melhor que complicado
+linear é melhor do que aninhado
+esparso é melhor que denso
+Legibilidade conta
+casos especiais não especiais o bastante para quebrar as regras, ainda que praticidade vença a pureza
+erros nunca devem passar silenciosamente, a menos que sejam explicitamente silenciados
+diante da ambiguidade recusa a tentação de adivinhar, o python evita adivinhar coisas explícitas
+deveria haver um - e preferencialmente só um modo óbvio para fazer algo, simplifica a forma de comunicar códigos com outros dev
+agora é melhor que nunca
+boas ideias vem com a facilidade em explicar
+
+
+Estilos de codificação: a padronização é estabelecida e abordada de forma natural, separando funções, variáveis e outras estruturas com 2 linhas de espaço
+
+Algoritmo -> sequência de passos lógicos que realizaram um objetivo final
+
+Uso do python:
+
+interpretador, é possível usar depois de instalar o arquivo fornecido no site do python, o problema é manipulação de códigos maiores e modulados
+
+Jupyter:
+
+esc - modo de execução
+cntl + enter - executa
+enter = modo de edição
+b - cria nota depois da atual
+a - cria nota antes da atual
+d - deleta bloco
+l - mostra as linhas
+1 - transforma de python para markdown
+
+
+—-------------------------------------------------
+Introdução
+
+** o python usa a questão de uma sentença por quebra linha
+** estrutura dos dados é a condição que separa a construção dos dados
+
+tipos de dados:
+bool
+int
+float
+string
+list
+dict
+NoneType
+
+tipos de operadores:
++ 	Soma ou Concatenação
+- 	Subtração
+*	Multiplicação
+/	Divisão
+//	Divisão de inteiros
+** 	Exponenciação
+% 	Módulo da divisão de inteiros
+=	Atribuição, coloca o resultado da expressão à direita na identificação (variável) a esquerda
+
+
+
+Criar Variáveis -> basta escrever o nome da variável + = + o valor que ela conterá
+**no python os valores não tipamentes estáticos, o interpretador que fica encarregado de saber o tipo da variável
+
+Comentários devem ser importantes que agreguem valor, 
+O resultado da expressão anterior é guardado em uma variável temporária chamada _:
+O print() sempre retorna None, o faz que o interpretador não emitirá nada, porém o próprio print() enviará para a saída padrão o resultado da expressão passada para ele.
+No python não é feito comparações positivas de string com números
+
+*builtins é um módulo que já vem por padrão e não é necessário alterar
+o __builtins__ tem mais de 150 membros
+funções:
+função dir(), com ela podemos listar todos os membros do escopo atual (sem parâmetros) ou de um determinado objeto.
+Função help(), sem nenhum parâmetro faz o interpretador entra em modo de help, o que nos mostrará qualquer ajuda relacionado ao que for digitado.
+Função type() irá retornar o tipo/classe a que pertence o objeto usado como parâmetro.
+
+Diante da ambiguidade, negue a tentação de adivinhar!
+linguagem fortemente tipada = as  operações precisam lidar com objetos de mesma classe/tipo
+
+
+Quando uma operação com tipos diferentes tem um óbvio resultado esperado neste caso uma coerção será aplicada automaticamente. ex: 1 + True = 2 ou 10/3 = 3.333333
+*resultados de divisões é sempre float
+*o motivo de contas de floats deram números quebrados que não existem, é por conta dos números na forma binária serem tratadas com mais velocidade e com menos especificação, o uso do decimal junta o melhor dos dois mundos
+
+
+
+É possível modificar níveis de precisão com a função Decimal, getcontext
+Strings são imutáveis, para modificá-las é preciso fazer uma cópia e alterar a variável 
+
+Apesar de ser possível utilizar backslash (\) para escapar caracteres, no caso da própria
+aspa simples é aconselhado delimitar a string com aspas duplas
+É possível especificar strings com múltiplas linhas usando 3 aspas duplas
+
+Algumas funções strings:
+A função len() pode ser utilizada com qualquer objeto, retorna o tamanho total
+O método lower() retorna uma nova string com todos os caracteres em minúsculo(NÃO MODIFICA A STRING ANTERIOR)
+O método upper() retorna uma nova string com todos os caracteres em maiúsculo(NÃO MODIFICA A STRING ANTERIOR)
+O método split() retorna uma nova lista de strings, cada elemento contendo uma palavra da string original(NÃO MODIFICA A STRING ANTERIOR)
+
+Interpolação de Strings:
+
+
+—-------------------------------------------------
+
+
+
+
+—-------------------------------------------------
+Estruturas:
+**Listas são dinâmicas e heterogêneas
+Funções: 
+len()
+append() - adiciona itens na lista
+insert  - adiciona um novo elemento em uma posição específica da lista,
+remove() - remove item
+reverse() - reverte os itens da lista	
+
+Método:
+.index() - retorna o índice de um elemento indicado
+in - retorna True se estiver contido o elemento especificado
+Acesso:
+[1] - seleciona o item da segunda posição
+[:i] - seleciona a partir da posição sucessora de i
+[::i] - seleciona toda a lista de i em i
+[-1] - seleciona o item da última posição
+del lista[i]- deleta o item da posição i
+
+*Tuplas não podem ser modificadas
+tuplas não podem ser alteradas
+para declarar um único item é preciso terminar com ,
+
+
+*Dicionários	
+Não existem herança de dicionário
+chaves precisam estar entre aspas ou serem variáveis já declaradas
+métodos:
+	Funções - append, remove, len
+pop() - retorna um valor e retira esse item do dicionário
+update() - adiciona um campo e um valor
+keys() retorna todas as chaves
+values() retorna todos os valores
+items() retorna todos as chaves e valores, em algo similar a uma lista de tuplas
+get() funciona de forma similar ao índice, porém caso a chave não exista retorna um None.
+clear() - reseta o dicionário
+
+
+*Conjuntos são muito parecido com listas exceto por:
+Não aceitar índices
+Não interessar a ordem
+não se repetir valores
+Todos os elementos precisam ser imutáveis
+
+métodos: baseados em conjuntos matemáticos
+
+**Interpolação: substituir valores dentro de uma string
+operador módulo % (legado)
+str.format(),
+f-string
+
+—-------------------------------------------------
+Estruturas de controle, repetição e decisão
+
+** if 0< idade < 18 ouu  if idade in range(0, 18)
+
+
+**for:
+for idade in (17, 2, 3) //tupla
+
+ou declare a tupla antes
+
+idades = (17, 2, 3)
+for idade in idades
+
+**While	
+
+
+**for
+* as variáveis criada dentro do for ainda armazenam após o laço
+* continue está relacionado com o laço de repetição
+* Se chamar o break o else após o for não é percorrido
+**É possível utilizar o match que funciona como um switch
+
+Arquivos:
+
+** o operador * ele extrai de uma tupla ou lista todos os seus elementos em ordem
+**  Função .strip() = retira os elementos do final e do começo
+** try controlam as exceções
+*exception 
+*pass = bloco vazio
+
+**With = manipula o arquivo de forma mais segura, já garantindo que será fechado
+
+
+Lista Comprehension
+é uma sequência de comandos em uma só linha de código
+# (expressão for item in list if comprehension)
+
+# (expressão for item in lista if condição) isso seria igual a:
+for item in lista:
+	if condição:
+
+
+** Os generators geram menos dados para memória, sob demanda: pode ser chamado com um next ou dentro do for
+
+**dicionários: basta trocar () por {}
+
+—-------------------------------------------------
+Funções:
+uma sequência de passos que vai retornar uma saída
+2 parâmetros:
+posicional: segue a ordem da passagem de argumentos
+nomeado: pode ser passado já nomeado o parâmetro e não importando a ordem(é bom para entender a forma que chama a function)
+parâmetro com asterisco: com 1 passa uma tupla e 2 um dicionário
+
+**unpaking 
+passando um tupla ou lista por parâmetros, é possível fazer o despacotamento dos seus valores.
+def  nome_function(*nome_parametro):
+
+** função callabel: serve para verificar se uma parâmetro é uma função ou não, é possível atrelar junto com a criação de funções que executam outras funções
+é possível passar funções como parâmetros e realiza lás
+no unpaking: é preciso passar nomear os parâmetros, dá mais clareza para o código 
+
+** parâmetros com venham após um parâmetro com *, eles só podem ser passados nomeadamente
+
+Passando um dicionário:
+def nome_function(**nome_parametro)
+
+
+**parâmetros posicionais sempre estarão antes dos nomeados
+
+**um objeto pode se tornar uma função assim como uma função pode se tornar um objeto
+
+**não é interessante utilizar objetos mutáveis como parametro de uma função, no momento que começa alterá-los o efeito é propagado para as próximas chamadas.
+
+**é possível usar o ou como uma técnica de selecionar valores padrões
+
+—-------------------------------------------------
+Decorator
+** entre herança e reuso por decomposição é melhor a segunda opção
+** para chamar uma função interna a outra basta utilizar dois parenteses
+
+
+
+** Ao carregar o modulo vc quer usar partes da funcionalidades
+** Procure por nomes mais interessantes
+
+
+
+—-------------------------------------------------
+POO
+
+
+Objetos - composto por atributos e métodos
+Classe
+Pilares
+Os dados são os atores principais
+
+
+Classe vs objeto:
+classe - o molde
+objeto -  a instância desse molde
+Os valores vão ser responsáveis por diferenciar os objetos
+
+
+Pilares de POO:
+
+Herança - possibilidade de reuso de código
+Polimorfismo - capacidade de substituir objetos específicos como genéricos
+Encapsulamento - o uso de funcionalidades sem conhecer como funciona
+Abstração - saber extrair os métodos e atributos importantes
+
+Função: __str__ de forma implícita o python já converte as entradas numa saída string
+
+Metodo construtor:
+
+nome da classe()
+O python só permite um construtor
+Pode se usar valores padrões assim ter a possibilitar de instanciar com nenhum parâmetro
+
+
+—-------------------------------------------------
+POO avançado
+
+Diferença entre membro instanciado e estático:
+Membros instanciados precisam ser esclarecidos e declarados os estáticos serão associado diretamente há classe.
+Métodos	 estaticos podem ser chamados sem precisar declarar um objeto, chamando diretamente pela classe
+
+
+
+
+
+Forma imperativa x forma declarativa
+
+você detalha tudo que precisa ser feito versus a ideia de só chamar a função e ela ser feita

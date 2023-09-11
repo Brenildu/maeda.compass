@@ -1,0 +1,134 @@
+terminal - ctrl + alt + t
+
+2 comandos na mesma linha
+cd etc && ls - faz os dois ao mesmo tempo, movimenta para o etc e lista
+Q sai de linhas presas
+CTRL + R = lista em forma reversa e da a opção de procurar comandos 
+comando pwd = saber onde estou
+Atualização de versão linux, sudo apt -get dist-upgrade não é muito aconselhável, Atualizar direto pelo site
+!! Roda o comando novamente
+comando witch = identifica de onde sai algum comando ou app
+
+
+.cd(Altera diretório)
+ls(lista os diretórios)
+
+cd / 
+ls
+cd /etc/
+ls
+cd /etc/fonts
+
+cd ..(volta para o diretório anterior)
+cd ../../..(volta 3 vez)
+cd - (volta para o último diretório que entrou)
+cd ~(vai direto para home)
+cd #tab - completa a digitação para um diretório possível
+	
+
+ls - a (lista os arquivos ocultos e outros)
+ls -la (exibe óculos e demonstra detalhes o diretório)
+ls -lh (mostra mais fácil os números)
+ls -ltr (mostra datas de modificações)
+ls -(tag qualquer) /(arquivo) = lista do arquivo tal sem sair do atual
+
+LS AVANÇADO
+ls -R (lista todos os sub-diretórios dos diretórios)
+ls -lr (lista reversa)
+ls -lS (ordena por tamanho do arquivo)
+ls -m (lista separando por virgula)
+ls –help(vê com detalhes todas as funções e comandos)
+
+
+.	
+clear(limpa a tela)
+cat(cria um arquivo ou vê o conteúdo dele)
+
+(arquivo test criado)
+(conteudo: uii uii test)
+ls		(listou)
+cat teste	(uii uii test)mostrou conteúdo do test
+
+(arquivo test2 criado)
+(conteudo: uii uii segundo test)
+ls			(listou)
+cat test test2		(uii uii test	uii uii segundo test)mostrou conteúdo do test e test2
+cat test test2 > test3 		(cria um arquivo test3 concatenando os outros dois)
+
+cat -n (mostra o conteúdo com o número de linhas do lado) 
+cat > (junta arquivos e cria um novo)
+cat -e (sinaliza final de linha com $)
+cat >> (concatena arquivos e cria um novo)
+
+
+touch (cria arquivo ou muda a data de modificação)
+
+touch a b c
+ls
+
+man (explica todos os comandos)
+
+
+
+
+
+
+
+SEÇÃO 4 - GERENCIAMENTO DE ARQUIVOS E DIRETÓRIOS
+
+mkdir (cria novo diretório)
+mkdir -v (acompanhar o'que está fazendo)
+mkdir -p (cria vários diretórios dentro de outros)
+
+
+rm (deleta arquivos)
+rm -i(pergunta antes de remover)
+rm -dv(remove diretórios vazios)
+rm -rfv(remove diretórios que possuem outros diretórios)
+rmdir (remove apenas diretorios)
+
+Por causa de segurança, rmdir(remove diretórios dentro de diretórios)
+
+cp(copia diretórios )
+cp -r (copia todos arquivos e pastas de um diretório para outro)
+
+mv(move arquivo/diretorio apagando a cópia original)
+
+
+
+SEÇÃO 5 - GERENCIAMENTO DE PACOTES E APLICATIVOS
+
+
+sudo (Ganha permissões)
+apt -get update (atualiza os repositórios de aplicativos)
+apt -ge upgrade (atualiza os pacotes/app)
+
+tree(app que mostra a estrutura de diretórios de forma organizada)
+sudo apt -get install tree(instala o tree)
+
+sudo apt -get purge tree(deleta o aplicativo tree)
+sudo apt -get autoremove(remove aplicativos que não serão mais utilizados)
+apt -get search ;//nome (busca pacote)
+
+
+SEÇÃO 6 - FILTRO E BUSCAS DE ARQUIVOS E DIRETÓRIOS
+
+
+head (ver topo de um arquivo) (-n escolhe o número de linhas)
+tail (ver o final de um arquivo) (-n escolhe o número de linhas)
+tail -f (atualiza o final se houver atualizações no arquivo)
+grep (procura palavras e frases no arquivo) (-i ignora diferença de A a)
+grep -r(procura a frase ou palavra em todo diretorio)
+
+find -name (acha diretórios e arquivos)
+locate encontra arquivos antigos
+
+SEÇÃO 7: EDITORES DE TEXTO MAIS UTILIZADOS
+
+
+sudo apt -get install nano (instala o nano)
+nano (editor de arquivos)
+
+
+
+

@@ -1,0 +1,350 @@
+1- Introdução
+2- Trabalhando com containers
+3- Imagens e avançado em containers
+4 - Introdução volumes aos containers
+5- Conectando volumes de contêineres
+6- Introdução ao YAML
+7- Docker compose
+8- Docker Swarm
+9- Kubernetes
+
+Rever aula 89
+Control c sai do container
+Containers isolados não tem conexões com o mundo externo, é preciso expor portas 
+É possível rodar vários containers com a mesma imagem
+bind mount serve para volumes e para atualizações em tempo real, sem ter que utilizar build toda hora;
+
+
+O que é Docker:
+Um software que reduz a complexidade de setup de aplicações, auxilia desde o início do comando para instalar um pacote de instalação, onde há a configurações de containers, eles sendo servidores que rodam nas nossas aplicações, é possível criar ambientes independentes e que funcionam em diversos SO’s
+
+Por quê utilizar?
+O Docker proporciona mais velocidade na configuração do ambiente, uma vez certamente configurado e testado, terá disponível arquivos para novos devs, pouco tempo gasto com manutenção tendo ganho de confiabilidade, mais performance para execução de uma aplicação(mais que uma VM), nos livra da Matrix from Hell(se resume na dificuldade de manter vários softwares atualizados em mais uma máquina)
+
+Instalação
+para Windows Docker Desktop
+
+
+—------------------------------------------------------
+Containers:
+Um pacote de código que pode executar uma ação, os projetos serão criados e manipulados dentro dos containers, eles utilizam imagens, que são as intruções e o passo a passo para um código rodar com sucesso, containers podem rodar juntos um com outro
+
+Container x Imagem:
+Imagem é o projeto que será executado pelo container e todas as instruções estarão declaradas nela;
+Container é o docker rodando uma imagem, execução de uma instrução dada pela imagem
+Programamos uma imagem e a executamos através de um container	
+
+É possível encontrar imagens existentes para uma certa tecnologia através de um repositório docker
+
+
+Container x VM:
+Container é uma aplicação que serve para um determinado fim, não possui SO tendo um tamanho básico de alguns mbs,
+A VM possui um SO de tamanho de gbs, podendo executar diversas funções ao mesmo tempo, gastam muitos recursos e podem exercer mais funções.
+
+—------------------------------------------------------
+Comandos:
+docker ps
+docker containers is: mostra os containers que estão executados no exato momento
+ex: 	docker ps 
+
+docker -a: todos os containers executados
+ex:	docker ps -a
+
+run -it: roda um container e deixa ele executando no terminal:
+ex: 	docker run -id nginx
+
+run-d: executa um container em background(NÃO OCUPA O TERMINAL)
+ex: 	docker run -d nginx
+
+run -p: expõe portas:
+ex:	docker run -d -p 3000:00 nginx
+
+run -rm: remove o container após utiliza-lo
+ex:	docker run -d -p 3000:00 –name ap_nginx -rm nginx_remove
+
+docker stop <id ou nome>, pausa o uso de um container:
+ex:	docker stop nome
+
+docker start <nome>, starta um container de onde parou:
+ex:	docker start nome
+se utilizar -it o container roda com o terminal interativo
+
+docker –name, renomeia um container:
+ex:	docker run -d -p 3000:00 –name nginx_app  nginx
+
+docker logs<id>: verifica o que aconteceu em algum container:
+ex:	docker logs quirky_jang
+
+docker rm<id ou nome>: remove um container:
+ex:	docker rm festive_beaver
+
+docker pull: faz o download de alguma imagem
+ex:	docker pull python
+
+docker tag <nome>: altera o nome da imagem se já tiver sido criada adicione :tag no final
+ex: 	docker tag d545f616f8d5 minhaimagem:minhatag	
+
+docker rmi <imagem>: remove uma imagem
+ex:	docker rmi -f 22c957c35e37      
+ 
+docker system prune: remove imagens, containers e networks que não estão sendo usados
+ex: 	docker system prune
+
+docker cp: faz a cópia de arquivo entre diretórios
+ex:	docker cp node_diferente2:/app/appjs ./copia/
+
+docker top:verifica informações de processamento	
+ex: 	docker top node_diferente2
+
+docker inspect: verifica dados de um container
+ex: 	docker inspect c2ac3403e50c
+
+docker stats: verifica o processamento de forma mais geral
+ex:	docker stats
+
+docker push: envia imagens para o hub
+ex:	é preciso criar o repositório antes
+
+docker volume ls: vemos todos os volumes
+ex: 	docker volume ls
+
+
+
+—------------------------------------------------------
+Imagens
+São organizadas de arquivos que programamos para o docker criar uma estrutura que execute determinadas ações em um container. Contém informações necessárias: imagens base, diretório base, comandos a serem executados, porta da aplicação e etc. 
+Rodando um container baseado numa imagem, as instruções são executadas em camadas
+
+
+
+Funções:
+Criar imagem:
+É preciso de um Dockerfile, em um pasta que ficará o projeto
+No arquivo vai precisar das seguintes funções:
+From: imagem base
+Workdir: diretório onde será executado
+Expose: porta da aplicação
+Copy: quais arquivos serão copiados na imagem
+
+docker build e docker run: para executar a imagem
+
+Alteração:
+Sempre que alterar uma imagem é preciso de um build novamente, para um docker é como se fosse uma imagem nova
+
+
+Camadas das imagens:
+Dividem as imagens, cada instrução é uma camada, quando há alterações apenas a camada é refeita, o resto permanece em cache, deixando o build mais rápido
+
+—------------------------------------------------------
+Volumes:
+Uma forma prática de persistir dados e não depender de containers, os volumes ajudam no backup e no gerenciamento de dados
+
+tipos:
+Anônimos: diretórios criados com a flag -v, tendo um nome aleatório
+docker run -v /data
+/data -> diretório que contém o volume
+
+Nomeado: Volumes com nomes, podendo saber para que são utilizados
+	docker run -v nomeDoVolume:/data
+
+Bind mounts: Salva o arquivo no computador, uma forma de salvar sem o docker 
+	docker run /dir/data:/data
+	O diretório da máquina será o volume
+
+Porquê usar:
+Ao criar um container com alguma imagem, os arquivos pertencem ao container, logo se perdemos o containers perdemos também seu conteúdo, aí que entra o uso do volume
+
+
+Criando:
+docker volume create nome
+
+lista:
+docker volume ls
+—------------------------------------------------------
+
+Network:
+Uma forma de gerenciar a conexão do Docker com outras plataformas ou entre containers;
+Redes são criadas separadamente do container
+
+tipos de conexões:
+Externa: conexão com API de um servidor remoto, com o serviço web;
+Host: comunicação com a máquina que está executando o Docker;
+Entre containers: comunicação com o driver bridge, permite comunicar com 2 ou mais containers;
+tipos de redes:
+Bridge: default do Docker, utilizado para conectar containers
+Host: permite a conexão entre um container com uma máquina
+Maclan: permite a conexão de um container com um MAC address
+none: remove todas conexões de rede de um container
+plugins: permite extensões simular um drive ou rede
+
+
+Funções:
+listar - ls
+criar - create
+remover - rm
+conectar container - docker network connect
+desconectar - docker network disconnect
+
+
+—------------------------------------------------------
+YAML
+Não é uma linguagem de marcação e sim de configuração, é de facil leitura
+
+Criar arquivo:
+.yaml	possui chaves e valores, daí que vamos tirar as configurações do sistema, para definir chave inserimos o nome dela 	mais :
+
+
+Indentação:
+Não há ponto e virgula
+indentação de um ou mais espaços
+cada linha define um bloco
+espaço obrigatório apenas criação de chaves
+
+Tipos de dados:
+
+-Dados numéricos: inteiros e Flutuantes
+-Strings: sem aspas e com aspas
+-Dados nulos: ~ ou null = none
+-Boleano: True ou On //// False ou Off
+
+Arrays:
+[1,2,3,4,5]
+
+ou
+
+items:
+1
+2
+3
+4
+5
+
+Dicionarios: simulam objetos
+obj: {a:1, b:2, c:3}
+
+ou
+objeto:
+	chave:1
+	chave:2
+—------------------------------------------------------
+
+Docker Compose
+É uma ferramenta para rodar múltiplos containers, teremos apenas um arquivo de configuração que roda todo o projeto, é uma forma de rodar múltiplos builds e runs com um so comando
+
+Criar:
+
+docker-compose.yml 		 na raiz do projeto
+O arquivo vai coordenar os containers e imagens, possuindo chaves importantes, version, services e volumes
+
+Rodar:
+
+docker compose up
+
+Parar:
+docker compose down
+
+Variaveis de ambiente:
+Podemos defini-lás, definindo um arquivo base em env_file
+As variaveis podem ser chamadas ${VARIAVEL}
+é util quando o dado é sensivel e não pode ser compartilhado
+
+Redes:
+Cria uma rede base que é o bridge, porém podemos isolar as redes com a chave networks, podendo conectar apenas os containers que optarmos
+
+—------------------------------------------------------
+Docker Swarm
+
+
+
+
+
+
+Orquestração de containers:
+É o ato de conseguir gerenciar e escalar os containers da nossa aplicação, arquitetura horizontal se tem menos custo, utilizando várias máquinas que possuem a aplicação distribuída entre elas
+Temos um serviço que rege sobre todos serviços, verificando se os mesmos estão funcionando como deveriam. Tendo a garantia de que a aplicação é saudável  e também esteja sempre disponível 
+
+
+Sobre Docker Swarm:
+Uma ferramenta para orquestração de containers, podendo escalar horizontalmente nossos projetos de maneira simples, o famoso cluster = várias máquinas em paralelo, com várias instâncias sincronizadas no mesmo projeto.
+
+Conceitos:
+-Nodes: é uma instância(máquina) que participa do Swarm
+-Manager nodes: Node que gerencia os demais nodes
+-Worker nodes: Nodes que trabalham em função do Manager
+-Service: Um conjunto de taks que o Manager Nodes manda para o Worker Nodes executar; Os containers que estão rodando
+-Task: comandos que são executados nos Nodes
+
+
+
+PASSO A PASSO:
+Crie uma instância
+Configure ela
+Utilize  ssh -i "node:1.pem" ec2-user@ec2-18-119-124-129.us-east-2.compute.amazonaws.com no CMDER
+Atualize a máquina com sudo yum update -y
+Instale o docker: sudo yum install docker
+inicialize o docker: sudo service docker start
+permissão de usuário: sudo usermod -a -G ec2-user  
+Inicie o Swarm: docker swarm init
+
+Funções:
+docker node ls: lista os nodes
+docker node leave: sai do swarm
+docker node swarm initi: integra um novo swarm
+docker swarm join –token <token><ip>:<porta>: adiciona uma máquina a um swarm
+
+serviços: projetos rodando
+docker service create –name <nome> <imagem>: sobe um serviço de um swarm
+docker service ls - lista os serviços
+docker service rm <nome> : remove serviços
+docker service create –name <nome> –replicas <numero> <imagem>
+docker service ps <nome>: verifica quem está rodando a aplicação
+docker service scale <nome>=<replicas>> cria novas réplicas 
+docker service update –image<imagem><servico>: Atualiza parâmetros
+Swarms:
+docker swarm join-token manager: para achar o codigo para subir o swarm
+docker swarm leave -f: a instância deixa de ser um node no swarm
+docker node rm: remove um node
+docker node update –availability drain <id>: o serviço para de receber novas task
+docker network create: cria uma rede
+–network <rede>
+
+—------------------------------------------------------
+
+KUBERNETES- Uma ferramenta de orquestração
+Permite a criação de múltiplos containers, escalando o projeto formando um cluster, foco na arquitetura horizontal
+
+Conceitos:
+Control Plane: Onde é gerenciado o controle dos processos de Node
+Nodes: Máquinas que são gerenciadas pelo Control Plane
+Deployment: A execução de uma imagem/projeto em um Pod
+Pod: Um ou mais containers que estão em um Node
+Services: Serviços que expõe os pods ao mundo externo
+Kubectl: Cliente de linha de comando para os kubernetes
+
+
+—------------------------------------------------------
+Deployments
+Com ele criamos nosso serviço que vai rodar no pods, definimos uma imagem e um nome, para posteriormente ser replicado entre os servidores, precisamos de uma imagem no hub do docker 
+
+PASSO A PASSO
+Fazer a instalação do chocolatey
+Instalar o minikube
+Startar o minikube
+Criar projeto: buildar a imagem, enviar para o docker hub
+
+
+Partimos da imagem python3
+Atualizamos os repositórios e instalamos o python-pip e o python-dev
+definimos o diretorio de trabalho com o .app
+instalamos o flask com o pip
+copiamos todos os arquivos do projeto para o diretorio de trabalho
+expomos a porta para acesso 5000
+rodamos o comando para executar 
+
+
+Criando um Deployment:
+kubectl create deployments <nome>-image=<imagem>
+
+kubectl describe deployments: informações de deployments
+kubectl  
+

@@ -12,12 +12,12 @@ Sobre hobbies, começo pelos esportes, sou enxadrista amador, já disputei algun
 
 Escolhi passar pelo programa para ter um noção básica do mercado de trabalho (sou muito inseguro em não ser um bom profissional no futuro). Ciente que sou uma pessoa que procrastina bastante, luto muito para melhorar isso, vim almejando receber o máximo de críticas possível para me auxiliar profissionalmente.
 
-# Marco Atual                   Desafios
+# Marco Atual && Desafios
 
-- [x] Sprint 1                  Sem Desafio
-- [x] Sprint 2                  [Link 2](https://github.com/Brenildu/maeda.compass/tree/main/Sprint_2/desafio)
-- [x] Sprint 3                  [link 3](https://github.com/Brenildu/maeda.compass/tree/main/Sprint_3/desafio)
-- [x] Sprint 4                  [link 4](https://github.com/Brenildu/maeda.compass/tree/main/Sprint_4/docker/desafio)
+- [x] Sprint 1                  *Sem Desafio*
+- [x] Sprint 2                  [Desafio 2](https://github.com/Brenildu/maeda.compass/tree/main/Sprint_2/desafio)**link**
+- [x] Sprint 3                  [Desafio 3](https://github.com/Brenildu/maeda.compass/tree/main/Sprint_3/desafio)**link**
+- [x] Sprint 4                  [Desafio 4](https://github.com/Brenildu/maeda.compass/tree/main/Sprint_4/docker/desafio)**link**
 - [ ] Sprint 5
 - [ ] Sprint 6
 - [ ] Sprint 7
@@ -25,9 +25,11 @@ Escolhi passar pelo programa para ter um noção básica do mercado de trabalho 
 - [ ] Sprint 9
 - [ ] Sprint 10
 
+# Certificados:
+[Link todos Certificados]()
 
 # RESUMOS
-
+[Resumos completos]()
 ## Sprint 1
 
 ### Curso Git e GitHub do básico ao avançado (c/ gist e GitHub Pages)
@@ -351,5 +353,147 @@ Com o crescimento da internet aumentou o volume dos dados, sempre produzimos dad
     * Criação de um Total business value assessment: Pensar no retorno de valor que o projeto irá gerar, qual o tempo útil, suporte e manutenção, alterar o modelo de trabalho para trabalhar com Big Data, 
 
 
-### [Desafio](https://github.com/Brenildu/maeda.compass/tree/main/Sprint_2/desafio) *link*
+## Sprint 3
 
+### Curso Python 3 - Curso Completo do Básico ao Avançado
+
+
+* **Resumo Python**
+&nbsp;
+Python é uma linguagem de programação de código aberto criada por volta de 1991. É uma linguagem de alto nível, fácil de aprender e possui uma filosofia que enfatiza a legibilidade do código.
+&nbsp;
+* **Princípios e Filosofia do Python**
+&nbsp;
+Os princípios e filosofia do Python incluem:
+
+- Bonito é melhor que feio.
+- Explícito é melhor que implícito.
+- Simples é melhor que complexo.
+- Complexo é melhor que complicado.
+- Linear é melhor do que aninhado.
+- Esparso é melhor que denso.
+- Legibilidade conta.
+- Casos especiais não são especiais o suficiente para quebrar as regras.
+- Erros nunca devem passar silenciosamente.
+- Diante da ambiguidade, recuse a tentação de adivinhar.
+- Deveria haver um - e preferencialmente só um - modo óbvio para fazer algo.
+- Agora é melhor que nunca.
+- Boas ideias vêm com facilidade em explicar.
+&nbsp;
+* **Estilos de Codificação**
+&nbsp;
+Python enfatiza a padronização natural e separa funções, variáveis e outras estruturas com 2 linhas de espaço.
+&nbsp;
+* **Tipos de Dados**
+&nbsp;
+Python possui diversos tipos de dados, incluindo bool, int, float, string, list, dict e NoneType. Operadores comuns incluem +, -, *, /, //, **, e %.
+&nbsp;
+* **Uso do Python**
+&nbsp;
+Python pode ser usado com um interpretador para codificação interativa, ou em notebooks Jupyter. Possui uma comunidade rica e suporte a bibliotecas.
+&nbsp;
+* **Estruturas de Dados**
+&nbsp;
+Python oferece estruturas de dados como listas, tuplas, dicionários e conjuntos, cada uma com suas características específicas.
+&nbsp;
+* **Controle de Fluxo**
+&nbsp;
+Python suporta controle de fluxo usando estruturas como if, for, while, além de condicionais ternárias.
+&nbsp;
+* **Arquivos**
+&nbsp;
+Arquivos podem ser manipulados em Python usando o contexto 'with', garantindo o fechamento adequado.
+&nbsp;
+* **Compreensões de Lista**
+&nbsp;
+As compreensões de lista permitem criar listas de forma concisa usando expressões.
+&nbsp;
+* **Funções**
+&nbsp;
+Funções em Python podem ter parâmetros posicionais, nomeados e até parâmetros de lista e dicionário. Funções são objetos de primeira classe e podem ser atribuídas a variáveis.
+&nbsp;
+* **Decorators**
+&nbsp;
+Decorators permitem adicionar funcionalidades a funções existentes de forma elegante.
+&nbsp;
+* **Programação Orientada a Objetos (POO)**
+&nbsp;
+Python suporta programação orientada a objetos, com classes, objetos, herança, encapsulamento, polimorfismo e abstração.
+&nbsp;
+* **POO Avançado**
+&nbsp;
+Membros de classe podem ser instanciados ou estáticos. Métodos estáticos podem ser chamados diretamente na classe sem criar uma instância.
+&nbsp;
+* **Forma Imperativa vs. Forma Declarativa**
+&nbsp;
+Python permite programação tanto de forma imperativa quanto de forma declarativa, permitindo a escolha do estilo mais adequado para o problema.
+&nbsp;
+
+## Sprint 4
+
+### Curso Docker para Desenvolvedores(com Docker Swarm e Kubernetes) - Curso Completo do Básico ao Avançado
+
+# Resumo do Curso sobre Docker e Kubernetes
+
+1. Introdução
+
+- O Docker é uma ferramenta que simplifica a configuração de ambientes de aplicativos.
+- Ele utiliza containers para isolar e executar aplicativos em diferentes sistemas operacionais.
+- Isso permite criar ambientes independentes e portáteis.
+
+2. Trabalhando com Containers
+
+- Containers são pacotes de código que podem executar ações específicas.
+- Eles usam imagens que contêm instruções para a execução.
+- Vários containers podem ser executados juntos.
+
+3. Imagens e Avançado em Containers
+
+- Imagens contêm instruções para a execução de um container.
+- Camadas de imagens permitem reutilização e otimização.
+- Atualizações em imagens requerem recriação do container.
+
+4. Introdução a Volumes em Containers
+
+- Volumes são usados para persistência de dados.
+- Tipos de volumes: anônimos, nomeados e bind mounts.
+- Permitem que os dados sobrevivam aos ciclos de vida do container.
+
+5. Conectando Volumes de Contêineres
+
+- Volumes podem ser conectados a múltiplos containers.
+- Facilitam o compartilhamento de dados entre containers.
+
+6. Introdução ao YAML
+
+- YAML é uma linguagem de configuração fácil de ler.
+- Usada para definir configurações em arquivos.
+- É comumente usada para configurações do Docker e Kubernetes.
+
+7. Docker Compose
+
+- Docker Compose é usado para definir e executar aplicativos com múltiplos containers.
+- Um arquivo YAML descreve os serviços, volumes e redes.
+- Simplifica a execução de vários containers com um único comando.
+
+8. Docker Swarm
+
+- Docker Swarm é uma ferramenta de orquestração para gerenciar múltiplos containers.
+- É baseado em clusters com nós de gerenciamento e de trabalho.
+- Permite dimensionar horizontalmente e garantir alta disponibilidade.
+
+9. Kubernetes
+
+- Kubernetes é uma plataforma de orquestração de código aberto para automação, implantação e gerenciamento de aplicativos em containers.
+- Control Plane, Nodes, Deployments, Pods e Services são conceitos-chave.
+- Oferece escalabilidade, balanceamento de carga e auto-recuperação.
+
+Revisão da Aula 89
+
+- Comandos úteis do Docker, incluindo `docker ps`, `docker run`, `docker stop`, `docker logs` e outros.
+- Gerenciamento de imagens com `docker pull`, `docker tag` e `docker rmi`.
+- Uso de volumes para persistência de dados.
+- Introdução ao Docker Compose para orquestração simplificada.
+- Noções básicas de Docker Swarm e Kubernetes para orquestração avançada.
+
+Lembre-se de que este resumo é uma visão geral do curso sobre Docker e Kubernetes. Cada tópico pode ser explorado em mais detalhes clicando no link de resumos.
