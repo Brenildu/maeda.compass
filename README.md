@@ -26,10 +26,13 @@ Escolhi passar pelo programa para ter um noção básica do mercado de trabalho 
 - [ ] Sprint 10
 
 # Certificados:
-[Link todos Certificados]()
+[Todos Certificados](https://github.com/Brenildu/maeda.compass/tree/main/Certificados)
 
-# RESUMOS
-[Resumos completos]()
+# RESUMOS COMPLETOS
+[Todos Resumos](https://github.com/Brenildu/maeda.compass/tree/main/Resumos)
+
+## RESUMO DOS RESUMOS:
+
 ## Sprint 1
 
 ### Curso Git e GitHub do básico ao avançado (c/ gist e GitHub Pages)
@@ -356,14 +359,15 @@ Com o crescimento da internet aumentou o volume dos dados, sempre produzimos dad
 ## Sprint 3
 
 ### Curso Python 3 - Curso Completo do Básico ao Avançado
-
+&nbsp;
+![foto Python](img/python.jpg)
 
 * **Resumo Python**
-&nbsp;
+
 Python é uma linguagem de programação de código aberto criada por volta de 1991. É uma linguagem de alto nível, fácil de aprender e possui uma filosofia que enfatiza a legibilidade do código.
-&nbsp;
+
 * **Princípios e Filosofia do Python**
-&nbsp;
+
 Os princípios e filosofia do Python incluem:
 
 - Bonito é melhor que feio.
@@ -379,61 +383,62 @@ Os princípios e filosofia do Python incluem:
 - Deveria haver um - e preferencialmente só um - modo óbvio para fazer algo.
 - Agora é melhor que nunca.
 - Boas ideias vêm com facilidade em explicar.
-&nbsp;
+
 * **Estilos de Codificação**
-&nbsp;
+
 Python enfatiza a padronização natural e separa funções, variáveis e outras estruturas com 2 linhas de espaço.
-&nbsp;
+
 * **Tipos de Dados**
-&nbsp;
+
 Python possui diversos tipos de dados, incluindo bool, int, float, string, list, dict e NoneType. Operadores comuns incluem +, -, *, /, //, **, e %.
-&nbsp;
+
 * **Uso do Python**
-&nbsp;
+
 Python pode ser usado com um interpretador para codificação interativa, ou em notebooks Jupyter. Possui uma comunidade rica e suporte a bibliotecas.
-&nbsp;
+
 * **Estruturas de Dados**
-&nbsp;
+
 Python oferece estruturas de dados como listas, tuplas, dicionários e conjuntos, cada uma com suas características específicas.
-&nbsp;
+
 * **Controle de Fluxo**
-&nbsp;
+
 Python suporta controle de fluxo usando estruturas como if, for, while, além de condicionais ternárias.
-&nbsp;
+
 * **Arquivos**
-&nbsp;
+
 Arquivos podem ser manipulados em Python usando o contexto 'with', garantindo o fechamento adequado.
-&nbsp;
+
 * **Compreensões de Lista**
-&nbsp;
+
 As compreensões de lista permitem criar listas de forma concisa usando expressões.
-&nbsp;
+
 * **Funções**
-&nbsp;
+
 Funções em Python podem ter parâmetros posicionais, nomeados e até parâmetros de lista e dicionário. Funções são objetos de primeira classe e podem ser atribuídas a variáveis.
-&nbsp;
+
 * **Decorators**
-&nbsp;
+
 Decorators permitem adicionar funcionalidades a funções existentes de forma elegante.
-&nbsp;
+
 * **Programação Orientada a Objetos (POO)**
-&nbsp;
+
 Python suporta programação orientada a objetos, com classes, objetos, herança, encapsulamento, polimorfismo e abstração.
-&nbsp;
+
 * **POO Avançado**
-&nbsp;
+
 Membros de classe podem ser instanciados ou estáticos. Métodos estáticos podem ser chamados diretamente na classe sem criar uma instância.
-&nbsp;
+
 * **Forma Imperativa vs. Forma Declarativa**
-&nbsp;
+
 Python permite programação tanto de forma imperativa quanto de forma declarativa, permitindo a escolha do estilo mais adequado para o problema.
 &nbsp;
 
 ## Sprint 4
 
 ### Curso Docker para Desenvolvedores(com Docker Swarm e Kubernetes) - Curso Completo do Básico ao Avançado
+![foto Python](img/docker.jpg)
 
-# Resumo do Curso sobre Docker e Kubernetes
+* **Resumo do Curso sobre Docker e Kubernetes**
 
 1. Introdução
 
