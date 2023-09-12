@@ -37,6 +37,9 @@ Escolhi passar pelo programa para ter um noção básica do mercado de trabalho 
 
 ### Curso Git e GitHub do básico ao avançado (c/ gist e GitHub Pages)
 
+![foto git](img/git.png)
+&nbsp;
+
 &nbsp;
 * **Sobre o Git e GitHub**  
 <p>
@@ -111,6 +114,9 @@ Gostei muito do curso, achei o professor bem didático e demonstrou o conteúdo 
 </p>
 
 ### Curso Linux para Desenvolvedores (c/ terminal, Shell, Apache e +)
+
+![foto linux](img/linux.jpg)
+&nbsp;
 
 &nbsp;
 * **Introdução do curso**  
@@ -262,7 +268,7 @@ Representações gráficas de tabelas e suas conexões.
 
 
     
-### Curso Big DAta
+### Curso Big Data
 
 &nbsp;
 ![foto big data](img/bigdata.jpeg)
