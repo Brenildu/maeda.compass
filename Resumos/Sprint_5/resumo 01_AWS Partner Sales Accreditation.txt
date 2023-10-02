@@ -1,0 +1,41 @@
+Principais tópicos:
+
+Resiliência Operacional: A resiliência operacional na AWS depende dos quatro pilares: operações, segurança, software e infraestrutura. Isso envolve garantir a integridade e a disponibilidade das operações de TI.
+
+Causas de Falhas Operacionais: As principais causas de falhas operacionais incluem erros humanos, erros de configuração, erros de procedimentos e acidentes comuns.
+
+Agilidade Empresarial: A agilidade empresarial envolve a capacidade de responder rapidamente, realizar experimentação e gerar resultados em menos tempo. Isso permite ajustar estratégias e operações conforme necessário.
+
+Indicadores de Desempenho (KPIs) da Agilidade Empresarial: Alguns KPIs relacionados à agilidade empresarial incluem o tempo médio para versões de produção e o tempo de entrada no mercado de novos recursos de aplicações.
+
+Redução da Pegada de Carbono na AWS: Para reduzir a pegada de carbono na AWS, os clientes podem usar instâncias Graviton, instâncias spot, tecnologia sem servidor e realizar análises de economia de custo.
+
+Gerenciamento Financeiro da Nuvem: O gerenciamento financeiro da nuvem envolve a transparência de custos e o uso de ferramentas para medir e monitorar os custos e os dados de uso.
+
+Avaliação do Portfólio de Migração (MPA): A MPA ajuda a analisar portfólios de clientes, validar casos de negócio, criar planos de migração, recomendar redimensionamentos e fornecer relatórios de planejamento de migração.
+
+Mudanças na TI com a AWS: Com a AWS, as empresas podem eliminar tarefas táticas e indiferenciadas, liberando tempo para inovação, além de adotar novos serviços e tecnologias para reduzir custos.
+
+Simplicidade e Automação da AWS: A simplicidade e a automação da AWS ajudam os administradores de servidor a identificar riscos de segurança e aderir a padrões mais rapidamente.
+
+
+Conceitos de Computação em Nuvem: A computação em nuvem envolve a entrega sob demanda de recursos de TI pela internet, com pagamento conforme o uso. Ela oferece flexibilidade e escalabilidade para as organizações, eliminando a necessidade de infraestrutura local.
+
+Práticas Recomendadas com a AWS: Ao envolver as equipes da AWS, é importante demonstrar alinhamento com os objetivos do cliente, articular valor exclusivo, obter consentimento do cliente para compartilhar informações e fornecer descrições claras de projetos.
+
+Pilares do AWS Cloud Value Framework: Os quatro pilares deste framework incluem economia de custos, produtividade da equipe, agilidade empresarial e resiliência operacional. Cada pilar contribui para gerar valor comercial ao longo do tempo.
+
+Benefícios da Modernização: A modernização oferece benefícios como maior agilidade empresarial, eficiência da equipe, ROI e redução de TCO (Custo Total de Propriedade), permitindo que as organizações se adaptem às demandas do mercado e inovem.
+
+Considerações de Custo na Nuvem: Os clientes podem melhorar a eficiência na nuvem ao longo do tempo por meio de várias otimizações, mesmo com o aumento do uso. O controle de custos é uma preocupação comum na adoção da nuvem.
+
+Equipes da AWS e Setor Público: A AWS atende ao setor público, que inclui governo, educação, organizações sem fins lucrativos e saúde, fornecendo soluções específicas para essas áreas.
+
+Venda Conjunta com a AWS: Envolve a colaboração entre a AWS e seus parceiros para fornecer soluções integradas aos clientes. Os parceiros desempenham um papel crucial na oferta de soluções conjuntas.
+
+Resiliência Operacional: Contribui para o valor comercial ao aumentar a disponibilidade, a segurança e a capacidade de resposta a interrupções não planejadas.
+
+Segurança dos Dados: Ao lidar com preocupações de segurança dos dados, é importante destacar os padrões de segurança e certificações de conformidade da AWS.
+
+Aumento da produtividade da Equipe: A migração para a AWS pode aumentar a produtividade da equipe, permitindo o gerenciamento de mais máquinas virtuais e eliminando o tempo gasto na manutenção de hardware.
+

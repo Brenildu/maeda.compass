@@ -508,3 +508,87 @@ Revisão da Aula 89
 - Noções básicas de Docker Swarm e Kubernetes para orquestração avançada.
 
 Lembre-se de que este resumo é uma visão geral do curso sobre Docker e Kubernetes. Cada tópico pode ser explorado em mais detalhes clicando no link de resumos.
+
+## Sprint 5
+
+### Curso AWS e preparação para Certificação Cloud Practitione
+![foto AWS](img/aws.jpg)  
+
+### Título: Maximizando o Valor Comercial na AWS
+
+1. Introdução à Computação em Nuvem
+
+A computação em nuvem oferece recursos de TI sob demanda pela internet, proporcionando flexibilidade e escalabilidade. Este curso aborda como a AWS ajuda as organizações a aproveitar ao máximo essas vantagens.
+
+2. Pilares do AWS Cloud Value Framework
+
+O AWS Cloud Value Framework compreende quatro pilares que impulsionam o valor comercial ao longo do tempo.
+
+#### A. Redução de Custos
+
+- Análise de redução de custos comparando ambientes tradicionais com a AWS.
+- Modelos de definição de preços flexíveis, como instâncias reservadas e Saving Plans.
+- Consumo baseado em modelo para evitar ineficiências.
+
+#### B. Produtividade da Equipe
+
+- Eliminação de tarefas não essenciais e automação.
+- Aumento da eficiência, permitindo foco na inovação.
+- Estudos mostram aumento na produtividade.
+
+#### C. Resiliência Operacional
+
+- Maior disponibilidade e segurança.
+- Redução do tempo de inatividade, que pode ser custoso.
+- Mitigação de erros por meio de automação.
+
+#### D. Agilidade Empresarial
+
+- Resposta rápida a mudanças no mercado.
+- Lançamento mais rápido de produtos.
+- Uso de novos serviços e tecnologias.
+
+#### E. Sustentabilidade
+
+- Redução da pegada de carbono por meio de eficiência energética e uso de energia renovável.
+- Comparação com data centers tradicionais.
+
+3. Gerenciamento Financeiro da Nuvem
+
+O gerenciamento financeiro envolve medição, otimização, planejamento e operações financeiras na nuvem.
+
+#### A. Medição
+
+- Estabelecimento de visibilidade de custos e responsabilidades.
+- Uso de contas, tags e alocação de custos.
+
+#### B. Otimização de Custos
+
+- Economia de recursos, evitando dívidas técnicas.
+- Escolha de opções de compra econômicas.
+
+#### C. Planejamento e Forecast
+
+- Processos de orçamento e forecast ágeis e previsíveis.
+- Uso de ferramentas como AWS Pricing Calculator e AWS Cost Explorer.
+
+#### D. Operações Financeiras na Nuvem
+
+- Estabelecimento de governança e alinhamento entre finanças e TI.
+- Implementação de diretrizes de consumo e evolução de processos e automação.
+
+#### E. AWS Migration Evaluator (MPA)
+
+- Ferramenta para análise financeira de migrações.
+- Análise de inventário, estimativas de custos e taxas de execução na AWS.
+
+4. Considerações Adicionais
+
+- Benefícios da modernização, incluindo agilidade e ROI.
+- Segurança dos dados e resiliência operacional.
+- Venda conjunta com a AWS por meio de parcerias.
+- Como os AWS Partners podem auxiliar os clientes.
+
+5. Conclusão
+
+Este curso fornece uma visão abrangente sobre como a AWS ajuda as organizações a otimizar os aspectos econômicos da nuvem, maximizando o valor comercial ao longo do tempo. Compreender os pilares do AWS Cloud Value Framework e as práticas recomendadas de gerenciamento financeiro na nuvem é essencial para tomar decisões informadas e obter o máximo da AWS.

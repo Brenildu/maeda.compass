@@ -1,0 +1,242 @@
+Resumo AWS Partner: Cloud Economics Accreditation (Portuguese)
+
+
+Aspectos Econômicos da Nuvem:
+
+Foco em duas áreas, Valor em comum e Gerenciamento financeiro da nuvem, a primeira área incluem todos os componentes que promovem os negócios dos clientes e o segundo ajuda o cliente a desenvolver habilidades e as ferramentas necessárias para concretizar todos os benefícios econômicos
+
+Ajudam o cliente a migrar para a AWS com análise de ambientes on-premisses e a quantificação do valor, ajudando a manter a confiança e diminui o ciclo de venda
+
+Cloud Value Framework - uma maneira de considerar o valor na nuvem
+Feito de 5 pilares:
+Redução de custos: evita as estruturas on-premisses e reduzindo a variável de gastos	
+Produtividade da equipe: muito do trabalho técnico não será mais necessário
+Resiliência operacional: conquistado com maior disponibilidade e segurança e menor tempo de inatividade
+Agilidade empresarial:  novos produtos, novos expansões ou de mais recursos
+Sustentabilidade: redução dos impactos ambientais pelo TI
+
+Questão1: Qual é o objetivo da interação do valor comercial para clientes potenciais? (Selecione DUAS respostas.)
+RE: Facilitar a ida para uma prova de conceito
+
+—--------------------------------------------------
+Redução de custos
+Se foca na diferença entre o que o cliente pagaria com TI com o que pagaria utilizando o AWS, algumas técnicas:
+
+Análise de redução de custos: custos de aquisição e operacionais para executar um ambiente de TI tradicional(on-premisses) comparando com AWS 
+
+AWS ajuda a reduzir os custos de 3 maneiras: consumo baseado em modelo, os modelos de definição de preços e a frequência de custos de preços
+
+Consumo Baseado em modelo:
+O cliente paga apenas pelo que consomem em vez de pagarem adiantado pelo que acham que precisarão, a ideia é evitar ineficiência, tanto para mais quanto para mais recurso aplicado assim otimizando as despesas
+
+
+Modelos de definição de preços
+Por demanda: preços por demanda de instancias permitem o pagamento por capacidade computacional que é usada por hora	sem compromissos.
+
+Saving plans e instâncias reservadas: são modelos flexíveis que oferecem preços mais baixos em comparação com preços sob demanda em troca de compromissos de uso específicos de 1 a 3 anos
+
+Spot Intancia do EC2 oferecem capacidade computacional de reserva com grandes descontos e são melhores com trabalhos tolerantes a falhas com processamento em batch, renderização e cargas de trabalho em container
+
+
+Diminuição de custos por redução contínua dos preços
+
+—--------------------------------------------------
+Produtividade:
+
+Se refere a eficiência adquirida com a redução ou eliminação de tarefas não mais necessárias com os serviços da nuvem, diminuição do trabalho tático ao decorrer  
+expansão na nuvem, economizando tempo e reduz o tempo de inovação , na medida que se ganha mais experiência com a AWS a equipe ganha mais possibilidade de de estratégias de inovações:
+
+Melhorias:
+Na área de produtividade da equipe, o estudo revelou que pessoas em uma função de administrador de servidor puderam gerenciar 66% mais máquinas virtuais na AWS do que on-premises. no estudo citaram um aumento de 29% no tempo de desenvolvedores dedicados à criação de novos recursos e funcionalidades, em comparação com melhorias secundárias, atualizações e correções de erros.
+
+Servidor:
+Determinadas tarefas, como aplicação de patches, são significativamente reduzidas.a instalação, atualização e remoção de software foram reduzidas pela metade devido à simplicidade e à automação da AWS.
+
+Rede:
+Determinadas tarefas, como o planejamento da rede, são significativamente reduzidas. algumas tarefas, como atualização de hardware, podem ser eliminadas. Seus clientes não precisam gerenciar a rede quando usam a AWS
+
+Armazenamento:
+Os benefícios relacionados às funções de armazenamento mostram as atividades típicas relacionadas ao suporte às matrizes físicas de armazenamento em um data center, tarefas, como a instalação de hardware, são eliminadas. Neste exemplo, a economia é de 100% porque não há matrizes físicas para implementação.
+
+Aplicativo:
+Semelhante a outras funções, determinadas tarefas, como testes, exigem menos tempo devido à automação e ao autoatendimento da AWS.
+
+Instalações:
+Determinadas atividades, como planejamento e testes de recuperação de desastres relacionados ao hardware, foram significativamente melhoradas.
+
+Segurança: 
+Aqui a administração de ferramentas de segurança, como scanners de vulnerabilidade, está muito melhorada devido ao uso de uma plataforma central.
+E outras atividades, como auditorias de segurança, são bastante simplificadas, o que ajuda as empresas a aumentarem a conformidade com os padrões e a identificarem riscos mais rapidamente.
+
+
+—--------------------------------------------------
+Resiliência Operacional:
+Conquistado com a melhoria na disponibilidade e na segurança, representando menos tempo inativo e mais segurança. Tempos de inatividades para empresas custam milhões de dólares. Uma informação interessante é saber sobre o custo de interrupção
+custos de tempo de inatividade incluem:
+Taxas de terceiros
+Substituição de equipamentos
+Custos incidentais após o ocorrido
+Atividades e custos de recuperação
+Custos de detecção associados à descoberta inicial e investigações subsequentes
+Equipe de TI improdutiva e custos de usuários finais
+Perda de receita
+Custos de interrupção dos negócios
+E muito mais 
+Melhorias:
+Redução de 54% em interrupções não planejadas por ano
+Redução de 45% em incidentes relacionados à segurança por mês
+Redução de 39% em tempo médio para detecção de incidentes de segurança
+
+
+Como a AWS mitiga a possibilidade de erros: 
+A AWS faz o uso da automação, gerencia serviços de ponta a ponta, proporciona visibilidade de todo o sistema para uso, desempenho e métricas operacionais, usa a configuração de segurança e de governança de recursos da AWS e monitora o acesso das APIs 
+
+
+Causas de erros:
+Operações:
+Erros humanos, como a falta de procedimentos claramente definidos ou privilégios de usuário
+Erros de configuração nas definições do hardware ou do sistema operacional e scripts de inicialização
+Erros de procedimentos, como restaurar o backup incorreto ou esquecer-se de reiniciar um dispositivo
+E acidentes comuns no data center, como tropeçar nos cabos, derrubar o equipamento ou desconectar dispositivos
+
+
+
+
+Segurança:
+Malware, como worms e vírus
+Ataques de rede, como portas abertas e pacotes fragmentados
+Aplicativos ou sistemas operacionais sem aplicação de patches
+Problemas de segurança, como divulgação de senhas e credenciais não armazenadas com segurança
+E autenticação precária ou limitada
+
+
+Software:
+Esgotamento de recursos, como processos descontrolados, vazamentos de memória e aumento de arquivos
+Erros de computação ou de lógica, como referências incorretas, indicadores corrompidos e erros de sincronização
+Monitoramento inadequado, como inabilidade de identificar problemas
+Atualizações com falha, como intercompatibilidade e integrações
+
+
+Infraestrutura:
+Falha de hardware de servidores, armazenamento ou redes
+Desastres naturais, como furacões, inundações e terremotos
+Interrupções de energia, como falha no fornecimento de energia e nas baterias
+Ataques volumétricos, como DDoS e amplificação do Sistema de nomes de domínio (DNS)
+
+
+—--------------------------------------------------
+Agilidade Empresarial:
+Significa entregar mais, por exemplo, entregar mais rápido, fazer mais experiências e entregar resultados no mesmo tempo ou antes, é a habilidade de agregar mais valor aos clientes, é uma ampla área de valor que abre oportunidades para os clientes experimentarem e responderem com mais rapidez a mudança do negócio 
+
+
+Vencer em um setor digitalmente competitivo depende muito da agilidade de desenvolvimento de produtos, e um aspecto principal disso é a velocidade na qual os novos produtos e recursos são introduzidos no mercado.
+
+
+Melhorias:
+O tempo médio de liberação em produção foi reduzido em 34% depois da migração.
+A facilidade com que os clientes podem implantar analytics em tempo real em seus dados, favoreceu uma redução de 60% no tempo para informações acionáveis no momento em
+Variaveis importantes:
+Escopo
+Priorização
+adoção de novas iniciativas
+Técnica de falhar rapidamente e reduzir os custos das falhas
+
+
+
+
+—--------------------------------------------------
+Sustentabilidade:
+Significa evitar o desperdício e o esgotamento dos recursos naturais, toca muitas áreas da economia
+
+
+A AWS pode ajudar os clientes a conquistarem suas metas de sustentabilidade e a reduzir suas pegadas de carbono em várias áreas:
+Infraestrutura energeticamente eficiente da AWS
+Servidores mais eficientes e maior utilização de servidores
+Consumo reduzido de eletricidade e uso de energia renovável
+Quando comparada com os data centers empresariais em várias regiões geográficas, a AWS pode reduzir a pegada de carbono de um cliente em pelo menos 80% atualmente, e em até 96% quando a AWS estiver energizada com 100% de energia renovável, o que deve ocorrer até 2025
+
+
+—--------------------------------------------------
+Gerenciamento Financeiro:
+Você so paga pelos recursos que utiliza
+
+
+Os 4 pilares:
+Medição: e a responsabilidade focalizam o estabelecimento economico de transparência de custos e responsabilidades por meio de etapas necessárias
+Otimização de custos: foco na identificação de desperdícios, criação de arquiteturas compativeis na demanda.
+Planejamento e o forecast: foco na obtenção de uma melhor compreensão dos custos associados aos recursos de TI
+Operações financeiras da nuvem: foco na identificação e o investimento em pessoas, processos, ferramentas e automação para oferecer suporte ao gerenciamento
+
+
+Medição:
+capacidades que permitem que as organizações estabeleçam visibilidade dos custos e responsabilidade por gastos.
+
+
+Algumas atividades e resultados incluem:
+Usar contas e tags para criar uma representação de como as cargas de trabalho e as organizações são mapeadas para seu consumo da AWS.
+Criar o nível certo de granularidade para gerar relatórios de custos e monitoramento para os stakeholders tomarem decisões em tempo real e evitarem exceder o orçamento em nuvem.
+Alocar custos de nuvem implementando showbacks ou estornos de gastos na nuvem. Isso inclui gastos em opções de compra baseadas em compromisso, serviços compartilhados e compras no mercado para orientar um consumo mais consciente na nuvem.
+E por final, medir e relatar a eficiência da nuvem e os KPIs de valor para que as organizações possam medir o impacto das otimizações de custos e validar o esperado em comparação com a criação do valor real.
+
+
+Otimização de custos:
+A otimização de custos em organizações visa economizar recursos ao pagar apenas pelo necessário. Isso envolve evitar dívidas técnicas, projetando soluções econômicas desde o início, identificar e reduzir gastos desnecessários na nuvem, escolher as opções de compra mais econômicas para cargas de trabalho (por exemplo, Saving Plans, instâncias reservadas) e repassar as economias para os clientes quando a AWS introduz inovações ou reduções de preços. Para atingir esse objetivo, as organizações devem criar uma estratégia que equilibre custo, desempenho, disponibilidade e escalabilidade, levando em consideração requisitos técnicos, modelos de preços e mudanças na demanda ao longo do tempo.
+
+
+
+
+Planejamento e o forecast:
+
+
+O planejamento e o forecast visam melhorar a previsibilidade das cargas de trabalho na nuvem. Isso inclui tornar os processos de orçamento e forecast mais ágeis, usar novas metodologias para estimar custos com ferramentas da AWS, quantificar o valor além da redução de custos, e integrar os processos de planejamento na nuvem com os da TI on-premises. A AWS oferece ferramentas como o AWS Pricing Calculator, páginas de preços detalhadas e o AWS Price List API para auxiliar nesse processo. Além disso, o AWS Cost Explorer utiliza machine learning para melhorar o forecast baseado em tendências. A avaliação do portfólio de migração também é importante para fornecer análises de redução de custos e apoiar as conversas com clientes no planejamento da migração.
+
+
+
+
+Operações Financeiras na nuvem: 
+
+
+As operações financeiras na nuvem envolvem:
+Obter patrocínio executivo para um Centro de Excelência em Nuvem (Cloud CoE) para um gerenciamento de custos programático.
+Alinhar a compreensão dos stakeholders sobre os custos da nuvem para criar uma cultura consciente e sustentável em relação aos custos.
+Implementar diretrizes de consumo na nuvem para promover agilidade empresarial e governança de custos.
+Evoluir processos, automação e ferramentas para alcançar eficiência contínua na redução de custos.
+O Cloud CoE é fundamental para alinhar incentivos e promover a governança, automação e métricas na organização. Os AWS Partners devem incentivar seus clientes a estabelecer um CoE e fazer perguntas-chave para eliminar as lacunas entre as finanças e a TI, como:
+Avaliar a utilização de instâncias reservadas e Savings Plans.
+Identificar suporte para cargas de trabalho elásticas.
+Realizar análises bem arquitetadas em colaboração com arquitetos de soluções.
+Garantir colaboração entre finanças e unidades de negócios técnicas.
+Garantir que os usuários finais tenham acesso a métricas de gerenciamento de custos.
+Continuar otimizando o uso da AWS.
+Os clientes têm opções para monitorar e relatar métricas, seja usando ferramentas existentes, personalizadas ou fornecidas por AWS Partners. A automação é fundamental, com práticas recomendadas como identificar instâncias ociosas, automatizar desligamentos, otimizar armazenamento e apresentar resultados em painéis para promover uma cultura de otimização.
+Uma ferramenta útil é o Programador de Instâncias da AWS, que permite configurações personalizadas de início e parada para instâncias do Amazon EC2 e Amazon RDS, reduzindo os custos operacionais. Usando essa solução, os clientes podem economizar significativamente nos custos durante o tempo de inatividade.
+
+
+
+
+Melhorias:
+
+
+O monitoramento e a medição consistentes e sistemáticos do custo e do uso da nuvem aumentam a taxa de atendimento dos acordos de nível de serviço (SLAs) da nuvem em 74%.
+O uso de modelos de preços baseados em compromissos e capacidade em excesso atinge uma economia maior de 35% em custos contínuos na nuvem.
+A condução de uma análise detalhada das variações entre forecasts e gastos reais na nuvem produz um aumento de 35% na precisão do forecast de gastos na nuvem.
+A governança centralizada de atividades na nuvem (por exemplo, segurança, finanças e demanda) aumenta a redução incremental dos custos na nuvem em 38%
+
+
+•  As empresas com melhor desempenho usam 30% mais estratégias de otimização de custos.
+•  O dimensionamento correto e os modelos de preços têm o maior impacto na redução incremental de custos na nuvem.
+.
+
+
+—--------------------------------------------------
+MPA
+A AWS Migration Evaluator (MPA) é uma ferramenta valiosa que ajuda as equipes a fazer a transição rápida para discussões de arquitetura e provas de conceito, simplificando, automatizando e escalando as análises financeiras. Isso beneficia os AWS Partners, consultores e equipes de vendas ao fornecer análises de redução de custos e relatórios úteis para planejamento de migração. Como profissional de vendas em uma organização AWS Partner, você pode usar a MPA para ajudar nas conversas com clientes. A MPA permite:
+Analisar o inventário atual de TI on-premises e mapeá-lo para serviços da AWS para comparação de custos.
+Estimar o nível de trabalho e os custos associados à migração.
+Calcular as taxas de execução anuais dos recursos de computação e armazenamento na AWS.
+Determinar a viabilidade do projeto, incluindo avaliação do custo total de propriedade ou redução de custos, comparações entre infraestrutura on-premises e AWS, estimativa de custos do projeto de migração e recomendações de dimensionamento correto para uma migração do tipo lift-and-shift.
+Para acessar a MPA, os AWS Partners podem fazer login no AWS Partner Central e usar as credenciais da AWS Partner Network (APN). Isso torna a MPA uma ferramenta valiosa para auxiliar na tomada de decisões informadas durante o processo de migração para a nuvem.
+
+
+
+

@@ -1,0 +1,227 @@
+Nuvem: O termo vem de um momento em que o recursos eram frequentemente representados por um nuvem
+
+Computação em nuvem: é a entrega sob demanda de poder computacional, BD, armazenamento, aplicativos e outros recursos de TI pela internet com preço pago pelo uso
+
+Uma empresa é proprietária da infraestrutura e garante a manutenção e segurança
+
+Benefícios:
+Agilidade: organização podem inovar de maneira mais rápida, podem gerar recursos ou implantar tecnologias de forma mais veloz	
+Elasticidade: Capacidade de aumentar o diminuir o número de recursos 
+Economia de custo: Troca de gastos com manutenção da infraestrutura com gastos variáveis, pagando apenas pela TI consumida
+Implantação global: se refere da capacidade de poder implementar um app em qualquer região do mundo em uma velocidade gigantesca
+
+Regiões AWS: São locais que visam a maior tolerância com falhas e instabilidades dos serviços Amazon Cloud, esses locais foram escolhidos posicionando a infraestrutura para os seus serviços próximos ao público alvo
+
+Amazon EC2:
+Elasticidade: permite aos clientes aumentar ou diminuir sua capacidade computacional em segundos, maximizando performance e diminuindo custos
+Controle: Os clientes possuem controle completo das instâncias
+Flexibilidade: Leque grande de possibilidades de SO, tipos de instancias e pacotes de software
+Integrado: EC2 é integrado nos outros serviços AWS
+Confiável: Garantia que o serviço será executado
+Seguro: Satisfaz um ótimo nível de segurança
+Econômico: Taxas baixas para bons serviços
+Facilidade: facilidade de gerenciamento
+
+Serviços de armazenamento:
+EBS:
+Persistência independentemente da instância, usado com o disco rígido
+Replicação automática, anexado a qualquer instância na mesma AZ
+Um volume do EBS para uma instância do EC2
+Os volumes EBS podem reter dados após encerrar o EC2
+
+S3:
+Armazena objetos em recursos = buckets
+Projetado para armazenamento altamente dimensionável, de alta durabilidade e disponibilidade
+Comum para: Data Lakes, Backup e armazenamento, hospedagem de app, hospedagem de mídia e entrega de software
+
+É importante saber bem sobre a escolha da categoria de armazenamento, dentro do S3 é possivel encontrar serviços para dados ativos, acessados raramente e para dados arquivados 
+
+
+Serviços de Banco de dados:
+Facil de configurar, gerenciar e manter
+Alta disponibilidade
+backups e atualizações automáticas
+Aumento ou diminuição vertical
+
+Serviço de Redes:
+Permite o cliente acessar uma rede virtual privada
+VPC: tem acesso total à rede virtual, seleção dos intervalos do ip, criação de subredes e configuração de tabelas de rotas e os gateways de uma rede,
+Divide o VPC: Listas de controle de acesso	da rede, Grupos de segurança, Logs de fluxo, Firewalls baseados em host
+Resumo:Crio um VPC, atribuo um intervalo de endereços IP e configuro sub-redes públicas e privadas	
+
+Serviços de Segurança:
+Clientes e parceiros são responsáveis pela segurança na nuvem: plataforma, configuração do sistema, criptografia e autenticação, proteção de tráfego…
+AWS é responsável pela segurança da nuvem: computação, BD, armazenamento, redes, infraestrutura…
+AWS comunica informações importantes.
+
+—----------------------------
+
+Os 7 R’s 
+para migrar de arquitetura para a nuvem
+
+Re-Hospedar  	 = Transferência de recursos para a nuvem, servidores -> instâncias
+Redefinir plataforma = uma infraestrutura VMware sem precisar comprar por novos hardwares ou modificar op. existentes
+Realocar = não se altera a arquitetura principal do app, objetivo de fazer otimização de nuvem direcionada e infraestrutura
+Refatorar = reimaginar como o aplicativo é arquitetado e desenvolvido
+Retirar = desativação de recursos inúteis	
+Reter = manter determinados aplicativos on-premises
+Recomprar = mover fluxos de trabalho para software como serviço (SaaS)
+
+As 4 primeiras representam a migração de cargas de trabalho para a nuvem
+
+
+Práticas recomendadas de arquitetura de nuvem:
+
+Faça um design à prova de falhas e nada vai falhar
+evitar pontos únicos de falha
+várias instâncias
+várias zonas de disponibilidade
+separe um único servidor em vários aplicativos
+Crie segurança em cada camada
+criptografe dados em repouso e em trânsito
+aplique o princípio de menor privilégio no IAM
+implemente um grupo de segurança e listas de controle de acesso à rede
+considere recursos e serviços avançados no servidor
+Aproveite diferentes opções de armazenamento
+mova ativos estáticos web para o Amazon S3
+use o cloudFront para servir globalmente
+armazene o estado de sessão no DynamoDB
+use o ElasticCache entre Hosts e bancos de dados
+Implemente elasticidade:
+implemente políticas de auto scaling
+arquitete resiliência para reinicializar e relançar
+use serviços como o Amazon S3 e o Amazon DynamoDB
+Pense paralelo
+dimensione horizontalmente, não verticalmente(Adicione mais recursos computacionais na sua aplicação em vez de adicionar mais potência aos recursos computacionais)
+desacople a computação da sessão/estado
+use o Elastic Load Balancing
+dimensione corretamente a infraestrutura
+O acoplamento fraco liberta você
+em vez de um único fluxo de trabalho ordenado, use várias filas
+use o Amazon Simple Queue Service e o Simple Notification Service
+aproveite serviços existentes
+Não tema restrições
+repense restrições tradicionais
+se precisar de mais ram, considere distribuir a carga em diversas instância
+
+
+AWS Well-architected Framework: criado para ajudar o cliente com a infraestrutura
+
+os 6 pilares:
+
+1- Excelência operacional
+2- Segurança
+3- Confiabilidade
+4- Eficiência
+5- Otimização de custos
+6- Sustentabilidade
+
+
+Soluções do AWS através de seus serviços, cada solução possui instruções, guia e implementação específicas
+
+. AWS Solution Space: solução de parceiros da AWS, envolvendo resumo de soluções, oferta de consultoria e Quick Start
+
+A descoberta é a reunião de coleta de informações para ajudar você a compreender os desafios dos clientes.
+Depois que todas as informações necessárias que identificam as metas e os pontos problemáticos do cliente forem coletadas, você se reunirá com o cliente novamente para apresentar suas descobertas e propor uma ou mais soluções da AWS. 
+Na verdade, isso pode acabar se tornando várias reuniões, dependendo da necessidade de ajustes na solução.Assim que o cliente concordar com uma solução em potencial, você perguntará se ele gostaria de avançar com uma prova de conceito (POC), na qual avaliará a solução em seu próprio ambiente.
+
+Preparação para descoberta:
+
+Pesquise o negócio de seu cliente
+Determine o segmento de mercado
+Identifique tendências do setor e concorrente dos cliente
+Pesquise notícias recentes e sobre o relacionamento do cliente com AWS	
+
+Incentive conversas detalhadas:
+faça perguntas direcionadas, abertas
+
+Uso do quadro branco:
+acompanhe a conversa, resumindo a reunião
+ilustre fluxo de trabalho e concepção
+*Compreensão do modelo de negocios da empresa
+* Evitar perguntas com respostas sim/não
+*Perguntas os porquês para descobriar a raiz do problema
+
+
+Técnicas para lidar com a objeção
+
+abordar objeções antes de avançar
+as objeções nem sempre são factuais
+identificar com o ponto de vista do parceiro
+identificar a principal preocupação
+tomar medidas para resolver o problema
+
+Soluções:
+Use abordagens orientadas a dados
+Prepare casos de uso	
+Se aprofunde na questão
+Tenha firmeza em sua solução
+Mantenha o ritmo
+Chaves para bons resultados:
+Prepare
+Antecipe
+Diferencie
+Permanecer na mensagem
+
+O que não fazer:
+Uso de palavras como: nunca, definitivamente ou garantido
+Usar acrónimos ou jargões técnicos da AWS
+Focar na tecnologia
+Focar o curto/médio prazo	
+
+
+—----------------------------
+POC
+Princípios básicos:
+
+Prova de Conceito: é um exemplo prático e em pequena escala da solução proposta, é um mecanismo de avaliação e uma oportunidade de educar o cliente
+
+Habilidades necessárias:
+Desenvolvimento na AWS
+Saber migrar os dados de um aplicativo
+Como validar testes e soluções	
+
+AWS Quick star e Programa Partner Opportunity Accelaration(POA)
+O primeiro serve de recurso para implementar de maneira rápida uma arquitetura, inicia e executa os serviços AWS necessários para implementar uma carga de trabalho específico reduzindo procedimentos manuais.
+POA ajuda a acelerar o ciclo de venda com o cliente e a adoção da sua solução com o cliente, o POA espera que tenha um plano de projeto com escopo e requerimentos definidos.
+
+—----------------------------
+Migração
+
+Colocar em produção:
+Boas práticas recomendadas podemos citar: envolve as equipes de contas da AWS, requisitos regulatórios específicos do cliente(pergunte se há uma lista de verificação para garantir a conformidade), faça avaliação periódica do Well-Architected(compare se o projeto anda de acordo com as boas práticas de parceiros da AWS) 
+
+
+Plano de migração:
+Criar o ambiente, migrar dados
+Validar a funcionalidade, executar em paralelo com o site existente
+Rever do Well-architected da AWS, analisando custos e otimizações
+Revise os casos de uso, utilize da experiência e treine o cliente
+Construa o POC
+
+
+—----------------------------
+APN
+
+Beneficios:
+Aproveitamento da inovação da AWS
+Acesso a ferramentas e recursos
+Mercado mais acessivel
+Treinamento gratuito e certificação
+
+Caminhos:
+
+Software:
+Para parceiros que desenvolem softwares executados ou integrados à AWS
+
+Hardware:
+Para organizações que desenvolvem dispositivos que podem funcionam com a AWS
+
+Serviço:
+Empresas de consultoria 
+
+Treinamento:
+Empresas que oferecem ou incorporam os treinamentos da AWS
+
+Distribuição:
+Para convidados, ajuda os parceiros a desenvolver soluções mais rapidamente
