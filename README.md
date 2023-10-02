@@ -18,7 +18,7 @@ Escolhi passar pelo programa para ter um noção básica do mercado de trabalho 
 - [x] Sprint 2                  [Desafio 2](https://github.com/Brenildu/maeda.compass/tree/main/Sprint_2/desafio)**link**
 - [x] Sprint 3                  [Desafio 3](https://github.com/Brenildu/maeda.compass/tree/main/Sprint_3/desafio)**link**
 - [x] Sprint 4                  [Desafio 4](https://github.com/Brenildu/maeda.compass/tree/main/Sprint_4/docker/desafio)**link**
-- [ ] Sprint 5
+- [x] Sprint 5                  *Sem Desafio*
 - [ ] Sprint 6
 - [ ] Sprint 7
 - [ ] Sprint 8
@@ -31,7 +31,26 @@ Escolhi passar pelo programa para ter um noção básica do mercado de trabalho 
 # RESUMOS COMPLETOS
 [Todos Resumos](https://github.com/Brenildu/maeda.compass/tree/main/Resumos)
 
-## RESUMO DOS RESUMOS:
+## LINK PARA OS RESUMOS DO README:
+### Sprint 1
+1. [Curso Git e GitHub do básico ao avançado (c/ gist e GitHub Pages)](https://github.com/Brenildu/maeda.compass#curso-git-e-github-do-b%C3%A1sico-ao-avan%C3%A7ado-c-gist-e-github-pages)
+2. [Curso Linux para Desenvolvedores (c/ terminal, Shell, Apache e +)](https://github.com/Brenildu/maeda.compass#curso-linux-para-desenvolvedores-c-terminal-shell-apache-e-)
+
+### Sprint 2
+3. [Curso SQL](https://github.com/Brenildu/maeda.compass#curso-sql)
+4. [Curso Big Data](https://github.com/Brenildu/maeda.compass#curso-big-data)
+
+### Sprint 3
+5. [Curso Python 3 - Curso Completo do Básico ao Avançado](https://github.com/Brenildu/maeda.compass#curso-python-3---curso-completo-do-b%C3%A1sico-ao-avan%C3%A7ado)
+
+### Sprint 4
+6. [Curso Docker para Desenvolvedores(com Docker Swarm e Kubernetes) - Curso Completo do Básico ao Avançado](https://github.com/Brenildu/maeda.compass#curso-docker-para-desenvolvedorescom-docker-swarm-e-kubernetes---curso-completo-do-b%C3%A1sico-ao-avan%C3%A7ado)
+
+### Sprint 5
+7. [Curso AWS e preparação para Certificação Cloud Practitione](https://github.com/Brenildu/maeda.compass#curso-aws-e-prepara%C3%A7%C3%A3o-para-certifica%C3%A7%C3%A3o-cloud-practitione)
+
+
+# RESUMO DOS RESUMOS:
 
 ## Sprint 1
 
