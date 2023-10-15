@@ -1,0 +1,609 @@
+Data Analytics - Fundamentos
+
+
+Avaliação de dados é o processo de compilar, processar e analisar dados para que você possa usá-los para tomar decisões.
+Análise de dados:é o processo analítico específico sendo aplicado.
+Os processos analíticos de dados são combinados para criar soluções de avaliação de dados, que ajudam as empresas a decidir onde e quando lançar novos produtos, quando oferecer descontos e quando comercializar em novas áreas.
+
+Dados gerados por humanos e dados gerados por computador
+Soluções de coletas, armazenamento, processamento e análise de dados
+
+A solução de análise de dados ajuda	 desde a gerenciar todo o ciclo dos dados
+
+Como saber se está utilizando bem os dados: 5 Vs
+tem dificuldade:
+no volume repentino de dados
+na velocidade em que os dados chegam
+na variedade de dados
+na precisão 
+ou na extração do valor de seus dados
+
+Processamento: Coletar, limpar, transformar e carregar dados em um armazenamento de dados	
+Aprender com os dados: Insides práticos, na forma de relatórios e dashboards a partir dos resultados do processamento
+
+—---------------------------------------------
+Volume:
+
+O volume de dados é algo natural, dispositivos e apps coletam dados todos os dias em uma imensidão de quantidade, o advento da internet das coisas só aumentou esse número de coleta, o número massivo de dados tendem apenas a crescer
+
+Dados 
+estruturados: são relacionados entre si, são organizados e armazenados na forma de valores que são agrupados em linhas e colunas de uma tabela.
+semi-estruturados: dados que não possuem uma estrutura rígida, são dados temporários muitas vezes são armazenados em conjuntos de pares de chave-valor que são agrupados em elementos em um arquivo.
+não-estruturados: dados que possuem forma de arquivos, objetos.. dados intocáveis e precisam estar catalogados para a análise Alguns dados podem ter uma estrutura semelhante a dados semi estruturados, mas outros podem conter apenas metadados.
+
+
+Amazon S3: Amazon Simple Storage 3
+As soluções de avaliação de dados podem ingerir dados de praticamente qualquer lugar. No entanto, quanto mais próximo os dados estiverem do sistema de processamento, melhor será o desempenho desse sistema. 
+O Amazon S3 é o armazenamento para a internet, projetado para facilitar a computação em escala web para os desenvolvedores. 
+
+Serviço de armazenamento de objetos de qualquer tipo de dado, um objeto é um arquivo para o Amazon S3, sendo escalável, durável tendo uma boa segurança e desempenho
+
+Cria buckets(pastas de arquivos)
+Mova os dados para os buckets, não importando o tamanho do volume
+
+Há 3 maneiras para armazenar no Amazon S3
+1- Desacoplamento: separar a maneira como armazena os dados da maneiro como os processa
+ex:
+Você pode armazenar de modo econômico todos os tipos de dados em seus respectivos formatos nativos com o Amazon S3. Em seguida, você pode executar quantos servidores virtuais forem necessários usando o Amazon Elastic Compute Cloud (Amazon EC2).
+
+Desacoplar oferece muitos benefícios, incluindo a capacidade de processar e analisar os mesmos dados com diversas ferramentas.
+
+
+2- Paralelização: acesso dos locais de armazenamento em paralelo sem afetar os outros processos
+
+
+3- Local Central: local que manipula e armazena dados analiticos
+
+O Amazon S3 facilita a criação de um ambiente multi-tenant em que muitos usuários podem trazer suas próprias ferramentas de análise de dados para um conjunto comum de dados.
+
+Melhora o custo e a governança de dados em relação às soluções tradicionais, ter o Amazon S3 como seu datastore central oferecerá ainda mais benefícios em relação às opções de armazenamento tradicionais.
+
+
+Os benefícios do Amazon S3 são:
+
+
+    - Armazenamento de qualquer coisa;
+    - Armazenamento seguro de objetos;
+    - Acesso HTTP nativamente on-line;
+    - Escalabilidade ilimitada; 
+    - Durabilidade de 99,999999999%.
+
+Objeto:
+composto por um arquivo e quaisquer metadados que descrevem esse arquivo
+
+Buckets:
+são contêineres lógicos para objetos
+
+Chave de Objeto:
+é um identificador exclusivo de um objeto em um bucket.
+
+Depois que os objetos foram armazenados em um bucket do Amazon S3, eles recebem uma chave de objeto. Use isso, juntamente com o nome do bucket, para acessar o objeto.
+
+Você pode considerar o Amazon S3 como um mapa de dados básico entre “bucket + chave + versão” e o próprio objeto. 
+
+
+Data Lake: é um repositório centralizado que permite armazenar dados estruturados, semiestruturados e não estruturados em qualquer escala. você pode dividir esses silos de dados e trazê-los para um único repositório central gerenciado por uma única equipe, fornecendo uma única fonte, os dados no data lake não é preciso convertê-los, agregá-los ou filtrá-los antes de armazenar. Tendo um única fonte de dado há mais precisão
+Silos de dados: são dados em vários locais separados de armazenamento.
+
+Usar a Amazon S3 como um data lake permite que você tenha o seu armazenamento em um local centralizado, assim, suas soluções e ferramentas que necessitam analisar os dados podem fazer isso sem necessidade de movimentação
+
+Benefícios de um data lake na AWS
+São uma solução de armazenamento de dados econômica. Você pode armazenar de forma durável uma quantidade quase ilimitada de dados usando o Amazon S3.
+Implemente a segurança e a conformidade líderes do setor. A AWS usa rigorosos mecanismos de segurança, conformidade, privacidade e proteção de dados.
+Permite que você aproveite muitas ferramentas diferentes de coleta e ingestão de dados para ingerir dados em seu data lake. Esses serviços incluem o Amazon Kinesis para dados de streaming e dispositivos AWS Snowball para grandes volumes de dados locais.
+Ajudam você a categorizar e gerenciar seus dados de forma simples e eficiente. Use o AWS Glue para entender os dados dentro do seu data lake, prepará-los e carregá-los de forma confiável em datastores. Depois que o AWS Glue cataloga seus dados, eles são imediatamente pesquisáveis, podem ser consultados e estão disponíveis para processamento de ETL.
+Ajuda você a transformar dados em informações significativas. Utilize o poder dos serviços analíticos criados para finalidades específicas em vários casos de uso, como avaliação interativa, processamento de dados usando o Apache Spark e o Apache Hadoop, data warehousing, análise em tempo real, análise operacional, painéis e visualizações.
+A configuração e o gerenciamento de data lakes envolvem:  carregar os dados, monitorar os fluxos de dados, configurar partições para os dados e ajustar a criptografia. Você também pode precisar reorganizar dados, deduplicá-los, combinar registros vinculados e auditar dados ao longo do tempo.
+
+O AWS Lake Formation facilita a configuração de um data lake seguro em dias, facilita a ingestão, limpeza, catalogação, transformação e proteção dos seus dados, além de disponibilizá-los para avaliação e machine learning.
+
+O Lake Formation configura os fluxos, centraliza a orquestração e permite que você monitore a execução dos trabalhos
+
+Armazenamento de dados estruturados
+
+Data WareHouse
+Um repositório central de dados estruturados de muitas fontes de dados.são usados como um sistema central para armazenar dados analíticos de várias fontes, Os dados dentro do Data Warehouse são usados para relatórios e análises de negócio, eles são bancos de dados que armazenam os dados transacionais em um formato que acomoda consultas grandes e complexas.
+ Amazon Redshift permite configurar e implantar um novo data warehouse, Amazon Redshift Spectrum permite combinar um Data lake e o seu Data Warehouse como se fosse uma única fonte de dados.
+Benefício recuperação rápida e centralizada dos dados, capacidade de analisar dados estruturados e semi-estruturados. 
+Amazon EMR cria ferramentas ETL um estrutura de trabalho gerenciada do hadoop é um framework que ajuda a processar os dados, oferece suporte para análise rápida de dados, utilizando o amazon é possível combinar o Hadoop, Data lake e o Data Warehouse
+
+Amazon EMR File System, o EMRFS, pode catalogar dados dentro de um data lake no S3 e a partir do sistema de arquivos do Hadoop on-premises ao mesmo tempo
+
+
+Data Marts
+Os data marts se concentram em apenas um assunto ou uma área funcional. Um data mart pode armazenar apenas as fontes de um único departamento.
+
+Benefícios do Amazon Redshift
+Desempenho mais rápido
+10 vezes mais rápido do que outros data warehouses
+Fácil de configurar, implantar e gerenciar
+Escala rapidamente para atender às suas necessidades
+Seguro
+
+Ao armazenar objetos ou arquivos individuais, recomendamos o Amazon S3.
+Ao armazenar volumes massivos de dados, semiestruturados e não estruturados, recomendamos a criação de um data lake no Amazon S3.
+Ao armazenar grandes quantidades de dados estruturados para avaliaçãos complexas, recomendamos armazenar seus dados no Amazon Redshift.
+
+Hadoop
+O Hadoop usa uma arquitetura de processamento distribuído, no qual uma tarefa é mapeada para um cluster de servidores convencionais para processamento. Cada bloco de trabalho distribuído aos servidores do cluster pode ser executado ou re-executado em qualquer um dos servidores. Os servidores do cluster usam frequentemente o Hadoop Distributed File System (HDFS) para armazenar dados localmente para processamento. 
+
+facilita a navegação de dados, descoberta e avaliação única de dados.
+pode processar dados estruturados, semiestruturados ou não estruturados. 
+código aberto, vários projetos de ecossistema estão disponíveis para ajudar a analisar os vários tipos de dados que o Hadoop pode processar e analisar.
+os clusters podem processar enormes quantidades de dados de maneira econômica.
+
+
+—---------------------------------------------
+Velocidade
+Quando as empresas precisam de informações rápidas dos dados que estão coletando, mas os sistemas implantados simplesmente não conseguem atender às necessidades, há um problema de velocidade.
+
+A rapidez como os dados são criados e armazenados
+
+Processamento de dados: refe-se aos processos de coleta de dados e o processo de manipulação para a produção de informações
+
+Processamento:
+Batch: processamento em intervalos, agendado e periodico, usa apenas uma aplicação
+você utiliza o processamento em batch quando há uma grande quantidade de dados para processar e precisa realizar isso em determinados intervalos.
+agendado possui um volume muito grande de dados para serem processados em uma rotina regular
+periódico, ocorre de forma aleatória ou sob demanda. 
+é comumente implementado nos casos em que há a necessidade de se obter insights profundos e análises avançadas
+O Amazon EMR, um framework gerenciado com Hadoop, usa ferramentas como Apache Spark & Hive para executar processamento de dados complexos.
+
+
+Streams: processar dados em fluxos contínuos, processamento de dados que são gerados continuamente em pequenos conjuntos de dados,, próximo ao tempo real, usa de vários serviços
+ Você usaria o streaming quando precisasse de um feedback em tempo real ou insights contínuos.
+Tempo real ocorre em milissegundos, enquanto o processamento próximo do tempo real ocorre em minutos.
+Amazon Kinesis Data Streams,
+O Amazon Kinesis Data Analytics permite que você opte por consultar uma janela de tempo contínua de dados, por exemplo, dos últimos dois minutos.
+
+
+Desafio maior é na velocidade de processamento na coleta dos dados
+
+Batch e periódico: após a coleta dos dados, o processamento pode ser feito em um ambiente controlado. Existe tempo para planejar os recursos apropriados.
+
+Quase em tempo real e em tempo real: a coleta de dados leva a uma necessidade imediata de processamento. Dependendo da complexidade do processamento (limpeza, depuração, curadoria), pode haver redução significativa da velocidade da solução. Planeje adequadamente.
+
+A aceleração de dados não é constante, ela vem em picos.
+
+
+
+
+
+Processamento de dados em batch
+Processamento de dados em stream
+Escopo de dados
+Consultas ou processamento de todos ou da maioria dos dados no conjunto de dados
+Consultas ou processamento de dados em uma janela de tempo contínuo ou apenas no registro de dados mais recente
+Tamanho dos dados
+Grandes batches de dados
+Registros individuais ou microbatches que consistem em alguns registros
+Latência
+Minutos a horas
+Segundos ou milissegundos
+Avaliação
+Análise complexa
+Funções de resposta simples, agregações e métricas contínuas
+
+
+Processamento em Batch
+O processamento em batch é a execução de uma série de programas ou trabalhos em um ou mais computadores sem intervenção manual
+
+
+Problemas com a alta latencia:
+Amazon EMR:
+Hadoop ou Apache Spark. Ambas as estruturas de trabalho processam os dados em alta velocidade, mas fazem isso de maneiras diferentes.
+Quando temos um Hadoop rodando no EMR, ele irá configurar um cluster de instâncias do EC2 para servir como uma única solução de armazenamento distribuído e processamento. Isso provê velocidade, tolerância a falhas e a habilidade de escalar separadamente as instâncias que coletam o dado, das instâncias que realizam o processamento. 
+o Spark usa o armazenamento em cache na memória e a execução é otimizada para uma performance mais rápida. As análises são primeiro realizadas filtrando os dados, depois agregando. 
+
+Criando:
+bucket do Amazon S3.
+serviço de processamento chamado AWS Lambda para capturar quaisquer novos dados
+enviá-los para o Amazon EMR para processamento
+os resultados serão enviados para um serviço chamado Amazon Redshift(podendo utilizar o Amazon Glue nesse ultimo passo)
+
+
+Hadoop
+O Apache Hadoop é um sistema escalável de armazenamento e processamento de dados em batch. Ele usa hardware de servidor de commodity e fornece tolerância a falhas por meio de software. 
+O Hadoop complementa os sistemas de dados existentes ao ingerir e processar simultaneamente grandes volumes de dados, estruturados ou não, de qualquer quantidade de fontes, o que permite uma avaliação mais profunda do que qualquer outro sistema pode oferecer. 
+
+O Hadoop Common é o conjunto de utilitários e bibliotecas Java que oferecem suporte a outros módulos do Hadoop
+O Hadoop Distributed File System (HDFS) é o sistema de arquivos distribuídos que armazena os dados em um ambiente de alta taxa de transferência de nós da comunidade.
+O Hadoop YARN é o framework de gerenciamento de recursos responsável por programar e executar trabalhos de processamento.
+O Hadoop MapReduce é um sistema baseado em YARN que permite o processamento paralelo de grandes conjuntos de dados no cluster.
+
+
+O processamento de streaming envolve a coleta e o processamento contínuo de dados em tempo real, diferindo das soluções de processamento em lote em termos de tamanho e velocidade variáveis dos dados.
+Os benefícios do processamento de streaming incluem:
+Controle: As soluções de streaming desacoplam a coleta e o processamento de dados, proporcionando um buffer persistente para os dados de entrada, permitindo seu processamento e direcionamento conforme necessário.
+Capacidade de Combinação de Dados de Múltiplas Fontes: Vários produtores de stream podem gravar dados distintos em um único endpoint, permitindo a combinação de dados de diferentes streams em um único fluxo de processamento.
+Preservação da Ordem dos Dados: É vital manter a sequência de eventos em um stream, garantindo que os dados sejam entregues e processados na mesma ordem em que foram gerados.
+Os consumidores de dados de streaming podem aproveitar o consumo paralelo para criar aplicações paralelas e gerenciar intervalos de dados.
+Uma opção viável é o serviço Amazon Kinesis para processamento de dados de streaming em tempo real, que inclui recursos como Amazon Kinesis Data Firehose, Amazon Kinesis Data Stream, Amazon Kinesis Data Analytics e Amazon Kinesis Video Streams. Esses serviços permitem a coleta, processamento e análise de dados de streaming em grande escala, oferecendo flexibilidade na escolha das ferramentas adequadas às necessidades da aplicação.
+Uma arquitetura típica envolve a coleta de dados de sensores por meio do Amazon Kinesis Data Firehose, o processamento pelo Amazon Kinesis Data Analytics e o armazenamento de dados relevantes em um bucket do Amazon S3. Os dados podem ser consultados usando o Amazon Athena e usados para criar dashboards e relatórios detalhados com o Amazon QuickSight.
+A arquitetura também permite a combinação de resultados de dados de streaming com dados de dispositivos usando o AWS Glue, mantendo os resultados separados em buckets diferentes no Amazon S3 para análises mais rápidas no Amazon Athena e no Amazon QuickSight. Isso oferece uma visão completa dos resultados de análise de dados de streaming.
+O curso continuará a explorar esses serviços em mais detalhes, fornecendo uma compreensão mais profunda de como aproveitá-los para análise de dados em tempo real.
+
+
+O Amazon Kinesis Data Firehose é a maneira mais fácil de capturar, transformar e carregar streams de dados em datastores da AWS para análises quase em tempo real usando ferramentas existentes de business intelligence.
+
+O Amazon Kinesis Data Streams permite criar aplicativos personalizados e em tempo real para processar streams de dados usando frameworks comuns de processamento de streams.
+
+O Amazon Kinesis Video Streams facilita o streaming seguro de vídeos a partir de dispositivos conectados à AWS, onde podem ser usados para análise, machine learning (ML) e outros processamentos
+
+O Amazon Kinesis Data Analytics é a maneira mais fácil de processar streams de dados em tempo real com SQL ou Java sem precisar aprender novas linguagens de programação ou frameworks de processamento
+
+
+
+
+
+
+
+
+—---------------------------------------------
+Variedade
+O problema da variedade
+Essa ampla variedade de dados rapidamente se torna um desafio para empresas que estão buscando diversidade em análise. Felizmente, os dados costumam ser classificados com base nos tipos de armazenamento usados.
+
+
+
+
+como esses dados são organizados na fonte de dados.
+três tipos de dados: estruturados, semiestruturados e não estruturados:
+
+
+Razão para Sistemas de Gerenciamento de Bancos de Dados (DBMS): Os dados estruturados são comuns em formatos de arquivo de texto puro, mas esses arquivos frequentemente carecem de regras e restrições, tornando a análise posterior desafiadora. Os sistemas de gerenciamento de bancos de dados foram desenvolvidos para fornecer estruturas organizadas e consistentes para armazenamento de dados.
+Arquivos de Texto Puro (Flat-Files): São comuns na forma de planilhas e outros documentos que contêm dados organizados em colunas e linhas. Esses arquivos geralmente carecem de consistência entre si, dificultando a união de dados sem pré-processamento.
+Bancos de Dados Relacionais: São uma escolha comum para organizações que desejam ir além do armazenamento simples de arquivos de texto. Bancos de dados relacionais permitem a coleta, atualização e consulta rápida de dados. Eles são conhecidos por oferecer suporte ao ACID (Atomicidade, Consistência, Isolamento e Durabilidade) para garantir a integridade dos dados em sistemas transacionais.
+Processamento de Transações em Tempo Real (OLTP) e Processamento Analítico em Tempo Real (OLAP): Esses são dois métodos principais de organização de informações em bancos de dados relacionais. Eles diferem na forma como os recursos do banco de dados são utilizados para operações de leitura e escrita. Em bancos de dados menores, a tolerância para operações de leitura e escrita simultâneas é possível, mas em bancos de dados maiores, é necessário otimizar para uma ou outra operação.
+Bancos de Dados OTLP e OLAP: A solução para equilibrar as operações de leitura e escrita é ter um banco de dados otimizado para operações de escrita (OLTP) e outro otimizado para operações de leitura (OLAP). Os dados são escritos frequentemente no banco de dados OLTP e, em seguida, copiados para o banco de dados OLAP em intervalos programados. O banco de dados OLAP pode incluir transformações para facilitar a análise.
+Operações de ETL: As operações de Extração, Transformação e Carga (ETL) são comumente usadas para copiar, transformar e carregar dados do banco de dados OLTP para o banco de dados OLAP, tornando os dados mais adequados para análise.
+No próximo tópico, exploraremos o armazenamento de dados semiestruturados e não estruturados, bem como os bancos de dados que os acomodam. Essa discussão ajudará a entender melhor como diferentes tipos de dados podem ser gerenciados e utilizados em soluções de análise de dados
+
+
+Bancos de dados relacionais são uma solução robusta para armazenar dados estruturados. Eles são criados usando um processo chamado normalização, que reduz a redundância e melhora a consistência dos dados.
+Um banco de dados relacional consiste em tabelas que organizam os dados em entidades, onde cada entidade corresponde a uma tabela. Cada tabela tem colunas que representam atributos da entidade, e cada linha na tabela é um registro único dessa entidade.
+Relações são estabelecidas entre as tabelas, geralmente usando chaves primárias e chaves estrangeiras. Isso permite que os dados em diferentes tabelas estejam relacionados entre si.
+Em resumo, bancos de dados relacionais são uma maneira eficaz de armazenar e gerenciar dados estruturados, garantindo a integridade e a eficiência das operações de coleta, atualização e consulta de dados.
+
+
+
+
+Existem dois principais tipos de sistemas de informação para organizar dados em um banco de dados relacional:
+Bancos de Dados de Processamento de Transações On-line (OLTP): Estes sistemas são projetados para armazenar dados de transações e se concentram na velocidade de entrada de dados. Eles organizam logicamente os dados em tabelas e são caracterizados por um grande número de operações de inserção, atualização e exclusão de dados. A eficácia de um sistema OLTP é geralmente medida pelo número de transações por segundo.
+Bancos de Dados de Processamento Analítico On-line (OLAP): Também conhecidos como data warehouses, esses sistemas são projetados para coletar dados de sistemas OLTP e organizá-los para operações analíticas. Eles organizam os dados em tabelas e se concentram na velocidade de recuperação de dados por meio de consultas. Os sistemas OLAP têm um número relativamente baixo de operações de gravação e não envolvem operações de atualização e exclusão de dados. A eficácia de um sistema OLAP é geralmente medida pelo tempo de resposta das consultas.
+
+Esses dois tipos de sistemas de informação atendem a diferentes necessidades: OLTP é ideal para operações de entrada de dados em tempo real, enquanto OLAP é mais adequado para análises e consultas de dados. Ambos desempenham papéis importantes no armazenamento e na utilização eficiente de dados em um ambiente de banco de dados relacional.
+
+
+
+
+Característica
+OLTP
+OLAP
+Natureza
+Transações constantes (consultas/atualizações)
+Grandes atualizações periódicas, consultas complexas
+Exemplos
+Banco de dados contábil, transações de loja on-line
+Relatórios, suporte às decisões
+Tipo
+Dados operacionais
+Dados consolidados
+Retenção de dados
+Curto prazo (2 a 6 meses)
+Longo prazo (2 a 5 anos)
+Armazenamento
+Gigabytes (GB)
+Terabytes (TB)/petabytes (PB)
+Usuários
+Muitos
+Poucos
+Proteção
+Tolerância a falhas e proteção robusta e constante dos dados
+Proteção periódica
+
+
+
+Indexação é um conceito importante para otimizar a recuperação de dados em bancos de dados estruturados. Os bancos de dados utilizam índices para organizar e acelerar a busca por registros em tabelas. Tabelas indexadas retornam resultados de consulta muito mais rapidamente do que tabelas não indexadas.
+Imagine um balde de Lego desorganizado versus um organizado por cores. Isso ajuda a entender a diferença entre tabelas indexadas e não indexadas.
+Por exemplo, ao buscar todos os pedidos feitos em uma data específica em uma tabela não indexada, o sistema precisa verificar todos os registros, o que pode ser demorado. Em uma tabela indexada, como aquela indexada pela data do pedido, o sistema pode encontrar os dados muito mais rapidamente, ignorando as entradas irrelevantes.
+Existem duas principais formas de indexação:
+Indexação Baseada em Linha: É adequada para sistemas OLTP (Online Transaction Processing) e é eficaz para consultas que retornam várias colunas de dados para cada linha correspondente. É ideal para operações comumente realizadas em bancos de dados transacionais.
+Indexação Colunar: É mais adequada para sistemas OLAP (Online Analytical Processing), que envolvem consultas complexas com agregação de dados. A indexação colunar permite que o sistema carregue apenas as colunas necessárias para a consulta, economizando recursos e melhorando a eficiência.
+Dentro da AWS, o Amazon Relational Database Service (Amazon RDS) é uma opção para bancos de dados OLTP com indexação baseada em linha. Ele facilita a configuração e operação de bancos de dados relacionais na nuvem. Para bancos de dados OLAP com indexação colunar, o Amazon RedShift é uma escolha eficiente. É um Data Warehouse rápido e escalável que permite análises simplificadas e econômicas de grandes conjuntos de dados. Ambos os serviços ajudam as empresas a otimizar o desempenho de seus bancos de dados e a economizar em custos de armazenamento.
+
+
+
+Olap - Indexação colunar -s. Elas pegam valores em uma única coluna de um grande número de linhas e os reduzem a um único valor
+
+Elas pegam valores em uma única coluna de um grande número de linhas e os reduzem a um único valor
+
+Amazon RDS. Esse serviço facilita a configuração, a operação e o dimensionamento de um banco de dados relacional na nuvem. O serviço oferece capacidade econômica escalável, além de automatizar muitas tarefas demoradas de administração, como provisionamento de hardware, configuração de banco de dados, aplicação de patches e backups
+
+
+
+Para bancos de dados OLAP, uma vez usando indexação colunar, temos o Amazon RedShift
+
+
+Em um sistema OLTP, as consultas mais comuns são chamadas de consultas de pesquisa. Essas consultas precisam retornar várias colunas de dados para cada registro correspondente. Os filtros nesses dados geralmente são baseados nas colunas de chave dessa tabela.
+
+
+Em um sistema OLAP, as consultas mais comuns são consultas agregadas. Essas consultas utilizam um grande número de linhas e as reduzem a uma única linha agregando os valores em uma ou mais colunas.
+
+
+
+
+
+Índices baseados em linhas
+Índices colunares
+Armazenamento em disco
+Linha por linha
+Coluna por coluna
+Leitura/gravação
+Melhores em leituras e gravações aleatórias
+Melhores em leituras e gravações sequenciais
+Melhores para
+Retornar linhas completas de dados com base em uma chave
+Retornar agregações de valores de colunas
+Implementação
+Sistemas transacionais
+Processamento analítico
+Compactação de dados
+É possível alcançar compactação de baixa a média
+Alta compactação é a norma
+
+
+
+
+
+
+Terminologia Importante:
+SQL: Refere-se à linguagem utilizada para consultar dados.
+NoSQL: Bancos de dados não relacionais que são projetados para armazenar dados semiestruturados e não estruturados.
+Bancos de Dados NoSQL:
+São utilizados para armazenar dados semiestruturados e não estruturados.
+Não requerem esquema fixo, permitindo a adição de novos atributos sem modificação prévia.
+São especialmente eficientes para cenários com alta ingestão de dados e escalabilidade.
+Categorias de Bancos de Dados NoSQL:
+Armazenamento de Documentos: Os dados são armazenados em formato de arquivo, como JSON ou XML. Cada arquivo contém elementos que podem variar.
+Chave-Valor: Os dados são armazenados como pares chave-valor em uma única tabela, sem um esquema fixo.
+Bancos de Dados de Grafos: Projetados para armazenar dados relacionais e navegar por conexões e relacionamentos entre os dados.
+Amazon DynamoDB:
+É um banco de dados NoSQL oferecido pela AWS.
+Combina recursos de armazenamento de documentos e chave-valor.
+Oferece alta performance e escalabilidade, sendo adequado para aplicações na escala da Internet.
+É um banco de dados de documentos e chave-valor que fornece desempenho inferior a 10 milissegundos em qualquer escala. O serviço é um banco de dados totalmente gerenciado que opera em várias regiões e com vários mestres e conta com recursos integrados de segurança, backup e restauração, 
+Amazon Neptune:
+Projetado para armazenar e consultar dados altamente conectados.
+Ideal para cenários que dependem fortemente de análise de relacionamentos, como redes sociais e detecção de fraudes.
+é um serviço de banco de dados de grafo rápido, confiável e totalmente gerenciado que facilita a criação e a execução de aplicativos que funcionam com conjuntos de dados altamente conectados.
+Vantagens dos Bancos de Dados NoSQL:
+Flexibilidade na adição de novos atributos.
+Eficiência na ingestão de dados em alta velocidade.
+Adequados para cenários de grande escala, como mídias sociais e sistemas de recomendação.
+Em resumo, os bancos de dados NoSQL desempenham um papel crucial no armazenamento e gerenciamento de dados semiestruturados e não estruturados, oferecendo flexibilidade e escalabilidade para diversos tipos de aplicação. Cada categoria de banco de dados NoSQL atende a diferentes necessidades, desde armazenamento de documentos até análise de relacionamentos em redes complexas.
+
+
+Grafo:
+O objetivo da organização em um banco de dados de grafo é navegar pelas relações
+
+Vantagens:
+Permitem a recuperação simples e rápida de estruturas hierárquicas complexas;
+Ótimos para mineração de big data em tempo real;
+Podem identificar rapidamente pontos de dados comuns entre nós;
+Ótimos para fazer recomendações relevantes e permitir a consulta rápida dessas relações.
+Desvantagens:
+Não é possível armazenar adequadamente dados transacionais;
+Os analistas devem aprender novas linguagens para consultar os dados;
+A análise nos dados pode não ser tão eficiente quanto com outros tipos de bancos de dados.
+
+
+—---------------------------------------------
+Veracidade
+
+
+Quando se tem dados que não são controlados, provenientes de vários sistemas diferentes e não consegue fazer curadoria dos dados de maneiras significativas, você sabe que tem um problema de veracidade.
+
+A Veracidade de dados é um grau de precisão, exatidão e confiança dos dados. Os dados devem ser limpos e selecionados corretamente, para que os relatórios destes dados sejam precisos.
+
+Definições
+Limpeza de dados é o processo de detecção e correção de corrupções nos dados.
+Integridade referencial é o processo para garantir que as restrições das relações da tabela sejam impostas.
+Integridade do domínio é o processo para garantir que os dados inseridos em um campo correspondam ao tipo de dados definido para esse campo.
+Integridade da entidade é o processo para garantir que os valores armazenados em um campo correspondam às restrições definidas para esse campo.
+Curadoria é a ação ou o processo de selecionar, organizar e cuidar de itens em uma coleção.
+Integridade dos dados é a manutenção e a garantia de precisão e consistência dos dados durante todo o seu ciclo de vida.
+Veracidade dos dados é o grau em que os dados são exatos, precisos e confiáveis.
+
+
+Você deve garantir a manutenção de um alto nível de certeza de que os dados que está analisando são confiáveis.
+
+Ter alta integridade de dados, significa que podemos confiar na fonte de dados para planejamento e tomada de decisões e operações. Possui um ciclo de vida que inclui a criação, agregação, armazenamento, acesso, compartilhamento e arquivamento.
+Na fase de criação, a integridade dos dados significa garantir a precisão dos dados, nessa fase é necessário auditorias regulares dos seus sistemas de software para confirmar duas coisas: se eles estão produzindo dados ou arquivos válidos e que as alterações não afetarão negativamente a integridade do sistema.
+Agregação, a integridade dos dados nessa fase garante que o usuário obtenha 'valor esperado', a partir do agregado fornecido. 
+Armazenamento é necessário manter os dados em um formato seguro e garantir que todas as alterações sejam precisas. A proteção de dados significa garantir que os dados estáveis não sejam alterados e que os dados voláteis só sejam atualizados por usuários e serviços autorizados.
+Acesso, os dados se tornam visíveis para os usuários. Somente para leitura. A integridade dos dados nesse momento é uma prova da integridade de todas as outras fases
+Arquivamento. Nesse ponto, a integridade dos dados se trata de garantir o arquivamento adequado. Você até poderia excluir os dados,mas o mais comum é agregá-los de outra forma e descartar o original.
+
+Com fontes de dados internas, você pode fazer recomendações para melhorias
+
+Amazon RDS, o Amazon Redshift e o Amazon DynamoDB, podem cuidar disso pra você. Esses serviços podem aplicar esquemas e otimizar a performance do banco de dados. Por exemplo, as instâncias de banco de dados do Amazon RDS são pré-configuradas com parâmetros e definições que já são adequados para o mecanismo e a classe selecionados. Você pode iniciar uma instância de banco de dados e conectar a sua aplicação em minutos.
+
+Limpeza de dados, Saiba:
+
+qual deve ser a limpeza
+de onde os erros vêm
+as alterações aceitáveis
+se os dados originais tem valor
+
+
+
+Esquema de BD
+Um esquema de banco de dados é um conjunto de metadados usado para organizar objetos de dados, impor restrições de integridade e definir como os objetos interagem dentro do banco de dados. Existem dois tipos principais de esquemas: lógicos e físicos.
+Esquemas lógicos: Concentram-se nas restrições aplicadas aos dados no banco de dados e na organização das tabelas, visualizações e verificações de integridade. Os esquemas lógicos definem como os objetos estão relacionados entre si, incluindo informações sobre essas relações e como elas devem ser mantidas. Também fornecem integridade de domínio ao impor restrições sobre os valores permitidos em campos específicos.
+Esquemas físicos: Concentram-se no armazenamento real de dados no disco ou em um repositório em nuvem. Eles incluem detalhes sobre arquivos, índices, tabelas particionadas, clusters e outros aspectos relacionados ao armazenamento dos dados. São úteis para calcular estimativas de espaço de armazenamento necessário, planejar o crescimento do sistema, recuperar dados em caso de desastres e planejar a infraestrutura.
+Os esquemas de banco de dados desempenham um papel essencial na organização e na manutenção eficiente de um banco de dados relacional. Eles são usados pelos programadores ao desenvolver software que interage com o banco de dados e ajudam a manter a integridade dos dados e a otimizar as consultas.
+
+
+
+
+Esquema de informação
+Um esquema de informações é um banco de dados de metadados que armazena informações sobre os objetos de dados em um banco de dados. Ele é usado para registrar detalhes importantes sobre esses objetos, como tabelas, índices, restrições e configurações de segurança. Cada sistema de gerenciamento de banco de dados (DBMS) pode ter um nome diferente para sua estrutura de armazenamento de metadados, mas a finalidade é a mesma: definir e manter informações sobre os objetos no banco de dados. Os dados no esquema de informações ajudam a otimizar consultas e também são úteis para a manutenção do banco de dados. Com as permissões adequadas, você pode consultar o esquema de informações para obter informações detalhadas sobre os objetos do banco de dados.
+
+
+
+Consistência do BD
+ACID (Atomicidade, Consistência, Isolamento e Durabilidade):
+ACID é mais comum em bancos de dados relacionais, como o Amazon RDS.
+É usado para manter a consistência e a disponibilidade dos dados.
+Garante que todas as transações retornem à versão consistente mais recente dos dados.
+Introduz latência no sistema devido à necessidade de manter a consistência e a integridade dos dados.
+Muitas regulamentações exigem bancos de dados compatíveis com ACID para várias aplicações.
+BASE (Basically Available, Soft state, Eventually consistent):
+BASE é mais comum em bancos de dados NoSQL e sistemas distribuídos.
+Prioriza a disponibilidade rápida dos dados.
+As alterações nos dados são disponibilizadas imediatamente na instância em que a alteração foi feita.
+Pode levar algum tempo para que as alterações sejam totalmente consistentes em todas as instâncias.
+É adequado para aplicações que não podem arcar com o tempo necessário para manter a consistência absoluta dos dados.
+Ambos os métodos são implementados pelo banco de dados, não pela aplicação que acessa os dados. A escolha entre ACID e BASE depende das necessidades da aplicação e das regulamentações que a empresa precisa seguir. No próximo tópico, serão discutidas as operações de ETL (Extração, Transformação e Carga) e como elas garantem a limpeza e a consistência dos dados.
+
+
+Conformidade ACID
+O objetivo de um banco de dados compatível com ACID é retornar a versão mais recente de todos os dados e garantir que os dados inseridos no sistema atendam a todas as regras e restrições atribuídas em todos os momentos.
+
+
+O acrônimo ACID representa quatro propriedades essenciais em bancos de dados relacionais:
+Atomicidade: Garante que todas as instruções em uma transação sejam bem-sucedidas ou falhem juntas. É um "tudo ou nada". Se alguma instrução falhar, toda a transação é revertida.
+Consistência: Para que uma transação seja bem-sucedida, todas as instruções dentro dela devem atender a todas as restrições definidas no banco de dados. Se uma única instrução violar alguma dessas restrições, a transação é revertida.
+Isolamento: Garante que uma transação não interfira em outras transações simultâneas. Isso evita a corrupção de dados quando várias transações acessam os mesmos dados ao mesmo tempo.
+Durabilidade: Certifica que as alterações realizadas em uma transação são permanentes, mesmo em caso de falha do sistema. As transações concluídas resultam em registros gravados em disco, não apenas em memória.
+Essas propriedades garantem a integridade e a consistência dos dados em bancos de dados relacionais.
+
+
+BASE
+BASE é um acrônimo para BAsicamente disponível, eStado flexível, Eventualmente consistente. É um método para manter a consistência e a integridade em um banco de dados estruturado ou semiestruturado.
+
+
+O acrônimo BASE representa três características fundamentais em sistemas de banco de dados distribuídos:
+Basicamente Disponível: Isso significa que uma instância do banco de dados pode receber novos registros ou atualizações imediatamente e disponibilizá-los para acesso. A consistência completa é trocada pela disponibilidade imediata. Em um sistema ACID, as alterações não ficam visíveis até que todas as instâncias se tornem consistentes. No BASE, a disponibilidade é priorizada.
+Soft State: Refere-se a um estado flexível ou mutável dos dados. Em sistemas BASE, a consistência parcial entre instâncias distribuídas é permitida, o que significa que diferentes instâncias podem ter visões ligeiramente diferentes dos dados em um determinado momento. Isso contrasta com sistemas ACID, onde os dados são considerados em um estado rígido e consistente.
+Consistência Eventual: Isso implica que, embora as alterações sejam disponibilizadas imediatamente em uma instância, levará algum tempo até que essas alterações sejam replicadas e todas as instâncias se tornem consistentes. No entanto, os dados estão sempre disponíveis de alguma maneira, seja na versão antiga ou nova. A consistência é eventualmente alcançada, mas a disponibilidade imediata é priorizada.
+Essas características tornam o modelo BASE adequado para sistemas distribuídos onde a disponibilidade e o desempenho são mais críticos do que a consistência instantânea de todos os dados.
+
+
+O Amazon EMR oferece uma plataforma robusta para coleta e processamento de dados e é adequado para equipes com sólido conhecimento técnico. Ele permite criar pipelines de dados personalizados para atender às necessidades de negócios específicas, oferecendo flexibilidade. Pode ser mais econômico em termos de infraestrutura em comparação com o AWS Glue.
+O AWS Glue é uma ferramenta de ETL gerenciada sem servidor que é mais simples de usar do que o Amazon EMR, sendo ideal para tarefas de ETL simples. No entanto, oferece menos flexibilidade do que o EMR. O AWS Glue também pode ser usado como um metastore para dados transformados usando o AWS Glue Data Catalog, substituindo um metastore do Hive.
+
+
+—---------------------------------------------
+Valor
+O esforço real deve ser para descobrir qual é o valor real dos dados e aprender maneiras de extrair esse valor dos terabytes de dados coletados pela sua empresa.
+
+Quando há grandes volumes de dados usados para corroborar algumas informações valiosas, você pode estar perdendo o valor dos seus dados.
+
+O que é análise de dados?
+ Análise de informações é o processo de análise de informações para encontrar o valor contido nelas
+Análise operacional ela se concentra nas operações digitais de uma organização.
+
+
+. A análise de informações envolve responder a perguntas sobre o que aconteceu, por que isso aconteceu, o que vai acontecer e o que deveria ter sido feito, abrangendo análises descritivas, diagnósticas, preditivas, prescritivas e cognitivas. A análise operacional se concentra em dados relacionados às operações de TI e utiliza todas as formas de análise para extrair informações significativas.
+A análise de informações envolve a análise de dados para encontrar valor neles, permitindo tomar decisões baseadas em dados. As empresas frequentemente tomam decisões com base em suposições, mas a análise de informações fornece uma maneira eficiente de obter insights significativos de todos os dados coletados, é uma série de processos com o objetivo de fornecer informações à empresa para tomar decisões baseadas em dados.
+
+A análise operacional é fornecida por meio de aplicações de software que podem oferecer análise de causa raiz, análise de impacto no serviço e atribuição de problemas em tempo real. Essas aplicações também podem usar análise cognitiva com deep learning para aprender comportamentos e padrões de uso.
+A análise operacional é uma forma específica de análise usada para recuperar, analisar e relatar dados relacionados às operações de TI, como logs de sistema, segurança, eventos e processos de infraestrutura de TI. O Amazon Elasticsearch Service da AWS é uma ferramenta comum para implementar análises operacionais.	
+
+Além disso, a importância de planejar uma solução de análise, considerando tanto a forma como a análise é executada (batch ou em stream) quanto o tipo de análise (descritiva, diagnóstica, preditiva, prescritiva ou cognitiva).
+
+
+
+Amazon ML e Análise Preditiva
+A AWS oferece serviços como o Amazon ML e um conjunto de serviços de inteligência artificial (IA) para facilitar aos desenvolvedores a aplicação de análise preditiva aos seus dados e a adição de recursos inteligentes aos seus aplicativos. A pilha de machine learning da AWS inclui serviços de aplicativos, serviços de plataforma e frameworks/interfaces para especialistas em ML. Os dados podem ser armazenados no Amazon DynamoDB, o AWS Data Pipeline orquestra o fluxo de dados e a preparação para uso no Amazon SageMaker, onde é possível treinar modelos de ML para fazer previsões em tempo real com base na atividade do usuário.
+
+
+Analise Cognitiva
+
+A análise cognitiva é uma forma avançada de análise de dados que oferece recomendações altamente especializadas para empresas com pouco envolvimento humano após a configuração inicial e treinamento de modelos de machine learning. Exemplos incluem software financeiro que fornece recomendações de investimento precisas, software de saúde para recomendações de tratamento, software veterinário para diagnóstico e software para ligas de futebol americano. A velocidade de processamento de dados em sistemas de análise varia de acordo com o tipo de processamento.
+
+
+
+
+Existem três principais abordagens para análise de dados:
+Análise em Batch: Envolve a consulta de grandes quantidades de dados estáticos e gera resultados analíticos em intervalos regulares. É usado em plataformas como o Amazon EMR, que usa sistemas baseados em MapReduce.
+
+Análise Interativa: Essa abordagem permite consultas complexas em dados complexos com alta velocidade. O Amazon Athena é um serviço que facilita a análise de dados diretamente no Amazon S3 usando consultas SQL padrão. O Amazon ES (Elasticsearch) também é usado para análises quase em tempo real.
+
+Análise em Stream: É a ingestão de dados em tempo real e a atualização incremental de métricas e relatórios em resposta a cada registro de dados recebido. Plataformas como o Amazon Kinesis, Apache Kafka, Apache Spark Streaming e Apache Storm são usadas para processar dados de streaming.
+
+Essas abordagens têm diferentes casos de uso e requisitos, e a escolha depende das necessidades específicas de cada análise.
+
+
+Vizualização dos dados
+Relatórios Estáticos: São comuns e entregues para informar consumidores de dados por e-mail ou portais da web. Eles não são interativos e geralmente fornecem informações básicas.
+Relatórios Interativos: Permitem que os usuários explorem os dados usando filtros e agrupamentos. São altamente personalizáveis e oferecem detalhes sobre os dados.
+Dashboards: Concentram-se em apresentar insights importantes de forma fácil de ler e consumir rapidamente. Geralmente oferecem informações em tempo real ou quase em tempo real.
+É crucial planejar cuidadosamente o conteúdo e os elementos visuais em relatórios e dashboards para garantir que transmitam informações corretas de forma significativa. Considere o público-alvo, a frequência de atualização e a natureza dos dados ao escolher a melhor forma de entrega de relatórios.
+Além disso, lembre-se de que a criação de relatórios é uma jornada e que é importante experimentar e iterar para encontrar a melhor maneira de visualizar os dados. A AWS oferece recursos, treinamentos e documentações para ajudar em cada etapa desse processo.
+
+
+
+A preparação de dados é um processo essencial para tornar os dados valiosos e úteis. Esse processo inclui as seguintes etapas:
+Exploração de Dados: Esta fase ocorre durante o planejamento da operação de ETL (Extração, Transformação e Carga) e envolve a compreensão inicial dos dados a serem analisados.
+Limpeza de Dados: É o processo de normalização dos dados para garantir que os campos contenham valores corretos e para lidar com valores ausentes ou inconsistentes.
+Transformação de Dados: Envolve a aplicação de funções para manipular dados em novos formatos, tornando-os adequados para análise.
+Visualização de Dados: É a criação de relatórios e painéis para apresentar as informações contidas nos dados de forma clara e compreensível.
+Existem três tipos amplos de relatórios: estáticos, interativos e painéis.
+Relatórios Estáticos: São usados em apresentações e reuniões, geralmente em formato PDF ou slides do PowerPoint. Podem ser acessados por meio de portais da web e interfaces de software.
+Relatórios Interativos: São comuns em business intelligence de autoatendimento. Permitem que os consumidores apliquem filtros, alterem escalas e agrupem dados nos relatórios. Os consumidores podem contar suas próprias histórias usando esses relatórios.
+Painéis: São usados para roll-ups de alto nível dos principais fatores de negócios. A interatividade depende do software utilizado. Os consumidores encontram benefício quando se concentram em informações de alto nível.
+Relatórios e painéis são compostos por gráficos e tabelas para responder perguntas, e suas páginas geralmente têm temas específicos. Filtros interativos podem ser aplicados a toda a página ou a elementos individuais na página, permitindo que os consumidores personalizem sua experiência de análise de dados.
+
+
+
+
+Amazon QuickSight
+O Amazon QuickSight é um serviço analítico de negócios baseado na nuvem, projetado para ser rápido e fácil de usar. Ele permite que os funcionários de uma empresa criem visualizações, executem análises e obtenham informações empresariais rapidamente a partir de seus dados em qualquer dispositivo. O QuickSight oferece painéis interativos que permitem o autoatendimento para análise de dados, evitando a dependência de equipes de business intelligence.
+O serviço suporta várias fontes de dados, incluindo arquivos CSV e Excel, aplicativos de software como serviço (SaaS) como o Salesforce, bancos de dados locais como SQL Server, MySQL e PostgreSQL, bem como recursos de dados da AWS, como Amazon Redshift, Amazon RDS, Amazon Aurora, Amazon Athena e Amazon S3. O QuickSight é escalável para atender às necessidades de centenas de milhares de usuários e oferece um mecanismo robusto na memória chamado SPICE para consultas rápidas e responsivas.
+
+
+
+Práticas recomendadas para escrever relatórios
+Elaborar um relatório sólido que fornecerá aos consumidores o que eles precisam para tomar decisões críticas é uma forma de arte. Há algumas etapas para ter sucesso:
+Coletar dados, fatos, itens de ação e conclusões.
+Identificar o público, as expectativas dele e o método apropriado de entrega.
+Identificar os estilos de visualização e o estilo de relatório que melhor atendem às necessidades do público.
+Criar os relatórios e painéis.
+
+
+
+
+Resumo:
+
+Origem dos dados:
+Amazon S3
+Data lake baseado no S3
+
+Armazenamento dos dados:
+Amazon RDS
+Amazon DynamoDB
+Amazon RedShift
+
+Ingestão de dados em tempo real:
+Amazon Kinesis Streams
+Amazon kinesis Data Firehose
+
+Processamento em Batch: baseados em MapReduce
+Amazon EMR
+AWS Glue
+Machine Learning:
+Amazon ML
+
+Dados Streaming através dos Amazon Kinesis
+Solução: Amazon EC2 e Amazon EMR
+
+Análise para Data Lake:
+Amazon RDS
+Amazon RedShift
+
+Relatórios e Painéis:
+Para painéis e visualização: Amazon QuickSight
+Para análise operacional: Amazon Elasticsearch Service ou Kibana 

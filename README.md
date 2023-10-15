@@ -19,7 +19,7 @@ Escolhi passar pelo programa para ter um noção básica do mercado de trabalho 
 - [x] Sprint 3                  [Desafio 3](https://github.com/Brenildu/maeda.compass/tree/main/Sprint_3/desafio)**link**
 - [x] Sprint 4                  [Desafio 4](https://github.com/Brenildu/maeda.compass/tree/main/Sprint_4/docker/desafio)**link**
 - [x] Sprint 5                  *Sem Desafio*
-- [ ] Sprint 6
+- [x] Sprint 6                  [Desafiot](https://github.com/Brenildu/maeda.compass/tree/main/Sprint_6/AWS)**link**
 - [ ] Sprint 7
 - [ ] Sprint 8
 - [ ] Sprint 9
@@ -49,6 +49,8 @@ Escolhi passar pelo programa para ter um noção básica do mercado de trabalho 
 ### Sprint 5
 7. [Curso AWS e preparação para Certificação Cloud Practitione](https://github.com/Brenildu/maeda.compass#curso-aws-e-prepara%C3%A7%C3%A3o-para-certifica%C3%A7%C3%A3o-cloud-practitione)
 
+### Sprint 6
+8. [Cursos AWS Partner e skills builderIntrodução na prática]()
 
 # RESUMO DOS RESUMOS:
 
@@ -611,3 +613,45 @@ O gerenciamento financeiro envolve medição, otimização, planejamento e opera
 5. Conclusão
 
 Este curso fornece uma visão abrangente sobre como a AWS ajuda as organizações a otimizar os aspectos econômicos da nuvem, maximizando o valor comercial ao longo do tempo. Compreender os pilares do AWS Cloud Value Framework e as práticas recomendadas de gerenciamento financeiro na nuvem é essencial para tomar decisões informadas e obter o máximo da AWS.
+
+
+## Sprint 6
+
+### Cursos AWS Partner e skills builder(Introdução na prática)
+![foto AWS](img/aws_skilBuilder.jpg)  
+
+# Análise de Informações
+
+A análise de informações é o processo de analisar dados para extrair valor e insights. Ela é essencial para a tomada de decisões informadas nas empresas, abrangendo várias formas de análise, como análise operacional, preditiva, cognitiva, em batch e em streaming. As ferramentas e serviços associados incluem Amazon ML, Amazon Elasticsearch Service e Amazon Kinesis, entre outros.
+
+## Tipos de Análise
+
+Existem vários tipos de análise, incluindo:
+
+- Análise de dados operacionais
+- Análise preditiva
+- Análise cognitiva
+- Análise em batch
+- Análise em stream
+
+Cada tipo de análise desempenha um papel fundamental na compreensão dos dados e na obtenção de insights acionáveis para impulsionar os negócios.
+
+### Análise Preditiva
+
+A análise preditiva é utilizada para prever eventos futuros com base em dados históricos. A AWS oferece serviços como Amazon SageMaker e Amazon DynamoDB para facilitar a implementação de modelos de análise preditiva e permitir que os desenvolvedores adicionem recursos de processamento de dados inteligentes aos aplicativos.
+
+### Análise Cognitiva
+
+A análise cognitiva representa a análise de dados avançada que possibilita a geração de recomendações especializadas para empresas sem a necessidade de intervenção humana direta. A AWS disponibiliza serviços como Amazon ES e Amazon Redshift, que oferecem recursos robustos de processamento e análise de dados para atender às demandas de análise cognitiva.
+
+### Análise em Batch e em Stream
+
+A análise em batch envolve a análise de grandes volumes de dados em intervalos regulares, enquanto a análise em stream lida com a ingestão e o processamento de dados em tempo real. A AWS oferece uma variedade de serviços para essas finalidades, incluindo Amazon EMR, Amazon Kinesis e Amazon Redshift, que permitem o processamento eficiente e escalável de dados.
+
+## Preparação de Dados
+
+A preparação de dados é um processo crítico que envolve a exploração, limpeza, transformação e visualização de dados para garantir que eles sejam valiosos e úteis para os usuários. Isso inclui a criação de relatórios estáticos, interativos e painéis para apresentar insights de maneira eficaz e significativa.
+
+### Amazon QuickSight
+
+O Amazon QuickSight é um serviço de análise de negócios fácil de usar, projetado para a nuvem. Ele permite que os funcionários criem exibições e análises personalizadas de dados de diversas fontes, oferecendo recursos de autoatendimento e desempenho de consultas rápido e responsivo por meio do mecanismo SPICE.

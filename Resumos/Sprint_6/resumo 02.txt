@@ -1,0 +1,328 @@
+MODULO 1
+Coletar, Armazenar e Processador
+
+
+Amazon Kinesis
+AWS SnowBall
+AWS Direct Connect
+
+Amazon S3
+Amazon S3 Glacier
+Amazon DynamoDB
+Amazon RDS
+Amazon ES
+Amazon CloudSearch
+Amazon Aurora
+
+Amazon EMR
+Amazon Athena
+Amazon RedShift
+Amazon Kinesis Data Analytics
+Amazon SageMaker
+
+Vida dos Dados
+Quanto mais rápido obtiver insights maior é o valor, em um pipeline de dados permite a coleta e insights em tempo real
+
+Dados de streaming
+São gerados continuamente, de várias fontes, enviados simultaneamente, deve ter um processo incremental e sequencial
+
+Dados em lote
+São menos sensivéis e processam mais dados ao longo do tempo
+
+MODULO 2
+Jornada do cliente:
+Migrar os dados para a nuvem
+Armazenar e gerenciar dados
+Criar aplicações com base nos dados
+Modernizar os data warehouse e criar um data lake
+Inovar com Machine learning
+
+
+1- Modernizar o Data WareHouse com o Amazon RedShift
+
+Jornada do Cliente:
+Mover os dados e o BD para a nuvem:
+AWS Direct Conect, AWS SnowBall ou AWS Storage Gateway - mover para o Amazon S3
+AWS Database Migration Service - movar para o Amazon RDS
+Amazon Kinesis Data Firehose - coleta dados de transmissão no Amazon S3
+Amazon S3Transfer Acceleration - pode acelerar as transferências de conteúdo que entra ou sai do Amazon S3
+
+Modernizar o data WareHose
+Usado para relatórios, painéis e analises, conduz a decisão de negócios mais bem informada
+Beneficios: Tomada de decisão, dados consolidados, qualidade de dados aprimorados, acesso a inteligência historica
+
+Amazon RedShift:
+Um serviço de Data Warehouse totalmente gerenciado
+Otimizado para alta performance
+Compatível com formatos de arquivo abertos
+Flexibilidade ilimitada e escalabilidade de petabytes
+integrado com os serviços da AWS
+menos gastos
+
+O Amazon Schema Convertion Tool extrai dados os otimiza e depois esses dados são carregados em um bucket do Amazon S3 por meio de uma rede AWS SnowBall e assim o Amazon Redshift pode extrair do Amazon S3
+
+
+2- Criar um Data Lake
+
+Permite armazenar dados estruturados e não estruturados, não utilizando um data lake no Amazon S3 pode resultar em um swamp de dados
+
+Swamp de dados = dark dados ou dados não pesquisáveis	
+
+Etapas:
+Configurar armazenamento
+Mover dados
+Limpar, preparar e catalogar os dados
+Configurar e aplicar políticas de segurança e conformidade
+Disponibilizar dados para análise
+Pode demorar meses para concluir bem todas essas etapas, mas para criar uma plataforma moderna de análise de dados é preciso um data lake moderno e bem configurado
+
+AWS  Lake Formation -> Simplifica e automatiza o processo de algumas etapas da criação, reduzindo o tempo de meses para dias.
+Amazon Redshift Spectrum -> Oferece liberdade de armazenar os dados aonde você desejar no formato que desejar
+
+Utilize o Amazon Redshift Spectrum para fazer consultas em dados do Amazon S3, as consultas unem esses dados com dados em um data warehouse, otimize e use o Amazon QuickSight para ter acesso a BI ou ferramentas de SQL, gerando relatórios e insights 
+
+
+3- Transmissão e análise preditiva:
+Dados Streaming gerados em tempo real, eles devem ser processados sequencialmente e incremental ou em janelas de tempos deslizantes, tem o desafio de possuir duas camadas a de armazenamento e a de processamento, sendo dificil de configurar, de alcançar alta disponibilidade, complicado de dimensionar, propenso a erros e um alto custo de manutenção
+
+Amazon Kinessis:
+Data Streams -> Captura e armazena fluxo de dados
+Data Analytics -> Analisa fluxos de dados em tempo real
+Data Firehose -> Carregue dados de transmissão em streams, data lakes e warehouse
+Video Streams -> Captura, processa e faz transmissão de mídia em tempo real
+
+Amazon Managed Streaming for Apache Kafta -> Serviço totalmente gerenciado pelo apache kafta, pode fazer lift ou shift de suas workloads e obter os benefícios de um serviço totalmente gerenciado, ele configura automaticamente o cluster	
+
+
+4 - Analisar a governança
+
+Problemas como segurança e auditoria podem surgir, 
+
+O Amazon S3 oferece suporte à criptografia 
+O Amazon Macie protege os dados armazenados no Amazon S3
+O Amazon CloudWatch monitora e observa recursos, aplicações e dados 
+
+
+AWS Glue -> Categoriza, limpa, enriquece e move dados entre armazenamento de dados
+Catálogo de dados do AWS Glue -> Repositório central 
+Depois de categorizar os dados em um data lake ou data warehouse eles podem ser consultados com um ETL
+
+DIDL -> data lake não identificado: 
+Ajudam a chegar a causa da raiz e proteger o PII
+Podem descobrir, identificar, catalogar, monitorar e proteger seus dados
+Ao remover o PII antes de inserir em um data lake você pode continuar criando valor com redução do risco
+Aumenta a qualidade e valor dos dados
+
+Troca de informações com AWS:
+Certificações de terceiros no setor
+Práticas de controle e segurança
+Relatórios de conformidade diretamente no NDA
+
+Garantia:
+Certificações e declarações
+leis e boas práticas de privacidade
+Alinhamento com frameworks
+
+
+
+5- Machine Learning e muito mais
+
+ML requer:
+Mais dados: coletar todos os tipos de dados
+Flexibilidade: definir o esquema antes da análise
+Escalabilidade: escalar a computação de forma independente
+Transformação e processamento de dados: executar amplo conjunto de processamento e análise nos mesmos dados
+Segurança: rede, identidade, criptografia, compatibilidade
+
+
+Data Flywheel
+
+
+Monetização dos dados: processo de identificação e comercialização de dados
+
+benefícios:
+novas fontes de receita
+novos serviços
+maior fidelidade do cliente
+permanecer competitivo
+
+
+
+
+—---------------------------------------
+Serviços de análise de dados
+
+Amazon Athena:
+Serviço de consulta de interativa e em servidor usando SQL, facilita o uso do Amazon S3
+Fácil de usar por ser sem servidor, sem administração para ter que se preocupar
+
+AWS Glue:
+Prepare e carregue dados
+Facilita a preparação e a carga de dados para analise do cliente
+Uso para descobrir dados na AWS
+Após a descoberta do conteúdo é armazenado os metadados no AWS Glue Data Catalog
+
+AWS Data Exchange:
+Facilita a localização, a assinatura e o uso de dados de terceiros na nuvem
+Depois de se increver em um produto de dados, pode usar a API da AWS Data Exchange para carregar dados diretamente do Amazon S3
+Uso do ML
+
+Amazon SageMaker:
+Crie, treine e implante modelos de machine learning em grande escala
+Focado para os cientistas de dados
+
+
+Amazon EMR: executa facilmente aplicações de dados de código aberto
+processa grandes quantidades de dados, de forma rápida e econômica
+facilmente configurado, não é preciso se preocupar com várias configurações
+
+Amazon Managed Streaming for Apache Kafta: Construa pipelines e aplicações de dados em Streaming em tempo real
+Totalmente gerenciado, facilita a execução e criação de aplicações que usam Apache Kafta
+Permite o uso de API do Kafta para preencher data lakes, fazer streaming de alterações e para BD e controlar aplicações de ML e análise
+Menos tempo gerenciando a infraestrutura e mais tempo criando aplicações
+
+Amazon Elasticsearch Service: Implante, monitore e solucione problemas de aplicações em escala, usando ferramentas de sua preferência
+os dados são replicados em 3 zonas, usando serviço altamente escalável
+Capacidade de criptografar dados em repouso e em trânsito torna um serviço altamente seguro
+de nível empresarial e orientado pela comunidade
+
+Transformar dados em valor de negócio podem envolver várias tecnologias, os parceiros da AWS ajudam nesse trabalho, eles são parceiros de consultoria e tecnologia e seu sucesso vem na capacidade de demonstrar ao cliente a boa avaliação e o bom uso das ferramentas
+Sucesso:
+Boa escolha dos serviços e instancias -> economia de custo, capacidade de escalar
+Infraestrutura global e suporte à disponibilidade -> Agilidade empresarial
+capacidade de criar produtos e serviços -> inovação 
+
+
+—---------------------------------------
+MÓDULO 3
+
+Conversa de Vendas: 
+fazer perguntas de descobertas específicas, solucionar objeções comuns
+
+
+Público-alvo
+2 maneiras de verificar o público dos clientes:
+Amplamente por cargo e responsabilidade
+Detalhadamente por uma função em um ciclo de vendas
+Geralmente divido em 2 categorias:
+
+Empresarial:
+Diretor-executio(CEO)
+Diretor-TI(CIO)
+Diretor de Marketing(CMO)
+Líderes de linha de negocio(LOB)
+Diretor de transformação digital
+Analista de Negocio
+Diretor de risco
+Equipe não técnica do dataCenter
+
+Técnico:
+Diretor de Tecnologia(CTO)
+Diretor de dados(CDO)
+Arquiteto empresarial
+Vice-presidente ou diretor de engenharia
+Diretor do departamento de ciência de dados
+Arquiteto de BD
+Chefe de segurança
+Equipe técnica do DataCenter
+
+
+
+Tipos do cliente:
+Identifique no começo do processo de engajamento e entenda suas necessidades
+	Patrocinadores executivos:
+Diretor de Tecnologia
+Diretor de TI
+Diretor Digital
+Diretor de inovação
+Diretor de marketing
+Eles são do nível C e possuem a autoridade final para a tomada de decisões
+
+	Influenciadores:
+	Vices presidentes de:
+Engenharia
+Dados
+Produtos
+Tecnologia da informação
+Operações técnicas
+Vendas e marketing
+ Eles podem influenciar as decisões dos executivos de nível C, tem toda a confiança do executivo, podem ter historico tecnico ou comercial
+
+
+
+
+	Promotores:
+	Gerentes ou diretor de:
+Engenharia
+Dados
+TechOps
+DevOps
+BD
+TI
+Administradores de sistemas e infraestrutura
+Eles têm experiência no nível básico, podem influenciar os influenciadores
+	
+
+	Detratores:
+Segurança, risco e compatibilidade
+Operações
+Gerenciamento cotidiano do DataCenter
+Eles têm grande interesse em manter o status quo, preocupados com empregos, perda de autoridade, não estão informados sobre o benefício da nuvem nem tem medo de mudança de emprego
+
+
+
+Frameworks de pergunta e descoberta
+
+ESTADO E INICIATIVA ATUAIS - Comece com perguntas de alto nível sobre o estado atual do cliente
+
+Quais são suas principais prioridades?
+Quais seus projetos atuais de big data e análise?
+
+DESAFIOS - Aprenda sobre os desafios enfrentados pela pessoa-chave
+
+Quais são os principais problemas empresariais que você está tentando resolver com suas iniciativas de análise de dados?
+Quais desafios você enfrentou na execução de seus projetos e iniciativas?
+
+DEPENDÊNCIAS - Esteja ciente de dependências técnicas ou de negócios que possam impedir o progresso, verifique se a organização está comprometida em investir para resolução
+
+Qual sua função no projeto?
+Quem mais está envolvido no processo?
+Quais são seus investimentos existentes na infraestrutura de dados?
+
+IMPACTO - Entenda o impacto da organização se o cliente não conseguir fazer o que queria com seus dados
+
+O que pode acontecer se você não conseguir realizar suas iniciativas?
+O que pode acontecer se você não fizer nada com seus dados?
+
+
+
+
+
+
+TRATAMENTO DE OBJEÇÕES:
+
+Data WareHouse:
+
+On premisses é o suficiente, não precisamos migrar para nuvem
+Solução: pode ser suficiente por enquanto, mas o volume e a variedade de seus dados estão aumentando continuamente. Com sua solução você terá desafios de escala futura
+A nuvem oferece soluções totalmente gerenciada, escalável e durável
+
+Data Lake:
+Já gastamos muito tempo com o data lake atual on premisses, e não queremos gastar mais tempo com todas as configurações de segurança e governança de dados novamente. Há muito trabalho na migração
+Solução: Ajudamos o cliente a migrar facilmente para nuvem de formando segura usando o Data Lake Formation, O AWS SnowBall ele pode resolver muitos dos problemas de migração
+
+Dados de Streaming:
+Não queremos ficar preso há um unico fornecedor, usamos soluções como hadoop apache, apache kafta, apache spark para nossa análise de dados
+Alguns clientes usam o Amazon EMR para gerenciar o Apache Hadoop e o Apache Spark
+e o Amazon MSK para gerenciar o Apache Kafta
+Os benefícios vem com a maior escalabilidade, performance e segurança, somando com a facilidade de do uso por não precisar gerenciar o cluster e infraestrutura 
+
+Governança:
+Os executivos estão satisfeitos com os planos de segurança e governança atual nos datacenter on-premisses e há uma previsão de ter alguns desafios se irem para a nuvem
+Há uma segurança maior na nuvem, é possível compartilhar dados whitepapers para fornecer mais informações. A nuvem AWS possui um framework de alta segurança com o sistemas de camadas com monitoramento em tempo real
+A AWS oferece maneiras de gerenciar suas chaves de criptografia, você pode usar as ferramentas de seus fornecedores na nuvem, depois que os dados estiverem na nuvem você pode expandir com segurança e facilidade para outros mercados.
+
+Machine Learning:
+Não possuímos conhecimentos técnicos para construir e implementar e não há planos para usar o ML
+O ML está cada vez mais importante, o AWS ajuda a implementar usando Amazon SageMaker Studio que automatiza tarefas difíceis, que simplifica a aplicação e ajuda os engenheiros.
+

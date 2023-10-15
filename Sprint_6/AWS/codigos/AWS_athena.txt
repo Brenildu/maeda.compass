@@ -1,0 +1,42 @@
+//Criando BD
+CREATE DATABASE meubanco02
+
+//Criando tabela1
+ CREATE EXTERNAL TABLE IF NOT EXISTS meubanco02.tabela1 (
+  nome char(255),
+  sexo char(1),
+  total int,
+  ano int
+)
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe'
+WITH SERDEPROPERTIES (
+ 'serialization.format' = ',',
+ 'field.delim' = ','
+)
+LOCATION 's3://exemplo001.com/dados/'
+
+
+//Primeiro teste
+select nome from meubanco02.tabela1 where ano = 1999 order by total limit 15;
+
+
+//teste final
+WITH decada_dados AS (
+    SELECT
+        nome,
+        ano,
+        FLOOR(ano / 10) * 10 AS decada,
+        total,
+        ROW_NUMBER() OVER (PARTITION BY FLOOR(ano / 10) * 10 ORDER BY total DESC) AS rank
+    FROM meubanco02.tabela1
+    WHERE ano >= 1950 
+    order by ano
+)
+
+SELECT 
+    nome,
+    decada,
+    total
+FROM decada_dados
+WHERE rank <= 3;
+

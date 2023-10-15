@@ -1,0 +1,33 @@
+Amazon EMR
+Permite criar e gerenciar cluster no Hadoop, baseado em computação em nuvem elastica ou instancia o EC2
+O Hadoop usa esquema de redirecionamento de leitura, consegue armazenar qualquer tipo de dado	
+
+
+Amazon Athena
+Não usa servidor, basta apontar para o armazenamento do Amazon S3, definir o esquema e começar a consultar
+Analisa os dados sem configurações complexas, e faz todo o procedimento ETL, de extrair, transformar e carregar os dados
+você paga apenas pelas consultas realizadas, não há custos por armazenamentos alem do Amazon S3, usa Presto, ideal para consultar rápidas ad-hoc e pode acessar analises complexas, usa o Amazon S3 como seu dataStore subjacente
+
+Passos:
+crie um bucket no Amazon S3
+crie um BD de metadados
+crie um esquema
+ajuste o serializador/desserializador SERDE(Opcional)
+execute uma consulta
+acesse o histórico(Opcional)
+
+Amazon QuickSight:
+Usa de power BI
+as 8 etapas:
+Resultados visuais como gráficos de pizza, mapas de calor, tabelas dinâmicas, gráficos de dispersão
+Recurso X-ray: permite ver padrões e anomalias
+As histórias são uma série de interações e analise, cada interação é conhecida como cena, as cenas mostram a análise ao longo prazo, as historias ajudam a visualizar tendências 
+Oferece 2 planos: standard e enterprise
+Usuários fora da empresa podem acessar o quicksight desde que possuam o email e a senha
+
+Amazon Redshift:
+OLTP: sistema de processamento transacional online, caracterizado por grande numero de inserções, atualizações e execuções que entram no sistema
+OLAP: sistema de criação de adição usado para os workloads analíticos, esses que são executados em grande consulta historica
+Se enquadra no OLAP
+usa arquitetura de coluna
+
