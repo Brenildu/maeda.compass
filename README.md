@@ -21,8 +21,8 @@ Escolhi passar pelo programa para ter um noção básica do mercado de trabalho 
 - [x] Sprint 5                  *Sem Desafio*
 - [x] Sprint 6                  [Desafio 6](https://github.com/Brenildu/maeda.compass/tree/main/Sprint_6/AWS)**link**
 - [x] Sprint 7                  [Desafio 7](https://github.com/Brenildu/maeda.compass/tree/main/Sprint_7/Spark)**link**
-- [ ] Sprint 8
-- [ ] Sprint 9
+- [x] Sprint 8                  *Não Concluído*
+- [x] Sprint 9                  *Não Concluído*
 - [ ] Sprint 10
 
 # Certificados:
@@ -59,7 +59,10 @@ Escolhi passar pelo programa para ter um noção básica do mercado de trabalho 
 9. [Curso Hadoop e Spark](https://github.com/Brenildu/maeda.compass#sprint-7)
 
 ### Sprint 8
-10. []
+10. *Sem Resumo*
+
+### Sprint 9
+11. [Modelagem Relacional e Desafio]()
 
 # RESUMO DOS RESUMOS:
 
