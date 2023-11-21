@@ -1,0 +1,82 @@
+Resumo  DADA-ETL-Pandas-NumPy.pdf
+
+
+
+Arquitetura Lambda
+	
+Arquitetura Lambda é um modelo de arquitetura Big Data. Este modelo independe de soluções tecnológicas específicas para a ingestão, armazenamento e processamento dos dados, ou seja, é um modelo teórico, não há uma única ferramenta que provém uma solução completa de Big Data, É necessário esforços para criar uma boa arquitetura de uma solução.
+A arquitetura Lambda é dividida em 3 partes:
+batch layer
+speed layer
+serving layer
+
+O dado é processado pelo batch e o speed layer. No bach layer o dado é atualizado de maneira atômica(nada é atualizado ou subscrito), caso precise de alguma atualização, é criado um novo dado atualizado e armazenado, de maneira que se mantenha sempre a disposição os dados originais. Esses dados são processados para gerar visualizações pré-calculadas organizadas de acordo com a necessidade do negócio.
+Os dados são entregues ao serving layer apenas no final do processamento batch. A  Speed Layer veio para agilizar uma primeira análise, a camada recebe os mesmos dados mais os trata em tempo real e disponibiliza para que o sistema tenha uma informação relevante em mãos até que termine o processamento mais completo da batch. Essa camada só precisa se preocupar com os dados que não foram entregues pela batch, assim que o processamento da batch termina os dados da speed layer podem ser descartados.
+Resumindo: 
+dá para se processar uma grande quantidade de dados originais na batch, protegendo assim de erros humanos
+disponibilizar esses dados em visualizações pré-computadas (serving layer), 
+compensar os intervalos da camada batch e continuar entregando as informações em tempo real (speed layer).
+Data Lake
+e é um local central para armazenar todos os seus dados, independentemente de sua origem ou formato. São armazenadas informações em sua forma nativa com pouco ou nenhum processamento. A estrutura dos dados não é conhecida na inserção de dados apenas na sua leitura, dando a característica da flexibilidade
+
+Schema: Schema-on-read (Descobre-se a estrutura dos dados em tempo de leitura) 
+Escala: Escala para grandes volumes a um custo baixo 
+Métodos de Acesso:  Acessado através de sistemas como SQL, programas criados por desenvolvedores e outros métodos 
+Workload:   Suporta processamento batch, além de um recurso aprimorado sobre EDWs para suportar consultas interativas de usuários 
+Dado:  Bruto (Raw), Confiável (Trusted), Refinado(Refined) 
+Complexidade:  Processamento Complexos 
+Custo/Eficiência:  Uso eficiente das capacidades de armazenamento e processamento a um custo muito baixo 
+Benefícios: 
+Transforma a economia financeira do armazenamento de grandes quantidades de dados ·
+Suporta HiveQL, Spark e entre outros frameworks de programação de alto nível 
+Escala para executar em dezenas de milhares de servidores
+Permite o uso de qualquer ferramenta 
+Permite que a análise comece assim que os dados chegam 
+Permite o uso de conteúdo estruturado e não estruturado em um único armazenamento 
+Suporta modelagem ágil, permitindo que os usuários alterem modelos, aplicativos e consultas (queries) 
+
+Para se considerar um Data Lake:
+Deve ser um único repositório compartilhado de dados da organização. 
+Aceita todos os tipos de dados estruturados, semi-estruturados e não-estruturados. 
+Baixo custo de armazenamento
+Incluir capacidades de orquestração e agendamento de tarefas (jobs) 
+Conter um conjunto de aplicativos ou de workflows para consumir, processar ou agir de acordo com os dados 
+Suporta regras de segurança e proteção de dados. 
+Desacopla o armazenamento do processamento (permitindo alta performance e alta escala).
+
+Funções básicas:: ingestão, armazenamento, processamento e consumo
+O processo de ingestão é fundamental para capturar dados em tempo real ou em lote, enquanto o armazenamento no Data Lake oferece eficiência de custos e flexibilidade por meio de técnicas como schema on-read. 
+O processamento dos dados permite transformações e padronizações personalizadas, atendendo às diversas necessidades dos usuários.
+Por fim, o consumo dos dados envolve acessar e visualizar informações por meio de consultas, extrações e ferramentas de visualização. O gerenciamento e monitoramento desempenham um papel crucial para garantir a eficiência e a confiabilidade de todas as etapas do processo no Data Lake.
+
+Importante função: gerenciamento de monitoramento
+
+Tipos de dados: 
+Técnico:  Captura a forma e a estrutura de cada conjunto de dados Tipo de dados (texto, JSON, Avro), estrutura dos dados (os campos e seus tipos) 
+Operacional:  Captura a linhagem (lineage), qualidade, perfil e governança do dado Localização de origem e destino dos dados, tamanho, número de registros e a linhagem
+Negócio:   Captura o que significa para o usuário Nomes comerciais (business), descrições, tags, qualidade e regras de mascaramento 
+Todos esses tipos de metadados devem ser criados e ativamente curados (curated) - caso contrário, o Data Lake é simplesmente uma oportunidade desperdiçada
+
+
+ETL/ELT
+ETL -> Extração, transformação e carregamento, são comumentes utilizados com Data Warehouse e Business Intelligence, mas podem ser usados para outras finalidades
+nesse processo:
+os dados são retirados (extraídos) de um sistema-fonte, 
+convertidos (transformados) em um formato que possa ser analisado, 
+e armazenados (carregados) em um armazém ou outro sistema.
+ELT -> Extrair, carregar e transformar, a transformação ocorre no BD de destino, o ELT necessita de menos fontes remotas, exigindo apenas dados brutos e despreparados.
+
+
+Introdução 
+Numpy é uma biblioteca para cálculo vetorial e matricial disponibilizada em Python. 
+Várias outras bibliotecas utilizam NumPy como base para seus cálculos 
+Utilizar NumPy ao invés das estruturas básicas de Python (exemplo:. listas) apresenta melhorias de desempenho 
+Para instalar via pip utilize o comando pip install numpy
+
+Arrays NumPy 
+Funcionam como arrays em C++/Java 
+Alocam espaços contíguos em memória 
+São utilizados em várias funções numpy
+
+
+	

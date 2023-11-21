@@ -1,0 +1,80 @@
+Resumo - Apache Hadoop
+O Apache Hadoop, ou apenas Hadoop, é um framework Open Source, assim como o Spark, que permite gerenciar e processar big data com eficiência em um ambiente de computação distribuído
+
+4 Principais modulos:
+
+Hadoop Distributed File System (HDFS): O HDFS é um sistema de armazenamento que usa tecnologia de armazenamento de objetos (object storage) armazenando os dados como objetos de tamanho variável, ao contrário do armazenamento tradicional de arquivos em blocos. Assim, são características do object storage: a durabilidade, a alta disponibilidade, a replicação, e a elasticidade, permitindo que a capacidade de armazenamento seja virtualmente infinita. No object storage cada item armazenado é um objeto definido por um identificador único, oferecendo uma alternativa ao modelo de arquivos baseados em blocos de dados. Por causa dessas facilidades, o armazenamento de dados na nuvem pode ser feito por meio do object storage. Seguindo essa tendência, os principais provedores de nuvem têm suas implementações de object storage, como o AWS S3, o Oracle Object Storage, o Azure Blob Storage e o Google Cloud Storage[5]. O HDFS oferece melhor rendimento de dados quando comparado aos sistemas de arquivos tradicionais. Além disso, o HDFS oferece excelente escalabilidade. Você pode dimensionar de uma única máquina a milhares com facilidade e em hardware comum
+Yet Another Resource Negotiator (YARN): facilita tarefas agendadas, gerenciamento completo e monitoramento de nós de cluster entre outros recursos. 
+MapReduce: O módulo Hadoop MapReduce ajuda os programas a realizar computação paralela de dados. A tarefa Map de MapReduce converte os dados de entrada em pares chave-valor. Já a tarefa Reduce consome a entrada, agrega-a e produz o resultado. Abstrai toda a computação paralela em apenas duas funções: Map e Reduce
+Hadoop Common: O Hadoop Common usa bibliotecas Java que são padrões em todos os outros módulos. 
+
+Camadas que completam o Hadoop: ferramentas que facilitam e ajudam na consulta
+
+Na camada de armazenamento de dados há o sistema de arquivos distribuído Hadoop Distributed File System (HDFS), um dos principais componentes do framework
+na camada de processamento de dados temos o MapReduce, que também figura como um dos principais subprojetos do Hadoop
+Na camada de acesso aos dados são disponibilizadas ferramentas como Pig, Hive, Avro, Mahout, entre outras
+
+
+Para que o Hadoop funcione, é necessários cinco processos:
+NameNode, DataNode, SecondaryNameNode, JobTracker e TaskTracker. Os três primeiros são integrantes do modelo de programação MapReduce, e os dois últimos do sistema de arquivo HDFS. Os componentes NameNode, JobTracker e SecondaryNameNode são únicos para toda a aplicação, enquanto que o DataNode e JobTracker são instanciados para cada máquina do cluster 
+
+
+Namenode: responsável por gerenciar os dados (arquivos) armazenados no HDFS, registrando as informações sobre quais datanodes são responsáveis por quais blocos de dados de cada arquivo, organizando todas essas informações em uma tabela de metadados. Suas funções incluem mapear a localização, realizar a divisão dos arquivos em blocos, encaminhar os blocos aos nós escravos, obter os metadados dos arquivos e controlar a localização de suas réplicas. Como o NameNode é constantemente acessado, por questões de desempenho, ele mantém todas as suas informações em memória. Ele integra o sistema HDFS e fica localizado no nó mestre da aplicação, juntamente com o 
+JobTracker; 
+
+Datanode: responsável pelo armazenamento do conteúdo dos arquivos nos computadores escravos. Como o HDFS é um sistema de arquivos distribuído, é comum a existência de diversas instâncias de DataNode em uma aplicação Hadoop, permitindo que os arquivos sejam particionados em blocos e então replicados em máquinas diferentes. Um DataNode poderá armazenar múltiplos blocos, inclusive de diferentes arquivos, entretanto, eles precisam se reportar constantemente ao NameNode, informando-o sobre as operações que estão sendo realizadas nos blocos.
+
+
+MapReduce:
+De forma simples e resumida, ele abstrai as dificuldades do trabalho com dados distribuídos, eliminando quaisquer problemas que o compartilhamento de informações pode trazer em um sistema dessa natureza. Pode ser resumido nas seguintes fases:
+Map: Responsável por receber os dados de entrada, estruturados em uma coleção de pares chave/valor. Tal função map deve ser codificada pelo desenvolvedor, através de programas escritos em Java ou em linguagens suportadas pelo Hadoop; 
+Shuffle: A etapa de shuffle é responsável por organizar o retorno da função Map, atribuindo para a entrada de cada Reduce todos os valores associados a uma mesma chave; 
+Reduce: Por fim, ao receber os dados de entrada, a função Reduce retorna uma lista de chave/valor contendo zero ou mais registros, semelhante ao Map, que também deve ser codificada pelo desenvolvedor.
+
+JobTracker: recebe a aplicação MapReduce e programa as tarefas map e reduce para execução, coordenando as atividades nos TaskTrackers. Sua função então é designar diferentes nós para processar as tarefas de uma aplicação e monitorá-las enquanto estiverem em execução. Um dos objetivos do monitoramento é, em caso de falha, identificar e reiniciar uma tarefa no mesmo nó, ou, em caso de necessidade, em um nó diferente; 
+TaskTracker: processo responsável por executar as tarefas de map e reduce e informar o progresso das atividades. Assim como os DataNodes, uma aplicação Hadoop é composta por diversas instâncias de TaskTrackers, cada uma em um nó escravo. Um TaskTracker executa uma tarefa map ou uma tarefa reduce designada a ele. Como os TaskTrackers rodam sobre máquinas virtuais, é possível criar várias máquinas virtuais em uma mesma máquina física, de forma a explorar melhor os recursos computacionais; 
+SecondaryNameNode: utilizado para auxiliar o NameNode a manter seu serviço, e ser uma alternativa de recuperação no caso de uma falha do NameNode. Sua única função é realizar pontos de checagem (checkpointing) do NameNode em intervalos pré-definidos, de modo a garantir a sua recuperação e atenuar o seu tempo de reinicialização. 
+
+
+HDFS:
+O HDFS é um sistema de arquivos distribuído é responsável pela organização, armazenamento, localização, compartilhamento e proteção de arquivos que estão distribuídos em computadores de uma rede.
+Um sistema de arquivos é um componente do sistema operacional que permite ao usuário interagir com os arquivos e diretórios, seja para salvar, modificar ou excluir arquivos e diretórios (pastas), bem como instalar, executar ou configurar programas. Um sistema de arquivos distribuído faz tudo isso, mas em um ambiente de rede, onde os arquivos estão fisicamente espalhados em máquinas distintas. Para quem usa tais arquivos, o sistema deve permitir as mesmas facilidades de um sistema de arquivos local. O HDFS atua como um sistema de arquivos distribuído, localizado na camada de armazenamento do Hadoop, sendo otimizado para alto desempenho na leitura e escrita de grandes arquivos (acima dos gigabytes) que estão localizados em computadores (nós) de um cluster.
+Dentre as características do HDFS estão a escalabilidade e disponibilidade graças à replicação de dados e tolerância a falhas. O sistema se encarrega de quebrar os arquivos em partes menores, normalmente blocos de 64MB.
+A arquitetura do HDFS é estruturada em master-slave (mestre-escravo), com dois processos principais, que são: 
+Namenode: responsável por gerenciar os dados (arquivos) armazenados no HDFS
+Datanode: responsável pelo armazenamento do conteúdo dos arquivos nos computadores escravos
+
+MapReduce:
+O MapReduce é um modelo computacional para processamento paralelo das aplicações. De forma simples e resumida, ele abstrai as dificuldades do trabalho com dados distribuídos, eliminando quaisquer problemas que o compartilhamento de informações pode trazer em um sistema dessa natureza:
+3 fases:
+Map: Responsável por receber os dados de entrada, estruturados em uma coleção de pares chave/valor. Tal função map deve ser codificada pelo desenvolvedor, através de programas escritos em Java ou em linguagens suportadas pelo Hadoop;
+Shuffle: A etapa de shuffle é responsável por organizar o retorno da função Map, atribuindo para a entrada de cada Reduce todos os valores associados a uma mesma chave;
+Reduce: Por fim, ao receber os dados de entrada, a função Reduce retorna uma lista de chave/valor contendo zero ou mais registros, semelhante ao Map, que também deve ser codificada pelo desenvolvedor
+
+3 Execuções:
+JobTracker: recebe a aplicação MapReduce e programa as tarefas map e reduce para execução
+TaskTracker: processo responsável por executar as tarefas de map e reduce e informar o progresso das atividades
+SecondaryNameNode: utilizado para auxiliar o NameNode a manter seu serviço, e ser uma alternativa de recuperação no caso de uma falha do NameNode
+
+A arquitetura está organizada em nós mestres e escravos. O mestre contém o NameNode, o JobTracker e possivelmente o SecondaryNameNode. Já a segunda camada, constituída de nós escravos, comporta em cada uma de suas instâncias um TaskTracker e um DataNode.
+Fase Map: A fase de map aplica a mapfunction para toda a entrada do algoritmo. Para que isso aconteça, os mappers são executados em todos os nós computacionais do cluster, cuja tarefa é processar os blocos no arquivo de entrada que estão armazenados no HDFS. Estes blocos são divididos de forma mais igualitária possível e enviados para processamento localmente no nó do cluster. Em outras palavras, os cálculos ocorrem onde os dados são armazenados (localidade de dados).
+Fase Shuflle:	A fase Shuffle ordena os pares resultantes da fase do map localmente por suas chaves, depois disso, o MapReduce os atribui a um reducer de acordo com suas chaves
+Fase Reduce: De um modo geral, a função reduce cria uma lista arbitrariamente grande de pares de chave-valor. A saída da fase de reduce pode, se necessário, ser usada como a entrada para outra iteração MapReduce.
+
+Spark vs Hadoop
+Além do modelo de programação estendido, o Spark também apresenta uma performance muito superior ao Hadoop. Outra grande vantagem do Spark, é que todos os componentes funcionam integrados na própria ferramenta, como o Spark Streamming, o Spark SQL e o GraphX, diferentemente do Hadoop
+
+Principais diferenças entre Hadoop e Spark 
+Para listar as principais diferenças, usamos o comparativo feito pelo PhoenixNap [8]. As seções a seguir descrevem as principais diferenças e semelhanças entre as duas estruturas. Vamos dar uma olhada no Hadoop vs. Spark de vários ângulos. Alguns deles são custo, desempenho, segurança e facilidade de uso.
+No entanto, se o tamanho dos dados for maior do que a RAM disponível, o Hadoop é a escolha mais lógica. Outro ponto a ser considerado é o custo de funcionamento desses sistemas.
+
+O Hadoop MapReduce é bom para: 
+• Processamento linear de grandes conjuntos de dados. O Hadoop MapReduce permite o processamento paralelo de grandes quantidades de dados. Ele divide um grande fragmento em partes menores para serem processadas separadamente em diferentes nós de dados e reúne automaticamente os resultados nos vários nós para retornar um único resultado. Caso o conjunto de dados resultante seja maior que a RAM disponível, o Hadoop MapReduce pode superar o Spark. 
+• Solução econômica, se não houver resultados imediatos. O Hadoop considera o MapReduce uma boa solução se a velocidade de processamento não for crítica. Por exemplo, se o processamento de dados puder ser feito durante a noite, faz sentido considerar o uso do MapReduce do Hadoop. 
+
+Spark é bom para: 
+• Processamento rápido de dados. O processamento na memória torna o Spark mais rápido que o Hadoop MapReduce — até 100 vezes para dados na RAM e até 10 vezes para dados armazenados. 
+• Processamento iterativo. Se a tarefa for processar dados de novo e de novo, o Spark elimina o Hadoop MapReduce. Os RDDs (Distributed Datasets) resilientes do Spark permitem várias operações de mapa na memória, enquanto o Hadoop MapReduce tem que gravar resultados provisórios em um disco. 
+• Processamento quase em tempo real. Se uma empresa precisar de insights imediatos, deverá optar pelo Spark e pelo processamento na memória. 
+• Aprendizado de máquina. O Spark possui MLlib — uma biblioteca de aprendizado de máquina integrada, enquanto o Hadoop precisa de um terceiro para fornecê-lo. O MLlib possui algoritmos prontos que também são executados na memória. 
+• Juntando conjuntos de dados. Devido à sua velocidade, o Spark pode criar todas as combinações mais rapidamente, embora o Hadoop possa ser melhor se for necessário juntar conjuntos de dados muito grandes que requeiram muito embaralhamento e classificação. 

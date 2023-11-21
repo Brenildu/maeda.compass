@@ -60,7 +60,7 @@ Escolhi passar pelo programa para ter um noção básica do mercado de trabalho 
 
 ![foto git](img/git.png)
 &nbsp;
-
+    
 &nbsp;
 * **Sobre o Git e GitHub**  
 <p>
@@ -655,3 +655,54 @@ A preparação de dados é um processo crítico que envolve a exploração, limp
 ### Amazon QuickSight
 
 O Amazon QuickSight é um serviço de análise de negócios fácil de usar, projetado para a nuvem. Ele permite que os funcionários criem exibições e análises personalizadas de dados de diversas fontes, oferecendo recursos de autoatendimento e desempenho de consultas rápido e responsivo por meio do mecanismo SPICE.
+
+
+
+
+## Sprint 7
+
+### Cursos AWS Partner e skills builder(Introdução na prática)
+![foto spark](img/spark.png)
+
+
+# Spark: Processamento Distribuído e SQL
+
+## Introdução ao Spark
+
+O **Spark** é uma ferramenta de processamento de dados em cluster, que opera simultaneamente em diferentes computadores. Ele oferece replicação e tolerância a falhas, permitindo o processamento e particionamento de dados enquanto outras tarefas são executadas.
+
+## Componentes Principais
+
+- **Spark SQL:** Tabula dados de várias fontes.
+- **Spark Streaming:** Processa dados estruturados em tempo real.
+- Usa **gráficos aliomáticos** e otimização de CPU.
+
+## Estrutura e Funcionamento
+
+O **SparkSession** é iniciado pelo driver, que distribui recursos aos executores. Sua arquitetura baseia-se em trabalhos, estágios e tarefas.
+
+## Big Data e Estruturas de Dados
+
+- **Formatos de Big Data:** Binário, compacto, Parquet, ORC, Avro e RDD.
+- **RDD:** Conjunto distribuído resiliente com estrutura básica.
+- **DataSet e DataFrame:** Estruturas derivadas de RDD.
+
+## Ações Principais
+
+- **Ações:** Paralelização, coleta, subtração, união, interseção, cartesiano, contagem, soma, mapeamento e junção.
+- **Avaliação lenta:** Usada para transformações.
+- **Esquemas:** Podem ser definidos ou inferidos.
+
+## Arquitetura do Spark
+
+- **Máquina Local:** Pode desempenhar o papel de Driver Program e Worker.
+- **Observações:** Isolação de aplicativos, uso de diferentes gerenciadores de cluster (Standalone, Apache Mesos).
+
+## Termos e Aplicações
+
+- **Application:** Programa do usuário no Spark com Driver Program e executores no cluster.
+- **Application jar:** Contém a aplicação Spark do usuário, sem bibliotecas Hadoop ou Spark.
+
+&nbsp;
+Uma data frame imutável traz benefícios como tolerância à falha. O Apache Spark estende o modelo de programação MapReduce, com diversos componentes construídos sobre o Spark Core. Isso facilita o processamento, oferecendo funções básicas como map, reduce, filter e collect [2].
+&nbsp;

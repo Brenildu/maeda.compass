@@ -1,0 +1,208 @@
+Resumo - Spark
+
+Introdução:
+
+
+Spark
+Ele é uma ferramenta de processamento de dados, distribuída em cluster, opera na memória, sendo veloz e altamente escalável, dados em HSF. Uma ferramenta que opera em cluster
+
+cluster -> rede de computadores que operam sobre um mesmo objetivo, o spark opera com o cluster, dividindo o processamento em cada computador
+
+Replicação e tolerante a falhas -> a característica de replicação dá a possibilidade de resolver problemas de perdas de dados.
+
+Particionamento -> a possibilidade de dividir os dados em partições, essas são replicadas e cada partição processa ao mesmo tempo que outras
+
+Não substitui Python e o SQL
+Projeto extremamente ativo
+
+Spark SQL:
+Permite ler dados tabulares de várias fontes podendo usar sintaxe SQL
+
+Spark Streaming:
+Capaz de processar dados estruturados com os novos registros sendo adicionados ao final da tabela
+
+Turgsten:
+Motor de execução que tem o foco na otimização da CPU
+
+O spark funciona com o conceito de grafos acíclicos ou seja
+não possuem ciclo e possuem uma direção
+usam vértices que ligam por arestas
+
+Estrutura:
+Driver - Inicializa SparkSession, solicita recursos organizacionais do cluster, transforma em dags e distribui estas pelos executers
+Manager - gerencia os recursos do cluster, 4 formas: built-in standalone, YARN, mesos e kubernetes
+Executer - roda o cluster executando as tarefas
+
+Transformações e ações:
+Uma data frame imutável, faz benefícios como a tolerância à falha. Quando é feito o processamento de dados no Spark é executado dois tipos de grupos de operações: transformação e ação.
+Executando uma transformação gera um novo data frame (não é possível mudar o data frame já criado)
+a transformação só é executada no spark após uma ação: lazy evaluation
+o Spark opera assim para otimizar todo o código, dividindo o trabalho em workers
+Transformação possuem 2 tipos: Narrow e Wide
+Os dados necessários estão em uma mesma partição
+Os dados necessários estão em mais de uma partição
+
+
+Componentes:
+job: tarefa
+stage: divisão do jov
+task: menor unidade de trabalho, uma por núcleo e por partição
+
+Arquitetura base:
+O driver cria jobs
+os jobs vão ter vários estágios
+os estágios serão divididos em tarefas
+as tarefas vão atuar em diferentes partições
+na prática você roda um script no shell, se for criar uma aplicação você precisa criar um objeto
+
+Formatos aberto para Big Data:
+desacoplados da ferramenta
+binários e compactados
+suportam schema podendo ser armazenados em discos, redundância e parelismo
+
+Parquet - colunar, padrão Spark
+ORC - colocar, padrão do Hive
+Avro - linha
+linha - muitos atributos e mais escrita
+coluna - menos atributos e mais leitura
+o ideal é fazer um benchmark 
+
+—------------------------------------
+RDD - resilent distributed datasets
+Uma estrutura básica da baixo nível, com dados imutáveis distribuídos no cluster, complexo e verboso e possui uma otimização difícil pelo Spark
+
+Estrutura de mais alto nível -> DataSet e Dataframe: estão disponíveis em java e scala
+filtros -> são transformações
+
+Principais Ações:
+sc.parallelize = cria uma variável
+collect = mostra os elementos
+subtract = subtrai uma variável a outra
+union = faz a união entre listas
+intersection = faz a intersecção entre listas
+cartesian = mostra o cartesiano entre duas listas
+countByValue = mostra quantas vezes cada elemento aparece
+count = conta o total de elementos
+countByKeys = conta as chaves
+keys = mostra as chaves
+sum = soma os valores
+mapValues = função lambda entre os valores 
+join = faz a junção de duas listas que possuem a mesma chave
+
+
+Não vamos utilizar no curso
+
+DataFrame:
+uma tabela com linhas e colunas, com dados imutáveis, schema conhecido, linhagem preservada, as colunas podem ter tipos diferentes, possui operações comuns e o Spark otimiza estas analises
+
+Lazy Evaluation: o processo de transformação só ocorre quando há uma ação
+
+schema: você pode deixar para o spark inferir a partir de parte dos dados ou pode definir o schema, definir possui vantagens como ter o tipo correto e não ter overhead
+
+createDataFrame = cria um dataframe
+groupBy = concatena os elementos iguais
+schema = define primeiro o nome da coluna e depois o tipo de dado
+import expr = define uma expressão que se torna coluna
+select = seleciona uma coluna
+collect = mostra os dados em forma de lista
+agg = agrega uma coluna
+orderby = ordena a tabela
+groupby = agrupa a tabela
+filter = filtra uma coluna
+
+
+
+**importante definir o schemas pelo fato de garantir o tipo dos dados
+**NÃO É POSSÍVEL alterar um objeto em um dataFrame se cria um novo com a mudança
+
+.withCollumnRenamed(“era assim”, “agora e assim”)
+from pyspark.sql import functions as func -> importa uma função para manipulação de colunas
+write.format(“formato”).save(“pasta”) -> importar dados
+
+—------------------------------------
+Spark SQL
+
+tabela -> persistente, objeto tabular que reside em um BD que pode ser gerenciada utilizando SQL, sendo totalmente interoperável com DataFrame
+
+tabelas: 
+Gerenciadas: o spark gerencia os dados e metadados, lembra uma tarefa em BD, são armazenados no warehouse do spark, ao excluir a tabela tudo é apagado
+não gerenciados: o spark gerencia apenas os metadados, informamos aonde a tabela está e ao excluir os metadados os dados permanecem onde estavam
+
+Views:
+são alias para uma tabela, não contém dados é como se fosse um atalho para uma tabela onde é abstraído a complexidade da consulta
+Globais: visíveis em todas as sessões
+sessão: visíveis apenas na própria sessão
+
+Imports:
+
+from pyspark.sql import SparkSession
+from pyspark.sql.types import *
+
+
+Spark Particionamento:
+Diferenciamento na arquitetura que permite um grande volume de dados com grande performance
+Particionamento capacidade de dividir os dados
+Por padrão o particionamento é feito de acordo com o número de núcleos, com cada nó tendo uma task específica
+
+Shuflle - redistribuição de dados entre as partições, tendo que ser feito com cautela
+podemos particionar em disco(particionBy) ou em memória repartition() or coalesce()
+
+Bucketing - uma forma de particionamento com um número fixo de partições
+ideal para coluna com alta cardinalidade
+
+Reutilização de DataFrame:
+Uma forma de reutilizar os dados, eles ficam disponíveis para uma próxima consulta
+Cache: padrão em memória
+Persist: definido pelo usuário
+
+
+Dados e schema:
+DataFrames são objetos que tem um schema(do tipo structType) definido,  os schema são estruturas que comportam um conjunto de colunas, recebendo de parâmetro uma lista de StructFields e que cada um desses StructFields especificará cada coluna
+
+
+Apache Spark:
+O Apache Spark ou apenas Spark estende o modelo de programação MapReduce popularizado pelo Apache Hadoop, facilitando bastante. Ele estende o modelo de programação MapReduce popularizado pelo Apache Hadoop, facilitando bastante o desenvolvimento de aplicações de processamento de grandes volumes de dados. Além disso, ele permite a programação nas linguagens: R, Java, Scala, SQL e Python. O Spark tem diversos componentes para diferentes tipos de processamentos, todos construídos sobre o Spark Core, que é o componente que disponibiliza as funções básicas para o processamento como as funções map, reduce, filter e collect [2].
+
+Destaque:
+
+Spark + DataFrames: possibilita realizar consultas em dados estruturados dentro dos programas Spark, utilizando SQL ou a API do Spark
+Spark Streaming: permite criar aplicações de streaming escaláveis e tolerantes a falhas, podendo reutilizar o mesmo código para processamento em lote, unir os fluxos em relação aos dados históricos ou consultar consultas interativas. Permite ler dados do HDFS, Flume, Kafka, Twitter…
+Graphx: uma API para grafos em computação paralela, compete com o desempenho dos sistemas em grafo, mantém a flexibilidade do Spark, com tolerância a falhas e simples de usar
+MLlib: uma biblioteca de aprendizado de máquina escalável. Contendo algoritmos de aprendizado de máquina: classificação, regressão, árvores de decisão, sistema de recomendação, clusterização, etc …Possibilita a transformação de atributos, como categorização, normalização, entre outros..
+Spark-Core:  mecanismo principal do Spark, ele fornece serviços como gerenciamento de memória, agendamento de tarefas no cluster, recuperação de falhas, suporte para diversos sistemas de armazenamento. MPP(Massively-Parallel Processing) sistema de processamento massivo em paralelo, quando implementado em modo-cluster permite abstrair das camadas inferiores a trabalhar em um cluster através das APIS
+
+Arquitetura detalhada:
+As aplicações no Spark são executadas como conjuntos independentes de processos em um Cluster,  coordenados pelo objeto SparkContext. Para executar um cluster, o Spark Context pode se conectar a um gerenciador de cluster(Cluster Managers) que aloca recursos entre as aplicações. Uma vez conectados, os executores auxiliaram o Spark, sendo responsáveis por executar os processos e armazenar os dados da aplicação. O envio do código para os executores é definido pelos arquivos JAR ou Python repassados ao SparkContext.
+Assim a arquitetura pode ser resumida pelas três partes principais: 
+O Driver Program, que é a aplicação principal que gerencia a criação e é quem executará o processamento definido;
+ O Cluster Manager é um componente opcional que só é necessário se o Spark for executado de forma distribuída. Ele é responsável por administrar as máquinas que serão utilizadas como workers; 
+Os Workers, que são as máquinas que realmente executarão as tarefas que são enviadas pelo Driver Program. Se o Spark for executado de forma local, a máquina desempenha tanto o papel de Driver Program como de Worker.
+
+Observações à arquitetura:
+Cada aplicação obtém seus próprios processos executores, que permanecem ativos durante toda a aplicação e executam tarefas (tasks) em várias threads.  Isso isola uma aplicação da outra, tanto no agendamento, quanto no lado do executor, fazendo com que os dados não possam ser compartilhados em diferentes aplicações a não ser que sejam gravados em armazenamento externo.
+O Spark é agnóstico a qualquer gerenciador de cluster. Significa que diferentes gerenciadores de clusters podem ser utilizados para executar processos Spark. 
+O Driver Program deve escutar e aceitar conexões de entrada de seus executores ao longo de sua vida. Como tal, o Driver Program deve ser endereçável à rede a partir dos nós do Work. 
+Como o Driver Program agenda tarefas (tasks) no cluster, ele deve ser executado próximo aos nós Work, de preferência na mesma rede local.
+
+Tipos de Cluster Manager:
+Standalone - um gerenciador de cluster simples incluído no Spark que facilita a configuração de um cluster. Normalmente usado em execuções locais 
+Apache Mesos - um gerenciador geral de cluster que também pode executar Hadoop MapReduce. 
+Hadoop YARN - o gerenciador de recursos no Hadoop 2. 
+Kubernetes - um sistema de código aberto para automatizar a implantação, escalonamento e gerenciamento de aplicativos em contêineres. 
+
+Termos:
+Application (Aplicação)  - Programa do usuário desenvolvido em Spark. Consiste em um Driver Program e executores no cluster.
+Application jar (Jar de Aplicação) -  Um jar contendo uma aplicação Spark do usuário. Em alguns casos, os usuários desejarão criar um 'uber jar' contendo sua aplicação junto com suas dependências. O jar do usuário nunca deve incluir bibliotecas Hadoop ou Spark, no entanto, elas serão adicionadas no tempo de execução.] 
+Driver Program -  O processo que executa a função principal da aplicação e cria o SparkContext. Como se fosse o main() do programa.
+Cluster manager  -  Um serviço externo para adquirir recursos no cluster (por exemplo, standalone, YARN)
+Deploy mode  -  Distingue onde o processo do driver é executado. No modo 'cluster', o framework inicia o driver dentro do cluster. No modo 'cliente', o solicitante inicia o driver fora do cluster. 
+Worker node (Nó de Trabalho)  -  Qualquer nó que pode executar o código da aplicação no cluster
+Executor  -  Um processo iniciado para uma aplicação Spark em um nó de trabalho, que executa tarefas e mantém os dados na memória ou armazenamento em disco. Cada aplicação possui seus próprios executores. 
+Task (Tarefa)  -  Uma tarefa ou unidade de trabalho que será enviada a um executor
+Job (Trabalho)  -  Uma computação paralela que consiste em várias tarefas (Tasks) que são geradas em resposta a uma ação do Spark (por exemplo, save, collect)
+Stage (Estágios)  -   Cada Job é dividido em conjuntos menores de tarefas chamados de estágios (Stages) que dependem uns dos outros (semelhante aos estágios map e reduzir no MapReduce) 
+
+
+DAG (Directed Acyclic Graph)
+Sempre que uma ação é executada em um DataFrame, o Spark cria um DAG - um grafo direcionado e sem ciclos (ou seja, finito, caso contrário, nosso trabalho seria executado para sempre). Um grafo é um conjunto de vértices e arestas conectadas e, no caso de DAGs, essas conexões se dão sempre a uma mesma direção, de forma que, seguindo as conexões do grafo nunca se fará um loop fechado.
+Cada vértice é uma função, as DAGs permitem que o Spark otimize a execução e minimize o shuffling(fase de ordenação do MapReduce), ter um plano de execução permite ao Spark direcionar uma parte dos dados para cada worker node e dividir as tarefas de forma mais eficiente. Se cada transformação fosse executada de forma imediata, essas otimizações e divisão de tarefa não seriam possíveis
