@@ -19,9 +19,9 @@ Escolhi passar pelo programa para ter um noção básica do mercado de trabalho 
 - [x] Sprint 3                  [Desafio 3](https://github.com/Brenildu/maeda.compass/tree/main/Sprint_3/desafio)**link**
 - [x] Sprint 4                  [Desafio 4](https://github.com/Brenildu/maeda.compass/tree/main/Sprint_4/docker/desafio)**link**
 - [x] Sprint 5                  *Sem Desafio*
-- [x] Sprint 6                  [Desafiot](https://github.com/Brenildu/maeda.compass/tree/main/Sprint_6/AWS)**link**
-- [ ] Sprint 7
-- [ ] Sprint 8
+- [x] Sprint 6                  [Desafio 6](https://github.com/Brenildu/maeda.compass/tree/main/Sprint_6/AWS)**link**
+- [x] Sprint 7                  [Desafio 7](https://github.com/Brenildu/maeda.compass/tree/main/Sprint_7/Spark)**link**
+- [] Sprint 8
 - [ ] Sprint 9
 - [ ] Sprint 10
 
@@ -29,7 +29,10 @@ Escolhi passar pelo programa para ter um noção básica do mercado de trabalho 
 [Todos Certificados](https://github.com/Brenildu/maeda.compass/tree/main/Certificados)
 
 # RESUMOS COMPLETOS
-[Todos Resumos](https://github.com/Brenildu/maeda.compass/tree/main/Resumos)
+## **Resumos de todos os cursos de forma completa**
+[Todos Resumos - DA SPRINT 1 ATÉ A SPRINT 9](https://github.com/Brenildu/maeda.compass/tree/main/Resumos)
+
+
 
 ## LINK PARA OS RESUMOS DO README:
 ### Sprint 1
@@ -50,7 +53,9 @@ Escolhi passar pelo programa para ter um noção básica do mercado de trabalho 
 7. [Curso AWS e preparação para Certificação Cloud Practitione](https://github.com/Brenildu/maeda.compass#curso-aws-e-prepara%C3%A7%C3%A3o-para-certifica%C3%A7%C3%A3o-cloud-practitione)
 
 ### Sprint 6
-8. [Cursos AWS Partner e skills builderIntrodução na prática]()
+8. [Cursos AWS Partner e skills builderIntrodução na prática](https://github.com/Brenildu/maeda.compass#sprint-6-1)
+
+9.[Curso Hadoop e Spark](https://github.com/Brenildu/maeda.compass#sprint-7)
 
 # RESUMO DOS RESUMOS:
 
@@ -661,7 +666,7 @@ O Amazon QuickSight é um serviço de análise de negócios fácil de usar, proj
 
 ## Sprint 7
 
-### Cursos AWS Partner e skills builder(Introdução na prática)
+### Curso Hadoop e Spark
 ![foto spark](img/spark.png)
 
 
