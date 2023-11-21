@@ -21,7 +21,7 @@ Escolhi passar pelo programa para ter um noção básica do mercado de trabalho 
 - [x] Sprint 5                  *Sem Desafio*
 - [x] Sprint 6                  [Desafio 6](https://github.com/Brenildu/maeda.compass/tree/main/Sprint_6/AWS)**link**
 - [x] Sprint 7                  [Desafio 7](https://github.com/Brenildu/maeda.compass/tree/main/Sprint_7/Spark)**link**
-- [] Sprint 8
+- [ ] Sprint 8
 - [ ] Sprint 9
 - [ ] Sprint 10
 
@@ -55,7 +55,11 @@ Escolhi passar pelo programa para ter um noção básica do mercado de trabalho 
 ### Sprint 6
 8. [Cursos AWS Partner e skills builderIntrodução na prática](https://github.com/Brenildu/maeda.compass#sprint-6-1)
 
-9.[Curso Hadoop e Spark](https://github.com/Brenildu/maeda.compass#sprint-7)
+### Sprint 7
+9. [Curso Hadoop e Spark](https://github.com/Brenildu/maeda.compass#sprint-7)
+
+### Sprint 8
+10. []
 
 # RESUMO DOS RESUMOS:
 
@@ -711,3 +715,98 @@ O **SparkSession** é iniciado pelo driver, que distribui recursos aos executore
 &nbsp;
 Uma data frame imutável traz benefícios como tolerância à falha. O Apache Spark estende o modelo de programação MapReduce, com diversos componentes construídos sobre o Spark Core. Isso facilita o processamento, oferecendo funções básicas como map, reduce, filter e collect [2].
 &nbsp;
+
+
+## Sprint 8
+
+### NÃO CONSEGUI CONCLUIR A TEMPO
+
+
+## Sprint 9
+
+### Curso Modelagem Relacional e Desafio Com AWS
+![foto banco de dados relacional](img/banco_relacional.jpeg)
+
+# Modelo Entidade Relacional
+
+O **Modelo Entidade Relacional** consiste em três principais ideias:
+
+1. O mundo está repleto de coisas - Tudo que possui características distintas que moldam sua forma pode ser definido como coisa e posteriormente como entidade.
+2. Entidades possuem características próprias - Agrupam características comuns entre coisas que se relacionam, como conselhos de diferentes áreas.
+3. Relacionamento entre entidades - Indica como as coisas se relacionam entre si, como a associação de uma pessoa a um conselho.
+
+## Entidade
+
+Representação genérica de um componente do mundo real, contendo quase todas suas informações e propriedades necessárias para o sistema.
+
+### Classificação de Entidades
+
+- **Coisas Tangíveis:** Possuem existência concreta, como animais e produtos.
+- **Funções:** Papéis, atribuições, classificações, como professor ou cliente.
+- **Eventos ou Ocorrências:** Ações percebidas, como vendas ou compras.
+
+### Atributo
+
+Propriedades que descrevem uma entidade, como nome do paciente ou endereço.
+
+## Relacionamento
+
+A relação entre entidades representada por um verbo. Exemplo: Autor e Livro.
+
+### Cardinalidade
+
+- 1 livro por 1 autor - (1:1)
+- 1 Autor pode ter n livros - (1:n)
+
+### Tipos de Modelos de Dados
+
+#### Modelo Conceitual
+
+- Mais próximo da realidade do usuário.
+- Elaborado por meio de diagramas ER ou classes.
+
+#### Modelo Lógico
+
+- Descreve o armazenamento no banco e seus relacionamentos.
+- Adota uma tecnologia relacionada ou orientada a objetos.
+
+#### Modelo Físico
+
+- Descreve a armazenagem por meio de uma linguagem.
+- Escolhe um SGBD.
+
+## Integridade
+
+- Realizada por meio de restrições obrigatórias impostas pelo modelo.
+- Restrições de check, nulidade, unicidade e default.
+
+## Documentação
+
+- Definição formal dos elementos para evitar ambiguidades e falta de clareza.
+
+## Normalização
+
+Processo formal para examinar e evitar anomalias nos atributos de uma entidade.
+
+## Modelagem Dimensional
+
+Associada ao Data Warehouse, estrutura os dados para favorecer o consumo por meio de OLAP.
+
+### Elementos
+
+- **Fatos:** Registros de medidas resultantes de eventos de negócio.
+- **Dimensões:** Oferecem um contexto descritivo ao evento registrado.
+- **Métricas:** Quantificações atribuídas a um registro de fato.
+
+### Operações OLAP em Cubo
+
+- Slice, dice, drill-down, roll-up e pivô.
+
+### Representação de Dados
+
+- Esquema em estrela (Star Schema).
+- Esquema em floco de neve (Snowflake Schema).
+
+### Técnicas de Modelagem
+
+Transformação de um modelo de banco de dados relacional operacional (OLTP) em um modelo dimensional.
